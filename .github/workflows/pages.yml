@@ -25,6 +25,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      # Превью не индексируется. Метка ставится только в сборку для Pages,
+      # в репозитории и в релизах её нет — на боевой домен она не попадёт.
+      - name: Закрыть превью от поисковиков
+        run: |
+          find site -name '*.html' -exec sed -i 's|</head>|  <meta name="robots" content="noindex, nofollow">\n</head>|' {} +
+          for f in $(find site -name '*.html'); do
+            grep -q 'name="robots"' "$f" || { echo "noindex не добавлен: $f"; exit 1; }
+          done
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
