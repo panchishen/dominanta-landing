@@ -1,42 +1,12 @@
-{
+﻿{
   "version": "0.0.1",
   "configurations": [
     {
       "name": "site",
       "runtimeExecutable": "node",
-      "runtimeArgs": [
-        "serve-site.js"
-      ],
+      "runtimeArgs": ["serve-site.js"],
       "port": 5055,
       "autoPort": true
-    },
-    {
-      "name": "kristalis",
-      "runtimeExecutable": "node",
-      "runtimeArgs": [
-        "serve-kristalis.js"
-      ],
-      "port": 5051
-    },
-    {
-      "name": "zerno",
-      "runtimeExecutable": "python",
-      "runtimeArgs": [
-        "-m",
-        "http.server",
-        "8137",
-        "--directory",
-        "C:/Users/panch/OneDrive/Рабочий стол/Зерно/Прототипы"
-      ],
-      "port": 8137
-    },
-    {
-      "name": "keiman-hero",
-      "runtimeExecutable": "node",
-      "runtimeArgs": [
-        "serve-keiman.js"
-      ],
-      "port": 4173
     }
   ]
 }
