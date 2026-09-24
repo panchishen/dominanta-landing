@@ -1,0 +1,8 @@
+{
+  "projectId": "e6ca57d6-ea5a-4e59-9438-b33bbc27d6d6",
+  "projectName": "Crystalis",
+  "shape": "offscript-tokens",
+  "globalName": "Crystalis",
+  "readmeHeader": ".design-sync/conventions.md",
+  "_note": "Off-script sync. This repo is a tokens + static-HTML-preview design system (no React, no package.json, no dist). The standard converter (package-build.mjs) does NOT apply. The ds-bundle layout is assembled by hand from: tokens.css/design-tokens.json (tokens), components/<slug>/index.html (preview cards), _source/components.json (Figma variant/prop data for .d.ts + .prompt.md). See .design-sync/NOTES.md for the rebuild procedure."
+}

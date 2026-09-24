@@ -1,0 +1,389 @@
+/* Кристалис — версия для слабовидящих.
+   Файл самостоятельный: токены и стили основного сайта сюда не подключаются,
+   из дизайн-системы взят только шрифт Onest.
+   Настройки живут на <html> в виде атрибутов:
+   data-font-size  = small | medium | large
+   data-color-scheme = default | dark | blue | brown | green
+   data-spacing    = normal | wide
+   data-font       = sans | serif
+   data-sound      = on | off                                            */
+
+/* ── Базовая схема: чёрным по белому ── */
+:root {
+  --sv-bg: #ffffff;
+  --sv-fg: #000000;
+  --sv-panel: #f0f0f0;
+  --sv-line: rgba(0, 0, 0, .55);
+  --sv-focus: #0057b8;
+  --sv-hover-bg: #000000;
+  --sv-hover-fg: #ffffff;
+
+  /* Боковое поле по общей сетке сайта: XL 160 · L 80 · M 48 · S 40 · XS 16 */
+  --sv-pad: 80px;
+
+  --sv-fs: 22px;          /* базовый кегль, множится размером шрифта */
+  --sv-lh: 1.5;
+  --sv-ls: 0;
+  --sv-ws: normal;
+  --sv-gap: 1.6em;
+
+  --sv-font-sans: 'Onest', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  --sv-font-serif: Georgia, 'Times New Roman', Times, serif;
+  --sv-font: var(--sv-font-sans);
+}
+
+/* ── Цветовые схемы по ГОСТ Р 52872-2019 ── */
+:root[data-color-scheme="dark"] {
+  --sv-bg: #000000;
+  --sv-fg: #ffffff;
+  --sv-panel: #1a1a1a;
+  --sv-line: rgba(255, 255, 255, .6);
+  --sv-focus: #ffd400;
+  --sv-hover-bg: #ffffff;
+  --sv-hover-fg: #000000;
+}
+
+:root[data-color-scheme="blue"] {
+  --sv-bg: #9dd1ff;
+  --sv-fg: #185183;
+  --sv-panel: #bfe0ff;
+  --sv-line: rgba(24, 81, 131, .6);
+  --sv-focus: #0b3a63;
+  --sv-hover-bg: #185183;
+  --sv-hover-fg: #9dd1ff;
+}
+
+:root[data-color-scheme="brown"] {
+  --sv-bg: #f7f3d6;
+  --sv-fg: #4d4b43;
+  --sv-panel: #ede7c0;
+  --sv-line: rgba(77, 75, 67, .6);
+  --sv-focus: #6b4a10;
+  --sv-hover-bg: #4d4b43;
+  --sv-hover-fg: #f7f3d6;
+}
+
+:root[data-color-scheme="green"] {
+  --sv-bg: #3b2716;
+  --sv-fg: #a9e44d;
+  --sv-panel: #4a3320;
+  --sv-line: rgba(169, 228, 77, .6);
+  --sv-focus: #d8ff8a;
+  --sv-hover-bg: #a9e44d;
+  --sv-hover-fg: #3b2716;
+}
+
+/* ── Размер шрифта: 100 %, 150 %, 200 % ── */
+:root[data-font-size="medium"] { --sv-fs: 33px; }
+:root[data-font-size="large"]  { --sv-fs: 44px; }
+
+/* ── Интервалы (WCAG 1.4.12) ── */
+:root[data-spacing="wide"] {
+  --sv-lh: 1.8;
+  --sv-ls: .12em;
+  --sv-ws: .16em;
+  --sv-gap: 2em;
+}
+
+/* ── Гарнитура ── */
+:root[data-font="serif"] { --sv-font: var(--sv-font-serif); }
+
+/* ── Сброс и типографика ── */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  background: var(--sv-bg);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0 0 3em;
+  background: var(--sv-bg);
+  color: var(--sv-fg);
+  font-family: var(--sv-font);
+  font-size: var(--sv-fs);
+  line-height: var(--sv-lh);
+  letter-spacing: var(--sv-ls);
+  word-spacing: var(--sv-ws);
+}
+
+p, ul, ol, dl, h1, h2, h3 { margin: 0 0 var(--sv-gap); }
+ul, ol { padding-left: 1.2em; }
+li { margin-bottom: .6em; }
+
+h1 { font-size: 1.55em; font-weight: 700; line-height: 1.25; }
+h2 { font-size: 1.3em;  font-weight: 700; line-height: 1.3; }
+h3 { font-size: 1.1em;  font-weight: 600; line-height: 1.35; margin-top: 1.6em; }
+
+/* На крупном кегле длинные слова вроде «Имплантация» шире узкого экрана,
+   поэтому разрешаем перенос по слогам — язык страницы объявлен в <html lang="ru">. */
+h1, h2, h3, p, li, dd { hyphens: auto; overflow-wrap: break-word; }
+
+a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: .18em;
+}
+a:hover { text-decoration: none; background: var(--sv-hover-bg); color: var(--sv-hover-fg); }
+
+/* Видимый фокус — обязателен по критерию 2.4.7 */
+:focus-visible {
+  outline: 4px solid var(--sv-focus);
+  outline-offset: 3px;
+}
+
+/* Ссылка «к содержимому» для клавиатуры и скринридеров */
+.sv-skip {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 20;
+  padding: .6em 1em;
+  background: var(--sv-panel);
+  border: 2px solid var(--sv-line);
+}
+.sv-skip:focus { left: 0; }
+
+/* Текст только для скринридеров */
+.sv-sr {
+  position: absolute;
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0;
+  overflow: hidden; clip: rect(0 0 0 0);
+  white-space: nowrap; border: 0;
+}
+
+/* ── Панель настроек ──
+   Панель намеренно не липкая: её кнопки растут вместе с кеглем и на размере
+   200 % заняли бы почти весь экран. Вернуться к ней помогает кнопка
+   «Перейти к началу страницы» внизу. */
+.sv-panel {
+  background: var(--sv-panel);
+  border-bottom: 2px solid var(--sv-line);
+}
+
+.sv-panel__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.2em 2em;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: .8em var(--sv-pad);
+}
+
+.sv-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .5em;
+}
+.sv-group--last { gap: .5em 1em; }
+
+.sv-group__label {
+  font-size: .8em;
+  margin-right: .3em;
+}
+
+.sv-btns { display: flex; flex-wrap: wrap; gap: .4em; }
+
+/* Квадратные кнопки размера и цвета.
+   Сторону считаем от базового кегля страницы, а не от кегля буквы внутри,
+   иначе кнопки выстраиваются лесенкой разной высоты. */
+.sv-sq {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(var(--sv-fs) * 2);
+  height: calc(var(--sv-fs) * 2);
+  padding: 0;
+  font-family: inherit;
+  font-size: .8em;
+  line-height: 1;
+  color: var(--sv-fg);
+  background: transparent;
+  border: 2px solid var(--sv-line);
+  border-radius: 8px;
+  cursor: pointer;
+}
+/* Буква показывает, какой размер шрифта включает кнопка */
+.sv-sq--a1 { font-size: .7em; }
+.sv-sq--a2 { font-size: 1em; }
+.sv-sq--a3 { font-size: 1.4em; }
+
+.sv-sq:hover,
+.sv-sq[aria-pressed="true"] {
+  background: var(--sv-hover-bg);
+  color: var(--sv-hover-fg);
+}
+
+/* Образцы цветовых схем сохраняют свои цвета в любой схеме — это их смысл */
+.sv-sw { border-width: 3px; }
+.sv-sw--default { background: #fff;    color: #000;    }
+.sv-sw--dark    { background: #000;    color: #fff;    }
+.sv-sw--blue    { background: #9dd1ff; color: #185183; }
+.sv-sw--brown   { background: #f7f3d6; color: #4d4b43; }
+.sv-sw--green   { background: #3b2716; color: #a9e44d; }
+.sv-sw:hover,
+.sv-sw[aria-pressed="true"] { outline: 3px solid var(--sv-fg); outline-offset: 2px; }
+
+/* Кнопки-таблетки */
+.sv-pill {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 100%;
+  gap: .5em;
+  min-height: 2.4em;
+  padding: .35em .9em;
+  font-family: inherit;
+  font-size: .8em;
+  line-height: 1.3;
+  color: var(--sv-fg);
+  background: transparent;
+  border: 2px solid var(--sv-line);
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.sv-pill:hover,
+.sv-pill[aria-pressed="true"] {
+  background: var(--sv-hover-bg);
+  color: var(--sv-hover-fg);
+}
+.sv-pill--sans  { font-family: var(--sv-font-sans); }
+.sv-pill--serif { font-family: var(--sv-font-serif); }
+.sv-ico { font-size: 1.1em; line-height: 1; }
+
+.sv-exit { font-weight: 600; }
+
+/* ── Содержимое ── */
+/* Боковые отступы держим в пикселях: в em они росли бы вместе с кеглем
+   и на большом шрифте съедали бы ширину строки. */
+.sv-header,
+.sv-block {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.6em var(--sv-pad) 0;
+}
+
+.sv-header { padding-top: 1.2em; }
+
+.sv-brand {
+  font-size: .85em;
+  margin-bottom: .6em;
+}
+
+.sv-title { margin-bottom: .7em; }
+
+/* Меню разделов: пока не выводится, понадобится при росте спецверсии */
+.sv-nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6em 1.4em;
+  margin: 0 0 var(--sv-gap);
+  padding: 0;
+}
+.sv-nav a { display: inline-block; padding: .2em 0; }
+
+.sv-call {
+  display: inline-block;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  padding: .4em .8em;
+  border: 3px solid var(--sv-line);
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.sv-call:hover { background: var(--sv-hover-bg); color: var(--sv-hover-fg); }
+
+.sv-block {
+  padding-top: 1.8em;
+  border-top: 2px solid var(--sv-line);
+  margin-top: 1.8em;
+}
+
+.sv-block__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .6em 1.2em;
+  margin-bottom: var(--sv-gap);
+}
+.sv-block__head h2 { margin: 0; }
+
+.sv-listen {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 100%;
+  gap: .5em;
+  min-height: 2.2em;
+  padding: .3em .8em;
+  font-family: inherit;
+  font-size: .75em;
+  color: var(--sv-fg);
+  background: transparent;
+  border: 2px solid var(--sv-line);
+  border-radius: 8px;
+  cursor: pointer;
+}
+.sv-listen:hover,
+.sv-listen.is-playing {
+  background: var(--sv-hover-bg);
+  color: var(--sv-hover-fg);
+}
+
+/* Ширина строки — не длиннее 80 знаков (критерий 1.4.8) */
+.sv-text { max-width: 62ch; }
+
+/* Почта и подобные неразрывные строки на крупном шрифте иначе вылезают за экран */
+.sv-text a { overflow-wrap: anywhere; }
+
+.sv-note { font-weight: 600; }
+
+.sv-contacts { margin-bottom: var(--sv-gap); }
+.sv-contacts dt { font-weight: 700; margin-bottom: .2em; }
+.sv-contacts dd { margin: 0 0 1em; }
+
+.sv-copy { font-size: .8em; }
+
+.sv-uptop {
+  max-width: 1400px;
+  margin: 2em auto 0;
+  padding: 0 var(--sv-pad);
+}
+
+/* ── Поля по брейкпоинтам сайта ── */
+@media (min-width: 1600px) { :root { --sv-pad: 160px; } }
+@media (max-width: 1279.98px) { :root { --sv-pad: 48px; } }
+@media (max-width: 1023.98px) { :root { --sv-pad: 40px; } }
+@media (max-width: 767.98px) {
+  :root { --sv-pad: 16px; }
+  .sv-panel__inner { gap: .9em 1.2em; }
+  .sv-text { max-width: none; }
+}
+
+/* ── Мобильные ──
+   На узком экране те же 100/150/200 % считаются от меньшей базы, иначе
+   при 44 px строка не помещается по ширине и появляется горизонтальный скролл. */
+@media (max-width: 640px) {
+  :root { --sv-fs: 20px; }
+  :root[data-font-size="medium"] { --sv-fs: 30px; }
+  :root[data-font-size="large"]  { --sv-fs: 40px; }
+
+  h1 { font-size: 1.25em; }
+  h2 { font-size: 1.15em; }
+  h3 { font-size: 1.05em; }
+
+  .sv-group { width: 100%; }
+}
+
+/* ── Печать ── */
+@media print {
+  .sv-panel, .sv-listen, .sv-uptop { display: none; }
+  body { background: #fff; color: #000; font-size: 14pt; }
+}

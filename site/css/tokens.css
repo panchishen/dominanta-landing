@@ -1,0 +1,297 @@
+/* Кристалис — дизайн-токены. Сгенерировано из Figma (ro7HcMQfATSiCQa6IbhYCc). Не редактировать вручную. */
+
+:root {
+  /* ── Primitives · color ── */
+  --color-accent-100: #E9F9B8;
+  --color-accent-200: #D8F584;
+  --color-accent-300: #C6F157;
+  --color-accent-400: #BFF44A;
+  --color-accent-50: #F5FCE0;
+  --color-accent-500: #B4F03A;
+  --color-accent-600: #97D219;
+  --color-accent-700: #739E0E;
+  --color-accent-800: #4F6E0A;
+  --color-accent-900: #1F3304;
+  --color-error-50: #FCEBEB;
+  --color-error-500: #D83A3A;
+  --color-error-600: #B62A2A;
+  --color-info-50: #E9F1FD;
+  --color-info-500: #2E73D6;
+  --color-info-600: #1F5AB0;
+  --color-neutral-0: #FFFFFF;
+  --color-neutral-100: #EFF2F4;
+  --color-neutral-200: #E2E7EA;
+  --color-neutral-300: #CBD3D8;
+  --color-neutral-400: #9FAAB1;
+  --color-neutral-50: #F7F9FA;
+  --color-neutral-500: #6E7A82;
+  --color-neutral-600: #515C64;
+  --color-neutral-700: #3B454C;
+  --color-neutral-800: #252D32;
+  --color-neutral-900: #141A1E;
+  --color-primary-100: #D9DAF6;
+  --color-primary-200: #B7B8EE;
+  --color-primary-300: #9092E6;
+  --color-primary-400: #6366DA;
+  --color-primary-50: #EEEEFB;
+  --color-primary-500: #3538CD;
+  --color-primary-600: #2A2DAE;
+  --color-primary-700: #23258C;
+  --color-primary-800: #1D1E6E;
+  --color-primary-900: #161747;
+  --color-success-50: #E7F6EE;
+  --color-success-500: #1E9E5A;
+  --color-success-600: #157A45;
+  --color-warning-50: #FDF3E2;
+  --color-warning-500: #E08A12;
+  --color-warning-600: #B86E0C;
+  --color-brand-50: #F5FCE0;
+  --color-brand-100: #E9F9B8;
+  --color-brand-200: #D8F584;
+  --color-brand-300: #C6F157;
+  --color-brand-400: #BFF44A;
+  --color-brand-500: #B4F03A;
+  --color-brand-600: #97D219;
+  --color-brand-700: #739E0E;
+  --color-brand-800: #4F6E0A;
+  --color-brand-900: #1F3304;
+  --color-brand-on: #1F3304;
+
+  /* ── Scale · spacing / radius / border / icon / layout / opacity / motion / breakpoints ── */
+  --border-lg: 2px;
+  --border-md: 1.5px;
+  --border-sm: 1px;
+  --bp-desktop: 1440px;
+  --bp-laptop: 1024px;
+  --bp-mobile: 375px;
+  --bp-tablet: 768px;
+  --icon-2xl: 40px;
+  --icon-lg: 24px;
+  --icon-md: 20px;
+  --icon-sm: 16px;
+  --icon-xl: 32px;
+  --layout-columns: 12;
+  --layout-container-max: 1200px;
+  --layout-gutter: 24px;
+  --motion-duration-base: 200ms;
+  --motion-duration-exit: 150ms;
+  --motion-duration-fast: 150ms;
+  --motion-duration-moderate: 300ms;
+  --motion-duration-slow: 400ms;
+  --motion-easing-enter: cubic-bezier(0, 0, 0.2, 1);
+  --motion-easing-exit: cubic-bezier(0.4, 0, 1, 1);
+  --motion-easing-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --motion-easing-standard: cubic-bezier(0.2, 0, 0, 1);
+  --opacity-backdrop: 0.5;
+  --opacity-disabled: 0.4;
+  --opacity-hover: 0.08;
+  --opacity-pressed: 0.12;
+  --radius-2xl: 32px;
+  --radius-full: 999px;
+  --radius-lg: 16px;
+  --radius-md: 12px;
+  --radius-none: 0px;
+  --radius-sm: 8px;
+  --radius-xl: 24px;
+  --radius-xs: 4px;
+  --space-2xl: 48px;
+  --space-2xs: 4px;
+  --space-3xl: 64px;
+  --space-3xs: 2px;
+  --space-4xl: 96px;
+  --space-5xl: 128px;
+  --space-container-x: 24px;
+  --space-grid-gap: 24px;
+  --space-lg: 24px;
+  --space-md: 16px;
+  --space-section-y: 96px;
+  --space-section-y-mobile: 56px;
+  --space-sm: 12px;
+  --space-xl: 32px;
+  --space-xs: 8px;
+
+  /* ── Elevation · shadows ── */
+  --shadow-focus: 0px 0px 0px 4px #97D21940;
+  --shadow-lg: 0px 12px 28px 0px #101E281F;
+  --shadow-md: 0px 6px 16px 0px #101E281A;
+  --shadow-sm: 0px 2px 6px 0px #101E2814;
+  --shadow-xl: 0px 24px 48px 0px #101E2829;
+  --shadow-xs: 0px 1px 2px 0px #101E280F;
+
+  /* ── Typography ── */
+  --font-sans: 'Onest', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  /* ── Semantic · color (Light) — alias → primitive ── */
+  --color-action-primary: var(--color-brand-500);
+  --color-action-primary-hover: var(--color-brand-600);
+  --color-action-neutral: var(--color-neutral-900);
+  --color-action-neutral-hover: var(--color-neutral-800);
+  --color-action-neutral-pressed: var(--color-neutral-900);
+  --color-action-secondary: var(--color-neutral-100);
+  --color-action-secondary-hover: var(--color-neutral-200);
+  --color-bg-accent-subtle: var(--color-brand-50);
+  --color-bg-brand-subtle: var(--color-neutral-100);
+  --color-bg-canvas: var(--color-neutral-0);
+  --color-bg-inverse: var(--color-neutral-900);
+  --color-bg-muted: var(--color-neutral-100);
+  --color-bg-subtle: var(--color-neutral-50);
+  --color-border-accent: var(--color-brand-500);
+  --color-border-default: var(--color-neutral-200);
+  --color-border-error: var(--color-error-500);
+  --color-border-focus: var(--color-brand-600);
+  --color-border-strong: var(--color-neutral-300);
+  --color-border-subtle: var(--color-neutral-100);
+  --color-feedback-error: var(--color-error-500);
+  --color-feedback-error-bg: var(--color-error-50);
+  --color-feedback-info: var(--color-info-500);
+  --color-feedback-info-bg: var(--color-info-50);
+  --color-feedback-success: var(--color-success-500);
+  --color-feedback-success-bg: var(--color-success-50);
+  --color-feedback-warning: var(--color-warning-500);
+  --color-feedback-warning-bg: var(--color-warning-50);
+  --color-focus-ring: var(--color-brand-600);
+  --color-surface-default: var(--color-neutral-0);
+  --color-surface-sunken: var(--color-neutral-50);
+  --color-text-accent: var(--color-brand-700);
+  --color-text-accent-on-dark: var(--color-brand-400);
+  --color-text-accent-strong: var(--color-brand-800);
+  --color-text-brand: var(--color-brand-800);
+  --color-text-disabled: var(--color-neutral-400);
+  --color-text-error: var(--color-error-600);
+  --color-text-inverse: var(--color-neutral-0);
+  --color-text-on-primary: var(--color-brand-on);
+  --color-text-on-neutral: var(--color-neutral-0);
+  --color-text-primary: var(--color-neutral-900);
+  --color-text-secondary: var(--color-neutral-600);
+  --color-text-success: var(--color-success-600);
+  --color-text-tertiary: var(--color-neutral-500);
+}
+
+/* ── Typography utility classes ── */
+.text-body-lg {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0;
+}
+.text-body-md {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0;
+}
+.text-body-sm {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0;
+}
+.text-button-lg {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 24px;
+  letter-spacing: 0;
+}
+.text-button-md {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0;
+}
+.text-button-sm {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0;
+}
+.text-caption {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0;
+}
+.text-display {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 60px;
+  line-height: 64px;
+  letter-spacing: -0.015em;
+}
+.text-h1 {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: -0.01em;
+}
+.text-h2 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 38px;
+  line-height: 46px;
+  letter-spacing: -0.005em;
+}
+.text-h3 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 38px;
+  letter-spacing: 0;
+}
+.text-h4 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0;
+}
+.text-h5 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0;
+}
+.text-label-lg {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0;
+}
+.text-label-md {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0;
+}
+.text-label-sm {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0;
+}
+.text-overline {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.text-quote {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 32px;
+  letter-spacing: 0;
+}

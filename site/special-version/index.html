@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru" data-font-size="small" data-color-scheme="default" data-spacing="normal" data-font="sans" data-sound="on">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Версия для слабовидящих — стоматология «Кристалис»</title>
+  <meta name="description" content="Версия сайта клиники «Кристалис» для слабовидящих: крупный шрифт, контрастные цветовые схемы, озвучивание текста.">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="sv.css">
+  <!-- Настройки применяются до отрисовки, иначе страница мигает исходной схемой. -->
+  <script>
+    (function () {
+      var d = document.documentElement;
+      var map = {
+        'sv-font-size': 'data-font-size',
+        'sv-color-scheme': 'data-color-scheme',
+        'sv-spacing': 'data-spacing',
+        'sv-font': 'data-font',
+        'sv-sound': 'data-sound'
+      };
+      try {
+        for (var key in map) {
+          var v = localStorage.getItem(key);
+          if (v) d.setAttribute(map[key], v);
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+
+  <a class="sv-skip" href="#sv-main">Перейти к основному содержанию</a>
+
+  <!-- ПАНЕЛЬ НАСТРОЕК -->
+  <div class="sv-panel" role="toolbar" aria-label="Настройки отображения страницы">
+    <div class="sv-panel__inner">
+
+      <div class="sv-group">
+        <span class="sv-group__label" id="sv-lbl-size">Размер шрифта</span>
+        <div class="sv-btns" role="group" aria-labelledby="sv-lbl-size">
+          <button type="button" class="sv-sq sv-sq--a1" data-set="fontSize" data-value="small" aria-pressed="true" aria-label="Размер шрифта: обычный">А</button>
+          <button type="button" class="sv-sq sv-sq--a2" data-set="fontSize" data-value="medium" aria-pressed="false" aria-label="Размер шрифта: крупный">А</button>
+          <button type="button" class="sv-sq sv-sq--a3" data-set="fontSize" data-value="large" aria-pressed="false" aria-label="Размер шрифта: очень крупный">А</button>
+        </div>
+      </div>
+
+      <div class="sv-group">
+        <span class="sv-group__label" id="sv-lbl-color">Цвета</span>
+        <div class="sv-btns" role="group" aria-labelledby="sv-lbl-color">
+          <button type="button" class="sv-sq sv-sw sv-sw--default" data-set="colorScheme" data-value="default" aria-pressed="true" aria-label="Цветовая схема: чёрным по белому">Ц</button>
+          <button type="button" class="sv-sq sv-sw sv-sw--dark" data-set="colorScheme" data-value="dark" aria-pressed="false" aria-label="Цветовая схема: белым по чёрному">Ц</button>
+          <button type="button" class="sv-sq sv-sw sv-sw--blue" data-set="colorScheme" data-value="blue" aria-pressed="false" aria-label="Цветовая схема: тёмно-синим по голубому">Ц</button>
+          <button type="button" class="sv-sq sv-sw sv-sw--brown" data-set="colorScheme" data-value="brown" aria-pressed="false" aria-label="Цветовая схема: коричневым по бежевому">Ц</button>
+          <button type="button" class="sv-sq sv-sw sv-sw--green" data-set="colorScheme" data-value="green" aria-pressed="false" aria-label="Цветовая схема: зелёным по тёмно-коричневому">Ц</button>
+        </div>
+      </div>
+
+      <div class="sv-group">
+        <span class="sv-group__label" id="sv-lbl-space">Интервал</span>
+        <div class="sv-btns" role="group" aria-labelledby="sv-lbl-space">
+          <button type="button" class="sv-pill" data-set="spacing" data-value="normal" aria-pressed="true" aria-label="Интервал между буквами и строками: обычный">Обычный</button>
+          <button type="button" class="sv-pill" data-set="spacing" data-value="wide" aria-pressed="false" aria-label="Интервал между буквами и строками: увеличенный">Увеличенный</button>
+        </div>
+      </div>
+
+      <div class="sv-group">
+        <span class="sv-group__label" id="sv-lbl-font">Шрифт</span>
+        <div class="sv-btns" role="group" aria-labelledby="sv-lbl-font">
+          <button type="button" class="sv-pill sv-pill--sans" data-set="font" data-value="sans" aria-pressed="true" aria-label="Шрифт без засечек">Без засечек</button>
+          <button type="button" class="sv-pill sv-pill--serif" data-set="font" data-value="serif" aria-pressed="false" aria-label="Шрифт с засечками">С засечками</button>
+        </div>
+      </div>
+
+      <div class="sv-group sv-group--last">
+        <button type="button" class="sv-pill sv-pill--icon" id="sv-sound" aria-pressed="true" aria-label="Голосовые подсказки: включены">
+          <span class="sv-ico" aria-hidden="true">🔊</span><span class="sv-sound__text">Звук включён</span>
+        </button>
+        <a class="sv-pill sv-pill--icon sv-exit" href="../">
+          <span class="sv-ico" aria-hidden="true">👁</span>Обычная версия сайта
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ШАПКА -->
+  <header class="sv-header">
+    <p class="sv-brand">Стоматология «Кристалис»</p>
+    <h1 class="sv-title">Имплантация зубов под ключ в Москве</h1>
+
+    <!-- Меню разделов сознательно не выводим: вся спецверсия умещается на одной
+         странице. Когда разделов станет больше, сюда вернётся <nav class="sv-nav">
+         со списком ссылок — стили для него лежат в sv.css. -->
+
+    <p class="sv-cta">
+      <a class="sv-call" href="tel:+74951234567">Позвонить: +7 (495) 123-45-67</a>
+    </p>
+  </header>
+
+  <main id="sv-main" tabindex="-1">
+
+    <!-- О КЛИНИКЕ -->
+    <section class="sv-block" id="sv-about" aria-labelledby="sv-h-about">
+      <div class="sv-block__head">
+        <h2 id="sv-h-about">О клинике</h2>
+        <button type="button" class="sv-listen" data-speak="#sv-about">
+          <span class="sv-ico" aria-hidden="true">🔊</span>Прослушать
+        </button>
+      </div>
+
+      <div class="sv-text">
+        <p>Клиника «Кристалис» занимается имплантацией и лечением зубов: от одного зуба до полного восстановления челюсти.</p>
+        <ul>
+          <li>Лечим без боли — под местной анестезией или в седации.</li>
+          <li>Гарантию на приживление имплантов закрепляем письменно.</li>
+          <li>Приживаемость имплантов — 99 процентов.</li>
+          <li>Установили более 20 тысяч имплантов. Это один из самых больших показателей в Центральном округе Москвы.</li>
+          <li>Первичная консультация врача — бесплатно.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- УСЛУГИ -->
+    <section class="sv-block" id="sv-services" aria-labelledby="sv-h-services">
+      <div class="sv-block__head">
+        <h2 id="sv-h-services">Услуги и цены</h2>
+        <button type="button" class="sv-listen" data-speak="#sv-services">
+          <span class="sv-ico" aria-hidden="true">🔊</span>Прослушать
+        </button>
+      </div>
+
+      <div class="sv-text">
+        <h3>Имплантация одного или нескольких зубов</h3>
+        <p>Цена: от 125 000 рублей. Рассрочка 0 процентов. Гарантия на работу.</p>
+        <p>Поставим имплант на месте удалённого зуба. Соседние зубы останутся целыми — их не нужно обтачивать под мост.</p>
+
+        <h3>Полное восстановление зубов</h3>
+        <p>Цена: от 149 900 рублей. Новые зубы за 1 день. Без долгой костной пластики.</p>
+        <p>Вернём зубы на челюсти, даже если своих не осталось. Несъёмный протез ставим в день операции — домой вы уходите с зубами.</p>
+
+        <h3>Протезирование на имплантах</h3>
+        <p>Цена: от 24 900 рублей. Срок изготовления — от 1 дня.</p>
+        <p>Изготовим коронку, мост или полный протез в собственной лаборатории. Подберём цвет и форму под лицо, чтобы зубы выглядели естественно.</p>
+
+        <h3>Имплантация без боли</h3>
+        <p>Цена: от 9 600 рублей. Седация, лечение во сне. Подходит при страхе стоматолога.</p>
+        <p>Операцию проводим под местной анестезией, в седации или в медикаментозном сне. Боли вы не почувствуете, саму процедуру не запомните.</p>
+
+        <h3>Другие услуги</h3>
+        <ul>
+          <li>Лечение кариеса — от 3 500 рублей.</li>
+          <li>Лечение корневых каналов — от 6 900 рублей.</li>
+          <li>Комплексная профессиональная чистка — от 5 900 рублей.</li>
+          <li>Виниры — от 21 165 рублей.</li>
+          <li>Отбеливание зубов — от 12 000 рублей.</li>
+        </ul>
+
+        <p class="sv-note">Каждый случай индивидуален. Точную стоимость лечения врач называет в клинике после консультации.</p>
+
+        <p><a class="sv-call" href="tel:+74951234567">Записаться на бесплатный приём: +7 (495) 123-45-67</a></p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- КОНТАКТЫ -->
+  <footer class="sv-block sv-block--footer" id="sv-contacts" aria-labelledby="sv-h-contacts">
+    <div class="sv-block__head">
+      <h2 id="sv-h-contacts">Контакты</h2>
+      <button type="button" class="sv-listen" data-speak="#sv-contacts">
+        <span class="sv-ico" aria-hidden="true">🔊</span>Прослушать
+      </button>
+    </div>
+
+    <div class="sv-text">
+      <dl class="sv-contacts">
+        <dt>Адрес</dt>
+        <dd>Москва, улица Примерная, дом 12</dd>
+
+        <dt>Телефон</dt>
+        <dd><a href="tel:+74951234567">+7 (495) 123-45-67</a></dd>
+
+        <dt>Электронная почта</dt>
+        <dd><a href="mailto:hello@kristalis.ru">hello@kristalis.ru</a></dd>
+
+        <dt>Часы работы</dt>
+        <dd>Понедельник — воскресенье, с 9:00 до 21:00</dd>
+      </dl>
+
+      <p>
+        <a class="sv-pill sv-pill--icon" href="https://yandex.ru/maps/?rtext=~55.752023,37.617499&amp;rtt=auto&amp;z=15" target="_blank" rel="noopener noreferrer">
+          Построить маршрут на карте
+        </a>
+      </p>
+
+      <p class="sv-copy">© 2026 Кристалис. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <p class="sv-uptop">
+    <button type="button" class="sv-pill sv-pill--icon" id="sv-top">
+      <span class="sv-ico" aria-hidden="true">↑</span>Перейти к началу страницы
+    </button>
+  </p>
+
+  <div class="sv-sr" id="sv-live" role="status" aria-live="polite"></div>
+
+  <script src="sv.js"></script>
+</body>
+</html>

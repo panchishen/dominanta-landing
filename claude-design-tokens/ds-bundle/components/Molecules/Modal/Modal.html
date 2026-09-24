@@ -1,0 +1,505 @@
+<!-- @dsCard group="Molecules" name="Modal" subtitle="Диалог записи" viewport="900x1120" -->
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8"><style>
+/* Кристалис — дизайн-токены. Сгенерировано из Figma (ro7HcMQfATSiCQa6IbhYCc). Не редактировать вручную. */
+
+:root {
+  /* ── Primitives · color ── */
+  --color-accent-100: #E9F9B8;
+  --color-accent-200: #D8F584;
+  --color-accent-300: #C6F157;
+  --color-accent-400: #BFF44A;
+  --color-accent-50: #F5FCE0;
+  --color-accent-500: #B4F03A;
+  --color-accent-600: #97D219;
+  --color-accent-700: #739E0E;
+  --color-accent-800: #4F6E0A;
+  --color-accent-900: #1F3304;
+  --color-error-50: #FCEBEB;
+  --color-error-500: #D83A3A;
+  --color-error-600: #B62A2A;
+  --color-info-50: #E9F1FD;
+  --color-info-500: #2E73D6;
+  --color-info-600: #1F5AB0;
+  --color-neutral-0: #FFFFFF;
+  --color-neutral-100: #EFF2F4;
+  --color-neutral-200: #E2E7EA;
+  --color-neutral-300: #CBD3D8;
+  --color-neutral-400: #9FAAB1;
+  --color-neutral-50: #F7F9FA;
+  --color-neutral-500: #6E7A82;
+  --color-neutral-600: #515C64;
+  --color-neutral-700: #3B454C;
+  --color-neutral-800: #252D32;
+  --color-neutral-900: #141A1E;
+  --color-primary-100: #D9DAF6;
+  --color-primary-200: #B7B8EE;
+  --color-primary-300: #9092E6;
+  --color-primary-400: #6366DA;
+  --color-primary-50: #EEEEFB;
+  --color-primary-500: #3538CD;
+  --color-primary-600: #2A2DAE;
+  --color-primary-700: #23258C;
+  --color-primary-800: #1D1E6E;
+  --color-primary-900: #161747;
+  --color-success-50: #E7F6EE;
+  --color-success-500: #1E9E5A;
+  --color-success-600: #157A45;
+  --color-warning-50: #FDF3E2;
+  --color-warning-500: #E08A12;
+  --color-warning-600: #B86E0C;
+
+  /* ── Scale · spacing / radius / border / icon / layout / opacity / motion / breakpoints ── */
+  --border-lg: 2px;
+  --border-md: 1.5px;
+  --border-sm: 1px;
+  --bp-desktop: 1440px;
+  --bp-laptop: 1024px;
+  --bp-mobile: 375px;
+  --bp-tablet: 768px;
+  --icon-2xl: 40px;
+  --icon-lg: 24px;
+  --icon-md: 20px;
+  --icon-sm: 16px;
+  --icon-xl: 32px;
+  --layout-columns: 12;
+  --layout-container-max: 1200px;
+  --layout-gutter: 24px;
+  --motion-duration-base: 200ms;
+  --motion-duration-exit: 150ms;
+  --motion-duration-fast: 150ms;
+  --motion-duration-moderate: 300ms;
+  --motion-duration-slow: 400ms;
+  --motion-easing-enter: cubic-bezier(0, 0, 0.2, 1);
+  --motion-easing-exit: cubic-bezier(0.4, 0, 1, 1);
+  --motion-easing-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --motion-easing-standard: cubic-bezier(0.2, 0, 0, 1);
+  --opacity-backdrop: 0.5;
+  --opacity-disabled: 0.4;
+  --opacity-hover: 0.08;
+  --opacity-pressed: 0.12;
+  --radius-2xl: 32px;
+  --radius-full: 999px;
+  --radius-lg: 16px;
+  --radius-md: 12px;
+  --radius-none: 0px;
+  --radius-sm: 8px;
+  --radius-xl: 24px;
+  --radius-xs: 4px;
+  --space-2xl: 48px;
+  --space-2xs: 4px;
+  --space-3xl: 64px;
+  --space-3xs: 2px;
+  --space-4xl: 96px;
+  --space-5xl: 128px;
+  --space-container-x: 24px;
+  --space-grid-gap: 24px;
+  --space-lg: 24px;
+  --space-md: 16px;
+  --space-section-y: 96px;
+  --space-section-y-mobile: 56px;
+  --space-sm: 12px;
+  --space-xl: 32px;
+  --space-xs: 8px;
+
+  /* ── Elevation · shadows ── */
+  --shadow-focus: 0px 0px 0px 4px #6366DA40;
+  --shadow-lg: 0px 12px 28px 0px #101E281F;
+  --shadow-md: 0px 6px 16px 0px #101E281A;
+  --shadow-sm: 0px 2px 6px 0px #101E2814;
+  --shadow-xl: 0px 24px 48px 0px #101E2829;
+  --shadow-xs: 0px 1px 2px 0px #101E280F;
+
+  /* ── Typography ── */
+  --font-sans: 'Onest', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  /* ── Semantic · color (Light) — alias → primitive ── */
+  --color-action-primary: var(--color-accent-500);
+  --color-action-primary-hover: var(--color-accent-600);
+  --color-action-neutral: var(--color-primary-500);
+  --color-action-neutral-hover: var(--color-primary-600);
+  --color-action-neutral-pressed: var(--color-primary-700);
+  --color-action-secondary: var(--color-primary-50);
+  --color-action-secondary-hover: var(--color-primary-100);
+  --color-bg-accent-subtle: var(--color-accent-50);
+  --color-bg-brand-subtle: var(--color-primary-50);
+  --color-bg-canvas: var(--color-neutral-0);
+  --color-bg-inverse: var(--color-primary-900);
+  --color-bg-muted: var(--color-neutral-100);
+  --color-bg-subtle: var(--color-neutral-50);
+  --color-border-accent: var(--color-accent-500);
+  --color-border-default: var(--color-neutral-200);
+  --color-border-error: var(--color-error-500);
+  --color-border-focus: var(--color-primary-500);
+  --color-border-strong: var(--color-neutral-300);
+  --color-border-subtle: var(--color-neutral-100);
+  --color-feedback-error: var(--color-error-500);
+  --color-feedback-error-bg: var(--color-error-50);
+  --color-feedback-info: var(--color-info-500);
+  --color-feedback-info-bg: var(--color-info-50);
+  --color-feedback-success: var(--color-success-500);
+  --color-feedback-success-bg: var(--color-success-50);
+  --color-feedback-warning: var(--color-warning-500);
+  --color-feedback-warning-bg: var(--color-warning-50);
+  --color-focus-ring: var(--color-primary-400);
+  --color-surface-default: var(--color-neutral-0);
+  --color-surface-sunken: var(--color-neutral-50);
+  --color-text-accent: var(--color-accent-800);
+  --color-text-brand: var(--color-primary-700);
+  --color-text-disabled: var(--color-neutral-400);
+  --color-text-error: var(--color-error-600);
+  --color-text-inverse: var(--color-neutral-0);
+  --color-text-on-primary: var(--color-accent-900);
+  --color-text-on-neutral: var(--color-neutral-0);
+  --color-text-primary: var(--color-neutral-900);
+  --color-text-secondary: var(--color-neutral-600);
+  --color-text-success: var(--color-success-600);
+  --color-text-tertiary: var(--color-neutral-500);
+}
+
+/* ── Typography utility classes ── */
+.text-body-lg {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0;
+}
+.text-body-md {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0;
+}
+.text-body-sm {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0;
+}
+.text-button-lg {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 24px;
+  letter-spacing: 0;
+}
+.text-button-md {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0;
+}
+.text-button-sm {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0;
+}
+.text-caption {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0;
+}
+.text-display {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 64px;
+  letter-spacing: -0.015em;
+}
+.text-h1 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: -0.01em;
+}
+.text-h2 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 38px;
+  line-height: 46px;
+  letter-spacing: -0.005em;
+}
+.text-h3 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 38px;
+  letter-spacing: 0;
+}
+.text-h4 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0;
+}
+.text-h5 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0;
+}
+.text-label-lg {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0;
+}
+.text-label-md {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0;
+}
+.text-label-sm {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0;
+}
+.text-overline {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.text-quote {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 32px;
+  letter-spacing: 0;
+}
+
+/* ── preview scaffold ── */
+@import url("../../../fonts/onest.css");
+*{box-sizing:border-box}html,body{margin:0}
+body{font-family:var(--font-sans);background:var(--color-bg-canvas);color:var(--color-text-primary);padding:32px;-webkit-font-smoothing:antialiased}
+.ds-wrap{display:flex;flex-direction:column;gap:28px;max-width:1080px;margin:0 auto}
+.ds-title{font-weight:600;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-text-tertiary);margin:0}
+.ds-grid{display:flex;flex-wrap:wrap;gap:16px;align-items:flex-start}
+.ds-stack{display:flex;flex-direction:column;gap:10px}
+.ds-cap{font-size:12px;line-height:1.4;color:var(--color-text-tertiary)}
+.ds-cap b{color:var(--color-text-secondary);font-weight:600}
+.ds-cell{display:flex;flex-direction:column;gap:6px;align-items:flex-start}
+</style></head>
+<body><div class="ds-wrap">
+<style>
+  .mdl-cell { display: flex; flex-direction: column; gap: var(--space-sm); align-items: flex-start; }
+
+  /* Подложка-оверлей */
+  .mdl-scrim {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-2xl);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+  }
+  .mdl-scrim::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--color-bg-inverse);
+    opacity: .5;
+  }
+
+  /* Модалка */
+  .mdl {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 440px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    padding: var(--space-2xl);
+    background: var(--color-surface-default);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-xl);
+  }
+
+  /* Шапка */
+  .mdl-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--space-md);
+  }
+  .mdl-head-text { display: flex; flex-direction: column; gap: var(--space-3xs); }
+  .mdl-title { color: var(--color-text-primary); }
+  .mdl-sub { color: var(--color-text-secondary); }
+
+  .mdl-close {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    margin: calc(-1 * var(--space-2xs)) calc(-1 * var(--space-2xs)) 0 0;
+    border: none;
+    border-radius: var(--radius-md);
+    background: transparent;
+    color: var(--color-text-tertiary);
+    cursor: pointer;
+  }
+  .mdl-close:hover { background: var(--color-bg-subtle); color: var(--color-text-primary); }
+  .mdl-close svg { display: block; width: var(--icon-md); height: var(--icon-md); }
+
+  /* Тело */
+  .mdl-body { display: flex; flex-direction: column; gap: var(--space-md); }
+  .mdl-field { display: flex; flex-direction: column; gap: var(--space-3xs); }
+  .mdl-flabel { color: var(--color-text-secondary); }
+  .mdl-control {
+    position: relative;
+    height: 44px;
+    box-sizing: border-box;
+    padding: 0 var(--space-sm);
+    display: flex;
+    align-items: center;
+    border-radius: var(--radius-md);
+    border: var(--border-md) solid var(--color-border-default);
+    background: var(--color-surface-default);
+  }
+  .mdl-control--select { padding-right: 40px; }
+  .mdl-ph { color: var(--color-text-tertiary); }
+  .mdl-val { color: var(--color-text-primary); }
+  .mdl-chevron {
+    position: absolute;
+    right: var(--space-sm);
+    top: 50%;
+    transform: translateY(-50%);
+    width: var(--icon-md);
+    height: var(--icon-md);
+    color: var(--color-text-tertiary);
+    pointer-events: none;
+  }
+  .mdl-chevron svg { display: block; width: var(--icon-md); height: var(--icon-md); }
+  .mdl-helper { color: var(--color-text-tertiary); }
+
+  /* Низ */
+  .mdl-foot {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--space-sm);
+  }
+  .mdl-btn {
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 var(--space-lg);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+  }
+  .mdl-btn--white {
+    background: var(--color-surface-default);
+    color: var(--color-text-secondary);
+  }
+  .mdl-btn--white:hover { background: var(--color-bg-subtle); color: var(--color-text-primary); }
+  .mdl-btn--primary {
+    background: var(--color-action-neutral);
+    color: var(--color-text-on-neutral);
+  }
+  .mdl-btn--primary:hover { background: var(--color-action-neutral-hover); }
+
+  /* Состояние «отправлено» */
+  .mdl--success { align-items: center; text-align: center; gap: var(--space-md); }
+  .mdl-close--abs { position: absolute; top: var(--space-lg); right: var(--space-lg); margin: 0; }
+  .mdl-badge {
+    width: 96px; height: 96px;
+    border-radius: var(--radius-full);
+    background: var(--color-bg-accent-subtle);
+    display: flex; align-items: center; justify-content: center;
+    margin-top: var(--space-xs);
+  }
+  .mdl-badge svg { display: block; width: 48px; height: 48px; color: var(--color-text-accent); }
+  .mdl-ok-title { color: var(--color-text-primary); }
+  .mdl-ok-text { color: var(--color-text-secondary); max-width: 320px; }
+</style>
+
+<div class="ds-title">Modal · Molecules</div>
+
+<div class="mdl-cell">
+
+  <div class="mdl-scrim">
+    <div class="mdl" role="dialog" aria-modal="true" aria-labelledby="mdl-ttl">
+
+      <div class="mdl-head">
+        <div class="mdl-head-text">
+          <div class="mdl-title text-h4" id="mdl-ttl">Записаться на приём</div>
+          <div class="mdl-sub text-body-sm">Стоматология «Кристалис»</div>
+        </div>
+        <button class="mdl-close" type="button" aria-label="Закрыть">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+
+      <div class="mdl-body">
+
+        <div class="mdl-field">
+          <label class="mdl-flabel text-label-md">Имя</label>
+          <div class="mdl-control"><span class="mdl-ph text-body-md">Как к вам обращаться</span></div>
+        </div>
+
+        <div class="mdl-field">
+          <label class="mdl-flabel text-label-md">Услуга</label>
+          <div class="mdl-control mdl-control--select">
+            <span class="mdl-val text-body-md">Профессиональная гигиена</span>
+            <span class="mdl-chevron" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            </span>
+          </div>
+          <span class="mdl-helper text-caption">Перезвоним в течение 15 минут</span>
+        </div>
+
+      </div>
+
+      <div class="mdl-foot">
+        <button class="mdl-btn mdl-btn--white text-button-md" type="button">Отмена</button>
+        <button class="mdl-btn mdl-btn--primary text-button-md" type="button">Отправить</button>
+      </div>
+
+    </div>
+  </div>
+  <span class="ds-cap">Диалог записи</span>
+
+</div>
+<div class="mdl-cell">
+
+  <div class="mdl-scrim">
+    <div class="mdl mdl--success" role="dialog" aria-modal="true" aria-labelledby="mdl-ok-ttl">
+      <button class="mdl-close mdl-close--abs" type="button" aria-label="Закрыть">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <div class="mdl-badge" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.0007 1.20825 18.3195 3.68108 20.7923 4.99992 18.3195 6.31876 17.0007 8.79159 15.6818 6.31876 13.209 4.99992 15.6818 3.68108 17.0007 1.20825ZM8.00065 4.33325 10.6673 9.33325 15.6673 11.9999 10.6673 14.6666 8.00065 19.6666 5.33398 14.6666.333984 11.9999 5.33398 9.33325 8.00065 4.33325ZM19.6673 16.3333 18.0007 13.2083 16.334 16.3333 13.209 17.9999 16.334 19.6666 18.0007 22.7916 19.6673 19.6666 22.7923 17.9999 19.6673 16.3333Z"/></svg>
+      </div>
+      <div class="mdl-ok-title text-h4" id="mdl-ok-ttl">Ваша заявка отправлена!</div>
+      <div class="mdl-ok-text text-body-md">Мы перезвоним в течение 15 минут и подберём удобное время.</div>
+    </div>
+  </div>
+  <span class="ds-cap">Состояние «отправлено»</span>
+
+</div>
+</div></body></html>

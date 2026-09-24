@@ -1,0 +1,384 @@
+<!-- @dsCard group="Molecules" name="Card / Service" subtitle="Default · Hover" viewport="800x460" -->
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8"><style>
+/* Кристалис — дизайн-токены. Сгенерировано из Figma (ro7HcMQfATSiCQa6IbhYCc). Не редактировать вручную. */
+
+:root {
+  /* ── Primitives · color ── */
+  --color-accent-100: #E9F9B8;
+  --color-accent-200: #D8F584;
+  --color-accent-300: #C6F157;
+  --color-accent-400: #BFF44A;
+  --color-accent-50: #F5FCE0;
+  --color-accent-500: #B4F03A;
+  --color-accent-600: #97D219;
+  --color-accent-700: #739E0E;
+  --color-accent-800: #4F6E0A;
+  --color-accent-900: #1F3304;
+  --color-error-50: #FCEBEB;
+  --color-error-500: #D83A3A;
+  --color-error-600: #B62A2A;
+  --color-info-50: #E9F1FD;
+  --color-info-500: #2E73D6;
+  --color-info-600: #1F5AB0;
+  --color-neutral-0: #FFFFFF;
+  --color-neutral-100: #EFF2F4;
+  --color-neutral-200: #E2E7EA;
+  --color-neutral-300: #CBD3D8;
+  --color-neutral-400: #9FAAB1;
+  --color-neutral-50: #F7F9FA;
+  --color-neutral-500: #6E7A82;
+  --color-neutral-600: #515C64;
+  --color-neutral-700: #3B454C;
+  --color-neutral-800: #252D32;
+  --color-neutral-900: #141A1E;
+  --color-primary-100: #D9DAF6;
+  --color-primary-200: #B7B8EE;
+  --color-primary-300: #9092E6;
+  --color-primary-400: #6366DA;
+  --color-primary-50: #EEEEFB;
+  --color-primary-500: #3538CD;
+  --color-primary-600: #2A2DAE;
+  --color-primary-700: #23258C;
+  --color-primary-800: #1D1E6E;
+  --color-primary-900: #161747;
+  --color-success-50: #E7F6EE;
+  --color-success-500: #1E9E5A;
+  --color-success-600: #157A45;
+  --color-warning-50: #FDF3E2;
+  --color-warning-500: #E08A12;
+  --color-warning-600: #B86E0C;
+
+  /* ── Scale · spacing / radius / border / icon / layout / opacity / motion / breakpoints ── */
+  --border-lg: 2px;
+  --border-md: 1.5px;
+  --border-sm: 1px;
+  --bp-desktop: 1440px;
+  --bp-laptop: 1024px;
+  --bp-mobile: 375px;
+  --bp-tablet: 768px;
+  --icon-2xl: 40px;
+  --icon-lg: 24px;
+  --icon-md: 20px;
+  --icon-sm: 16px;
+  --icon-xl: 32px;
+  --layout-columns: 12;
+  --layout-container-max: 1200px;
+  --layout-gutter: 24px;
+  --motion-duration-base: 200ms;
+  --motion-duration-exit: 150ms;
+  --motion-duration-fast: 150ms;
+  --motion-duration-moderate: 300ms;
+  --motion-duration-slow: 400ms;
+  --motion-easing-enter: cubic-bezier(0, 0, 0.2, 1);
+  --motion-easing-exit: cubic-bezier(0.4, 0, 1, 1);
+  --motion-easing-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --motion-easing-standard: cubic-bezier(0.2, 0, 0, 1);
+  --opacity-backdrop: 0.5;
+  --opacity-disabled: 0.4;
+  --opacity-hover: 0.08;
+  --opacity-pressed: 0.12;
+  --radius-2xl: 32px;
+  --radius-full: 999px;
+  --radius-lg: 16px;
+  --radius-md: 12px;
+  --radius-none: 0px;
+  --radius-sm: 8px;
+  --radius-xl: 24px;
+  --radius-xs: 4px;
+  --space-2xl: 48px;
+  --space-2xs: 4px;
+  --space-3xl: 64px;
+  --space-3xs: 2px;
+  --space-4xl: 96px;
+  --space-5xl: 128px;
+  --space-container-x: 24px;
+  --space-grid-gap: 24px;
+  --space-lg: 24px;
+  --space-md: 16px;
+  --space-section-y: 96px;
+  --space-section-y-mobile: 56px;
+  --space-sm: 12px;
+  --space-xl: 32px;
+  --space-xs: 8px;
+
+  /* ── Elevation · shadows ── */
+  --shadow-focus: 0px 0px 0px 4px #6366DA40;
+  --shadow-lg: 0px 12px 28px 0px #101E281F;
+  --shadow-md: 0px 6px 16px 0px #101E281A;
+  --shadow-sm: 0px 2px 6px 0px #101E2814;
+  --shadow-xl: 0px 24px 48px 0px #101E2829;
+  --shadow-xs: 0px 1px 2px 0px #101E280F;
+
+  /* ── Typography ── */
+  --font-sans: 'Onest', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  /* ── Semantic · color (Light) — alias → primitive ── */
+  --color-action-primary: var(--color-accent-500);
+  --color-action-primary-hover: var(--color-accent-600);
+  --color-action-neutral: var(--color-primary-500);
+  --color-action-neutral-hover: var(--color-primary-600);
+  --color-action-neutral-pressed: var(--color-primary-700);
+  --color-action-secondary: var(--color-primary-50);
+  --color-action-secondary-hover: var(--color-primary-100);
+  --color-bg-accent-subtle: var(--color-accent-50);
+  --color-bg-brand-subtle: var(--color-primary-50);
+  --color-bg-canvas: var(--color-neutral-0);
+  --color-bg-inverse: var(--color-primary-900);
+  --color-bg-muted: var(--color-neutral-100);
+  --color-bg-subtle: var(--color-neutral-50);
+  --color-border-accent: var(--color-accent-500);
+  --color-border-default: var(--color-neutral-200);
+  --color-border-error: var(--color-error-500);
+  --color-border-focus: var(--color-primary-500);
+  --color-border-strong: var(--color-neutral-300);
+  --color-border-subtle: var(--color-neutral-100);
+  --color-feedback-error: var(--color-error-500);
+  --color-feedback-error-bg: var(--color-error-50);
+  --color-feedback-info: var(--color-info-500);
+  --color-feedback-info-bg: var(--color-info-50);
+  --color-feedback-success: var(--color-success-500);
+  --color-feedback-success-bg: var(--color-success-50);
+  --color-feedback-warning: var(--color-warning-500);
+  --color-feedback-warning-bg: var(--color-warning-50);
+  --color-focus-ring: var(--color-primary-400);
+  --color-surface-default: var(--color-neutral-0);
+  --color-surface-sunken: var(--color-neutral-50);
+  --color-text-accent: var(--color-accent-800);
+  --color-text-brand: var(--color-primary-700);
+  --color-text-disabled: var(--color-neutral-400);
+  --color-text-error: var(--color-error-600);
+  --color-text-inverse: var(--color-neutral-0);
+  --color-text-on-primary: var(--color-accent-900);
+  --color-text-on-neutral: var(--color-neutral-0);
+  --color-text-primary: var(--color-neutral-900);
+  --color-text-secondary: var(--color-neutral-600);
+  --color-text-success: var(--color-success-600);
+  --color-text-tertiary: var(--color-neutral-500);
+}
+
+/* ── Typography utility classes ── */
+.text-body-lg {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0;
+}
+.text-body-md {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0;
+}
+.text-body-sm {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0;
+}
+.text-button-lg {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 24px;
+  letter-spacing: 0;
+}
+.text-button-md {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0;
+}
+.text-button-sm {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0;
+}
+.text-caption {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0;
+}
+.text-display {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 64px;
+  letter-spacing: -0.015em;
+}
+.text-h1 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: -0.01em;
+}
+.text-h2 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 38px;
+  line-height: 46px;
+  letter-spacing: -0.005em;
+}
+.text-h3 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 38px;
+  letter-spacing: 0;
+}
+.text-h4 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0;
+}
+.text-h5 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0;
+}
+.text-label-lg {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0;
+}
+.text-label-md {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0;
+}
+.text-label-sm {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0;
+}
+.text-overline {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.text-quote {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 32px;
+  letter-spacing: 0;
+}
+
+/* ── preview scaffold ── */
+@import url("../../../fonts/onest.css");
+*{box-sizing:border-box}html,body{margin:0}
+body{font-family:var(--font-sans);background:var(--color-bg-canvas);color:var(--color-text-primary);padding:32px;-webkit-font-smoothing:antialiased}
+.ds-wrap{display:flex;flex-direction:column;gap:28px;max-width:1080px;margin:0 auto}
+.ds-title{font-weight:600;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-text-tertiary);margin:0}
+.ds-grid{display:flex;flex-wrap:wrap;gap:16px;align-items:flex-start}
+.ds-stack{display:flex;flex-direction:column;gap:10px}
+.ds-cap{font-size:12px;line-height:1.4;color:var(--color-text-tertiary)}
+.ds-cap b{color:var(--color-text-secondary);font-weight:600}
+.ds-cell{display:flex;flex-direction:column;gap:6px;align-items:flex-start}
+</style></head>
+<body><div class="ds-wrap">
+<style>
+  .svc-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    width: 320px;
+    box-sizing: border-box;
+    padding: var(--space-xl);
+    background: var(--color-surface-default);
+    border: var(--border-sm) solid var(--color-border-default);
+    border-radius: var(--radius-lg);
+    transition: box-shadow .18s ease, border-color .18s ease;
+  }
+  .svc-card--hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-border-accent);
+  }
+  .svc-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-md);
+    background: var(--color-bg-brand-subtle);
+    color: var(--color-action-neutral);
+  }
+  .svc-icon svg { width: var(--icon-lg); height: var(--icon-lg); }
+  .svc-title { color: var(--color-text-primary); margin: 0; }
+  .svc-desc { color: var(--color-text-secondary); margin: 0; }
+  .svc-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2xs);
+    color: var(--color-text-brand);
+    text-decoration: none;
+    margin-top: var(--space-2xs);
+  }
+  .svc-link svg { width: var(--icon-sm); height: var(--icon-sm); }
+</style>
+
+<div class="ds-stack" style="gap: var(--space-lg);">
+  <span class="ds-title">Card / Service · Molecules</span>
+
+  <div class="ds-grid" style="gap: var(--space-xl); align-items: flex-start;">
+
+    <div class="ds-cell">
+      <div class="svc-card">
+        <span class="svc-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 4c-2-1.6-5-1.6-6.4.4C4 6.7 4.6 10 5.4 13c.5 1.8.7 5 2 6 1.4 1 1.8-2.4 2.3-4.2.3-1 .8-1.6 2.3-1.6s2 .6 2.3 1.6c.5 1.8.9 5.2 2.3 4.2 1.3-1 1.5-4.2 2-6 .8-3 1.4-6.3 0-8.6C19.2 2.4 14 2.4 12 4z"/>
+          </svg>
+        </span>
+        <h5 class="text-h5 svc-title">Лечение кариеса</h5>
+        <p class="text-body-sm svc-desc">Безболезненно, под анестезией, за один визит.</p>
+        <a href="#" class="text-label-md svc-link">
+          Подробнее
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+      <span class="ds-cap">Default</span>
+    </div>
+
+    <div class="ds-cell">
+      <div class="svc-card svc-card--hover">
+        <span class="svc-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 4c-2-1.6-5-1.6-6.4.4C4 6.7 4.6 10 5.4 13c.5 1.8.7 5 2 6 1.4 1 1.8-2.4 2.3-4.2.3-1 .8-1.6 2.3-1.6s2 .6 2.3 1.6c.5 1.8.9 5.2 2.3 4.2 1.3-1 1.5-4.2 2-6 .8-3 1.4-6.3 0-8.6C19.2 2.4 14 2.4 12 4z"/>
+          </svg>
+        </span>
+        <h5 class="text-h5 svc-title">Лечение кариеса</h5>
+        <p class="text-body-sm svc-desc">Безболезненно, под анестезией, за один визит.</p>
+        <a href="#" class="text-label-md svc-link">
+          Подробнее
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+      <span class="ds-cap">Hover</span>
+    </div>
+
+  </div>
+</div>
+</div></body></html>

@@ -1,0 +1,32 @@
+/* Кристалис — мультибренд. Подключать ПОСЛЕ tokens.css.
+   Кристалис (зелёный) = тема по умолчанию из tokens.css (без атрибута / data-theme="kristalis").
+   Переключение демо-тем для показа заказчику — атрибутом на <html data-theme="…">.
+   Меняется только бренд-рампа --color-brand-*; нейтрали/чёрный/белый/функциональные цвета общие. */
+
+[data-theme="blue"] {
+  --color-brand-50:  #EAF1FE;
+  --color-brand-100: #C7DCFD;
+  --color-brand-200: #9CC1FB;
+  --color-brand-300: #6B9FF8;
+  --color-brand-400: #3B82F6;
+  --color-brand-500: #2563EB;
+  --color-brand-600: #1D4ED8;
+  --color-brand-700: #1E40AF;
+  --color-brand-800: #1E3A8A;
+  --color-brand-900: #172554;
+  --color-brand-on:  #FFFFFF;
+}
+
+[data-theme="sand"] {
+  --color-brand-50:  #FDFBF4;
+  --color-brand-100: #FAF4E5;
+  --color-brand-200: #F4EAD0;
+  --color-brand-300: #EFE1BD;
+  --color-brand-400: #EAD9AE;
+  --color-brand-500: #E5D3A8;
+  --color-brand-600: #CFB877;
+  --color-brand-700: #8A6F26;
+  --color-brand-800: #5E4C1B;
+  --color-brand-900: #3D300F;
+  --color-brand-on:  #3D300F;
+}
