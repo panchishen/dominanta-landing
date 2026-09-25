@@ -213,7 +213,7 @@ html.js .reveal.is-visible { opacity: 1; transform: none; }
 .hero-alt--dark .hero-offer__cell { background: rgba(255,255,255,.08); }
 .hero-alt__media { min-width: 0; position: relative; overflow: hidden; border-radius: var(--radius-2xl); background: var(--color-brand-700); }
 /* мягкое свечение бренд-цветом за фото (hero-media-blur в макете) */
-.hero-alt__media::before { content: ""; position: absolute; left: 50%; top: 0; width: 596px; height: 596px; transform: translateX(-50%); background: radial-gradient(circle closest-side, var(--color-brand-500) 0%, rgba(180,240,58,0) 100%); opacity: .85; pointer-events: none; }
+.hero-alt__media::before { content: ""; position: absolute; left: 50%; top: 0; width: 596px; height: 596px; transform: translateX(-50%); background: radial-gradient(circle closest-side, var(--color-brand-500) 0%, transparent 100%); opacity: .85; pointer-events: none; }
 .hero-alt__media img { position: relative; width: 100%; height: 100%; object-fit: cover; display: block; }
 .hero-alt__stats { position: absolute; left: var(--space-xl); right: var(--space-xl); bottom: var(--space-xl); display: flex; gap: var(--space-xs); color: var(--color-text-accent-strong); }
 /* «Стеклянные» плашки. В макете это Figma-эффект GLASS (radius 20, refraction 1,

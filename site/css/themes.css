@@ -30,3 +30,38 @@
   --color-brand-900: #3D300F;
   --color-brand-on:  #3D300F;
 }
+
+/* Доминанта — фирстиль клиники (фаза 4). Включена на <html data-theme="dominanta">.
+   База: #00848A основной, #00595A тёмный, #A9E2DD светлый, CTA #FF540F (кнопки чуть темнее), текст #333333, фон #F5F5F5. */
+[data-theme="dominanta"] {
+  --color-brand-50:  #EAF7F6;
+  --color-brand-100: #D3F0ED;
+  --color-brand-200: #A9E2DD;
+  --color-brand-300: #74CBC4;
+  --color-brand-400: #33ABA8;
+  --color-brand-500: #00848A;
+  --color-brand-600: #007278;
+  --color-brand-700: #00595A;
+  --color-brand-800: #00474A;
+  --color-brand-900: #003A3C;
+  --color-brand-on:  #FFFFFF;
+  --color-cta-500:   #E64A0A;
+  --color-cta-600:   #C43F00;
+  --color-neutral-50:  #FAFAFA;
+  --color-neutral-100: #F5F5F5;
+
+  --color-action-primary: var(--color-cta-500);
+  --color-action-primary-hover: var(--color-cta-600);
+  --color-text-on-primary: #FFFFFF;
+  --color-text-primary: #333333;
+  --color-bg-inverse: var(--color-brand-900);
+  --color-text-accent: var(--color-brand-600);
+  --color-text-accent-strong: var(--color-brand-700);
+  --color-text-brand: var(--color-brand-700);
+  --color-text-accent-on-dark: var(--color-brand-200);
+  --color-border-accent: var(--color-brand-500);
+  --color-border-focus: var(--color-brand-500);
+  --color-focus-ring: var(--color-brand-500);
+  --shadow-focus: 0px 0px 0px 4px #00848A40;
+}
+[data-theme="dominanta"] .hdr__logo:not(.hdr__logo--inverse) { --logo-accent: var(--color-brand-500); }
