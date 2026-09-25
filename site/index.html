@@ -6,8 +6,13 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
   <script>document.documentElement.classList.add('js')</script>
-  <title>Кристалис&nbsp;— стоматология и&nbsp;имплантация в&nbsp;Москве</title>
-  <meta name="description" content="Имплантация зубов под ключ. Лечим без боли, гарантию закрепляем письменно.">
+  <title>Имплантация All-on-4&nbsp;в&nbsp;Челябинске&nbsp;— зубы за&nbsp;1&nbsp;день | Доминанта</title>
+  <meta name="description" content="Несъёмные зубы на 4 имплантах: операция и временный протез за один визит. 3D-планирование, хирургический шаблон, 20 лет опыта. Челябинск, ул. Российская, 49.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:site_name" content="Доминанта — стоматология с расширенной гарантией">
+  <meta property="og:title" content="Имплантация All-on-4 в Челябинске — зубы за 1 день | Доминанта">
+  <meta property="og:description" content="Несъёмные зубы на 4 имплантах: операция и временный протез за один визит. 3D-планирование, хирургический шаблон, 20 лет опыта.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -18,7 +23,7 @@
 </head>
 <body>
 
-  <!-- Логотип Кристалис (из макета): м市ка — бренд-цвет, начертание — currentColor -->
+  <!-- Логотип: временно из шаблона, замена на лого Доминанты — фаза 4 -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
     <symbol id="kr-logo" viewBox="0 0 162 32">
       <g fill="var(--logo-accent, #739E0E)">
@@ -39,95 +44,14 @@
     </symbol>
   </svg>
 
-  <!-- Панель настроек (конфигуратор темы и Hero) -->
-  <div class="cfg" id="cfg">
-    <button class="cfg__toggle" type="button" aria-label="Настройки страницы" aria-expanded="false" aria-controls="cfgPanel">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
-    </button>
-
-    <aside class="cfg__panel" id="cfgPanel" role="region" aria-label="Настройки страницы">
-      <h2 class="cfg__title text-h5">Цветовая тема</h2>
-      <div class="cfg__seg" role="group" aria-label="Цветовая тема">
-        <button type="button" class="cfg__seg-btn text-button-sm is-active" data-theme-set="kristalis" aria-pressed="true">Зеленая</button>
-        <button type="button" class="cfg__seg-btn text-button-sm" data-theme-set="blue" aria-pressed="false">Синяя</button>
-        <button type="button" class="cfg__seg-btn text-button-sm" data-theme-set="sand" aria-pressed="false">Песочная</button>
-      </div>
-
-      <hr class="cfg__divider">
-
-      <h2 class="cfg__title text-h5">Hero-блок</h2>
-
-      <div class="cfg__group">
-        <span class="cfg__label text-label-md">Вариант</span>
-        <div class="cfg__seg cfg__seg--sm" role="group" aria-label="Вариант">
-          <button type="button" class="cfg__seg-btn text-button-sm is-active" data-variant="1" aria-pressed="true">1</button>
-          <button type="button" class="cfg__seg-btn text-button-sm" data-variant="2" aria-pressed="false">2</button>
-          <button type="button" class="cfg__seg-btn text-button-sm" data-variant="3" aria-pressed="false">3</button>
-        </div>
-      </div>
-
-      <div class="cfg__group" data-hero-opt-group="sub">
-        <span class="cfg__label text-label-md">Блок под заголовком</span>
-        <div class="cfg__opts">
-          <label class="cfg__opt"><input type="radio" class="cfg__radio" name="cfg-hero-sub" value="list" checked><span class="text-body-md">Список</span></label>
-          <label class="cfg__opt"><input type="radio" class="cfg__radio" name="cfg-hero-sub" value="text"><span class="text-body-md">Текст</span></label>
-        </div>
-      </div>
-
-      <div class="cfg__group">
-        <span class="cfg__label text-label-md">Кнопки</span>
-        <div class="cfg__opts">
-          <label class="cfg__opt"><input type="checkbox" class="cfg__check" name="cfg-btn-primary" checked><span class="text-body-md">Основная</span></label>
-          <label class="cfg__opt"><input type="checkbox" class="cfg__check" name="cfg-btn-secondary" checked><span class="text-body-md">Второстепенная</span></label>
-        </div>
-      </div>
-
-      <div class="cfg__group" data-hero-opt-group="counter">
-        <span class="cfg__label text-label-md">Счётчик</span>
-        <div class="cfg__opts">
-          <label class="cfg__opt"><input type="checkbox" class="cfg__check" name="cfg-counter" checked><span class="text-body-md">Вкл</span></label>
-        </div>
-      </div>
-
-      <div class="cfg__group" data-hero-opt-group="stats">
-        <span class="cfg__label text-label-md">Статистика на фото</span>
-        <div class="cfg__opts">
-          <label class="cfg__opt"><input type="checkbox" class="cfg__check" name="cfg-photo-stats" checked><span class="text-body-md">Вкл</span></label>
-        </div>
-      </div>
-
-      <hr class="cfg__divider">
-
-      <h2 class="cfg__title text-h5">Блок услуг</h2>
-      <div class="cfg__group">
-        <span class="cfg__label text-label-md">Вариант</span>
-        <div class="cfg__seg cfg__seg--sm" role="group" aria-label="Вариант блока услуг">
-          <button type="button" class="cfg__seg-btn text-button-sm is-active" data-services-variant="1" aria-pressed="true">1</button>
-          <button type="button" class="cfg__seg-btn text-button-sm" data-services-variant="2" aria-pressed="false">2</button>
-        </div>
-      </div>
-
-      <hr class="cfg__divider">
-
-      <h2 class="cfg__title text-h5">Подвал</h2>
-      <div class="cfg__group">
-        <span class="cfg__label text-label-md">Вариант</span>
-        <div class="cfg__seg cfg__seg--sm" role="group" aria-label="Вариант подвала">
-          <button type="button" class="cfg__seg-btn text-button-sm is-active" data-footer-variant="1" aria-pressed="true">1</button>
-          <button type="button" class="cfg__seg-btn text-button-sm" data-footer-variant="2" aria-pressed="false">2</button>
-        </div>
-      </div>
-    </aside>
-  </div>
-
   <!-- ХЕДЕР статичный -->
   <header class="hdr hdr--standard">
     <div class="container hdr__inner">
-      <a class="hdr__logo" href="#top" aria-label="Кристалис — на главную">
+      <a class="hdr__logo" href="#top" aria-label="Доминанта — на главную">
         <svg class="logo-svg" viewBox="0 0 162 32" aria-hidden="true"><use href="#kr-logo"/></svg>
       </a>
       <nav class="hdr__nav text-label-lg" aria-label="Основная навигация">
-        <a href="#services">Услуги</a>
+        <a href="#services">Метод</a>
         <a href="#pricing">Цены</a>
         <a href="#doctors">Врачи</a>
         <a href="#reviews">Отзывы</a>
@@ -135,8 +59,8 @@
       </nav>
       <div class="hdr__right">
         <a class="hdr__a11y" href="special-version/" aria-label="Версия для слабовидящих" title="Версия для слабовидящих"><svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M3.01513 10.9876C3.04409 9.4534 3.12559 8.46708 3.3548 7.32118C3.68643 5.66318 4.30872 4.66231 5.55413 3.83212L4.44481 2.16797C2.68993 3.33777 1.81208 4.83691 1.39364 6.92891C0.873728 9.52823 0.995882 14.8642 0.999024 14.9975C0.999024 14.9983 0.999023 14.9992 0.999023 15C0.999023 17.7614 3.2376 20 5.99902 20C8.76045 20 10.999 17.7614 10.999 15C10.999 14.7261 10.9769 14.4569 10.9343 14.1941C11.2647 14.0687 11.6233 14 11.999 14C12.3748 14 12.7334 14.0687 13.0638 14.1941C13.0211 14.4569 12.999 14.7261 12.999 15C12.999 17.7614 15.2376 20 17.999 20C20.7604 20 22.999 17.7614 22.999 15C22.999 15 23.1312 9.56126 22.6048 6.92895C22.1865 4.83699 21.3088 3.33785 19.5542 2.16802L18.4447 3.83207C19.6899 4.66224 20.3121 5.66309 20.6436 7.32114C20.8728 8.46712 20.9543 9.45349 20.9832 10.9878C20.1503 10.3673 19.1176 10 17.999 10C16.2206 10 14.6607 10.9281 13.7745 12.3247C13.2223 12.1149 12.6235 12 11.999 12C11.3745 12 10.7758 12.1149 10.2236 12.3247C9.33736 10.9281 7.77743 10 5.99902 10C4.88064 10 3.84801 10.3672 3.01513 10.9876ZM2.99902 15C2.99902 13.3431 4.34217 12 5.99902 12C7.30607 12 8.42033 12.8364 8.83082 14.0063C8.93949 14.316 8.99902 14.65 8.99902 15C8.99902 16.6569 7.65588 18 5.99902 18C4.34217 18 2.99902 16.6569 2.99902 15ZM15.1672 14.0063C15.5777 12.8364 16.692 12 17.999 12C19.6559 12 20.999 13.3431 20.999 15C20.999 16.6569 19.6559 18 17.999 18C16.3422 18 14.999 16.6569 14.999 15C14.999 14.65 15.0586 14.316 15.1672 14.0063Z"/></svg></a>
-        <a class="hdr__call" href="tel:+74951234567" aria-label="Позвонить: +7 (495) 123-45-67" title="+7 (495) 123-45-67"><svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M9.36556 10.6821C10.302 12.3288 11.6712 13.698 13.3179 14.6344L14.2024 13.3961C14.4965 12.9845 15.0516 12.8573 15.4956 13.0998C16.9024 13.8683 18.4571 14.3353 20.0789 14.4637C20.599 14.5049 21 14.9389 21 15.4606V19.9234C21 20.4361 20.6122 20.8657 20.1022 20.9181C19.5723 20.9726 19.0377 21 18.5 21C9.93959 21 3 14.0604 3 5.5C3 4.96227 3.02742 4.42771 3.08189 3.89776C3.1343 3.38775 3.56394 3 4.07665 3H8.53942C9.0611 3 9.49513 3.40104 9.5363 3.92109C9.66467 5.54288 10.1317 7.09764 10.9002 8.50444C11.1427 8.9484 11.0155 9.50354 10.6039 9.79757L9.36556 10.6821ZM6.84425 10.0252L8.7442 8.66809C8.20547 7.50514 7.83628 6.27183 7.64727 5H5.00907C5.00303 5.16632 5 5.333 5 5.5C5 12.9558 11.0442 19 18.5 19C18.667 19 18.8337 18.997 19 18.9909V16.3527C17.7282 16.1637 16.4949 15.7945 15.3319 15.2558L13.9748 17.1558C13.4258 16.9425 12.8956 16.6915 12.3874 16.4061L12.3293 16.373C10.3697 15.2587 8.74134 13.6303 7.627 11.6707L7.59394 11.6126C7.30849 11.1044 7.05754 10.5742 6.84425 10.0252Z"/></svg></a>
-        <a class="hdr__phone text-label-lg" href="tel:+74951234567">+7&nbsp;(495) 123-45-67</a>
+        <a class="hdr__call" href="tel:+73512251505" aria-label="Позвонить: +7 (351) 225-15-05" title="+7 (351) 225-15-05"><svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M9.36556 10.6821C10.302 12.3288 11.6712 13.698 13.3179 14.6344L14.2024 13.3961C14.4965 12.9845 15.0516 12.8573 15.4956 13.0998C16.9024 13.8683 18.4571 14.3353 20.0789 14.4637C20.599 14.5049 21 14.9389 21 15.4606V19.9234C21 20.4361 20.6122 20.8657 20.1022 20.9181C19.5723 20.9726 19.0377 21 18.5 21C9.93959 21 3 14.0604 3 5.5C3 4.96227 3.02742 4.42771 3.08189 3.89776C3.1343 3.38775 3.56394 3 4.07665 3H8.53942C9.0611 3 9.49513 3.40104 9.5363 3.92109C9.66467 5.54288 10.1317 7.09764 10.9002 8.50444C11.1427 8.9484 11.0155 9.50354 10.6039 9.79757L9.36556 10.6821ZM6.84425 10.0252L8.7442 8.66809C8.20547 7.50514 7.83628 6.27183 7.64727 5H5.00907C5.00303 5.16632 5 5.333 5 5.5C5 12.9558 11.0442 19 18.5 19C18.667 19 18.8337 18.997 19 18.9909V16.3527C17.7282 16.1637 16.4949 15.7945 15.3319 15.2558L13.9748 17.1558C13.4258 16.9425 12.8956 16.6915 12.3874 16.4061L12.3293 16.373C10.3697 15.2587 8.74134 13.6303 7.627 11.6707L7.59394 11.6126C7.30849 11.1044 7.05754 10.5742 6.84425 10.0252Z"/></svg></a>
+        <a class="hdr__phone text-label-lg" href="tel:+73512251505">+7&nbsp;(351) 225-15-05</a>
         <button class="btn btn--neutral btn--md text-button-md" data-open-modal>Записаться</button>
         <button class="hdr__burger" data-burger aria-label="Меню"><span></span><span></span><span></span></button>
       </div>
@@ -146,11 +70,11 @@
   <!-- ХЕДЕР плавающий -->
   <header class="hdr hdr--floating" id="floatingHeader">
     <div class="container hdr__inner">
-      <a class="hdr__logo" href="#top" aria-label="Кристалис — на главную">
+      <a class="hdr__logo" href="#top" aria-label="Доминанта — на главную">
         <svg class="logo-svg" viewBox="0 0 162 32" aria-hidden="true"><use href="#kr-logo"/></svg>
       </a>
       <nav class="hdr__nav text-label-lg" aria-label="Навигация">
-        <a href="#services">Услуги</a>
+        <a href="#services">Метод</a>
         <a href="#pricing">Цены</a>
         <a href="#doctors">Врачи</a>
         <a href="#reviews">Отзывы</a>
@@ -158,8 +82,8 @@
       </nav>
       <div class="hdr__right">
         <a class="hdr__a11y" href="special-version/" aria-label="Версия для слабовидящих" title="Версия для слабовидящих"><svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M3.01513 10.9876C3.04409 9.4534 3.12559 8.46708 3.3548 7.32118C3.68643 5.66318 4.30872 4.66231 5.55413 3.83212L4.44481 2.16797C2.68993 3.33777 1.81208 4.83691 1.39364 6.92891C0.873728 9.52823 0.995882 14.8642 0.999024 14.9975C0.999024 14.9983 0.999023 14.9992 0.999023 15C0.999023 17.7614 3.2376 20 5.99902 20C8.76045 20 10.999 17.7614 10.999 15C10.999 14.7261 10.9769 14.4569 10.9343 14.1941C11.2647 14.0687 11.6233 14 11.999 14C12.3748 14 12.7334 14.0687 13.0638 14.1941C13.0211 14.4569 12.999 14.7261 12.999 15C12.999 17.7614 15.2376 20 17.999 20C20.7604 20 22.999 17.7614 22.999 15C22.999 15 23.1312 9.56126 22.6048 6.92895C22.1865 4.83699 21.3088 3.33785 19.5542 2.16802L18.4447 3.83207C19.6899 4.66224 20.3121 5.66309 20.6436 7.32114C20.8728 8.46712 20.9543 9.45349 20.9832 10.9878C20.1503 10.3673 19.1176 10 17.999 10C16.2206 10 14.6607 10.9281 13.7745 12.3247C13.2223 12.1149 12.6235 12 11.999 12C11.3745 12 10.7758 12.1149 10.2236 12.3247C9.33736 10.9281 7.77743 10 5.99902 10C4.88064 10 3.84801 10.3672 3.01513 10.9876ZM2.99902 15C2.99902 13.3431 4.34217 12 5.99902 12C7.30607 12 8.42033 12.8364 8.83082 14.0063C8.93949 14.316 8.99902 14.65 8.99902 15C8.99902 16.6569 7.65588 18 5.99902 18C4.34217 18 2.99902 16.6569 2.99902 15ZM15.1672 14.0063C15.5777 12.8364 16.692 12 17.999 12C19.6559 12 20.999 13.3431 20.999 15C20.999 16.6569 19.6559 18 17.999 18C16.3422 18 14.999 16.6569 14.999 15C14.999 14.65 15.0586 14.316 15.1672 14.0063Z"/></svg></a>
-        <a class="hdr__phone text-label-lg" href="tel:+74951234567">+7&nbsp;(495) 123-45-67</a>
-        <a class="hdr__call" href="tel:+74951234567" aria-label="Позвонить: +7 (495) 123-45-67" title="+7 (495) 123-45-67"><svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M9.36556 10.6821C10.302 12.3288 11.6712 13.698 13.3179 14.6344L14.2024 13.3961C14.4965 12.9845 15.0516 12.8573 15.4956 13.0998C16.9024 13.8683 18.4571 14.3353 20.0789 14.4637C20.599 14.5049 21 14.9389 21 15.4606V19.9234C21 20.4361 20.6122 20.8657 20.1022 20.9181C19.5723 20.9726 19.0377 21 18.5 21C9.93959 21 3 14.0604 3 5.5C3 4.96227 3.02742 4.42771 3.08189 3.89776C3.1343 3.38775 3.56394 3 4.07665 3H8.53942C9.0611 3 9.49513 3.40104 9.5363 3.92109C9.66467 5.54288 10.1317 7.09764 10.9002 8.50444C11.1427 8.9484 11.0155 9.50354 10.6039 9.79757L9.36556 10.6821ZM6.84425 10.0252L8.7442 8.66809C8.20547 7.50514 7.83628 6.27183 7.64727 5H5.00907C5.00303 5.16632 5 5.333 5 5.5C5 12.9558 11.0442 19 18.5 19C18.667 19 18.8337 18.997 19 18.9909V16.3527C17.7282 16.1637 16.4949 15.7945 15.3319 15.2558L13.9748 17.1558C13.4258 16.9425 12.8956 16.6915 12.3874 16.4061L12.3293 16.373C10.3697 15.2587 8.74134 13.6303 7.627 11.6707L7.59394 11.6126C7.30849 11.1044 7.05754 10.5742 6.84425 10.0252Z"/></svg></a>
+        <a class="hdr__phone text-label-lg" href="tel:+73512251505">+7&nbsp;(351) 225-15-05</a>
+        <a class="hdr__call" href="tel:+73512251505" aria-label="Позвонить: +7 (351) 225-15-05" title="+7 (351) 225-15-05"><svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M9.36556 10.6821C10.302 12.3288 11.6712 13.698 13.3179 14.6344L14.2024 13.3961C14.4965 12.9845 15.0516 12.8573 15.4956 13.0998C16.9024 13.8683 18.4571 14.3353 20.0789 14.4637C20.599 14.5049 21 14.9389 21 15.4606V19.9234C21 20.4361 20.6122 20.8657 20.1022 20.9181C19.5723 20.9726 19.0377 21 18.5 21C9.93959 21 3 14.0604 3 5.5C3 4.96227 3.02742 4.42771 3.08189 3.89776C3.1343 3.38775 3.56394 3 4.07665 3H8.53942C9.0611 3 9.49513 3.40104 9.5363 3.92109C9.66467 5.54288 10.1317 7.09764 10.9002 8.50444C11.1427 8.9484 11.0155 9.50354 10.6039 9.79757L9.36556 10.6821ZM6.84425 10.0252L8.7442 8.66809C8.20547 7.50514 7.83628 6.27183 7.64727 5H5.00907C5.00303 5.16632 5 5.333 5 5.5C5 12.9558 11.0442 19 18.5 19C18.667 19 18.8337 18.997 19 18.9909V16.3527C17.7282 16.1637 16.4949 15.7945 15.3319 15.2558L13.9748 17.1558C13.4258 16.9425 12.8956 16.6915 12.3874 16.4061L12.3293 16.373C10.3697 15.2587 8.74134 13.6303 7.627 11.6707L7.59394 11.6126C7.30849 11.1044 7.05754 10.5742 6.84425 10.0252Z"/></svg></a>
         <button class="btn btn--neutral btn--md text-button-md" data-open-modal>Записаться</button>
         <button class="hdr__burger" data-burger aria-label="Меню"><span></span><span></span><span></span></button>
       </div>
@@ -169,89 +93,37 @@
   <main id="top">
 
     <!-- HERO: 3 переключаемых варианта (см. панель настроек) -->
-    <div id="hero" class="hero-wrap">
+    <div id="hero" class="hero-wrap" data-hero-sub="list" data-hero-btn-primary="on" data-hero-btn-secondary="on" data-hero-counter="on" data-hero-stats="on">
 
-    <!-- HERO — вариант 1 (тёмная панель) -->
+    <!-- HERO — тёмная панель -->
     <div class="hero-slot band reveal is-active" data-hero-variant="1">
       <div class="hero-alt hero-alt--dark">
         <div class="hero-alt__panel">
           <div class="hero-alt__copy">
-            <h1 class="hero-alt__title text-display"><span class="accent-on-dark">Имплантация</span> зубов под&nbsp;ключ в&nbsp;Москве</h1>
+            <h1 class="hero-alt__title text-display"><span class="accent-on-dark">Все зубы</span> за&nbsp;один день на&nbsp;4&nbsp;имплантах</h1>
             <ul class="hero-alt__features js-hero-sub-list">
-              <li class="hero-feature"><span class="hero-feature__icon"><img src="assets/hero.png" alt="" loading="lazy"></span><span class="text-body-lg">От&nbsp;одного зуба до&nbsp;полного восстановления челюсти</span></li>
-              <li class="hero-feature"><span class="hero-feature__icon"><img src="assets/hero.png" alt="" loading="lazy"></span><span class="text-body-lg">Лечим без&nbsp;боли&nbsp;— под&nbsp;местной анестезией или&nbsp;в&nbsp;седации</span></li>
-              <li class="hero-feature"><span class="hero-feature__icon"><img src="assets/hero.png" alt="" loading="lazy"></span><span class="text-body-lg">Гарантию на&nbsp;приживление имплантов закрепляем письменно</span></li>
+              <li class="hero-feature"><span class="hero-feature__icon"><img src="assets/hero.png" alt="" loading="lazy"></span><span class="text-body-lg">Несъёмный протез&nbsp;— в&nbsp;день операции, жевать можно сразу</span></li>
+              <li class="hero-feature"><span class="hero-feature__icon"><img src="assets/hero.png" alt="" loading="lazy"></span><span class="text-body-lg">Операция по&nbsp;цифровому плану и&nbsp;3D-шаблону&nbsp;— с&nbsp;минимальной травмой десны</span></li>
+              <li class="hero-feature"><span class="hero-feature__icon"><img src="assets/hero.png" alt="" loading="lazy"></span><span class="text-body-lg">В&nbsp;90% случаев без&nbsp;наращивания кости</span></li>
             </ul>
-            <p class="hero-alt__text-fallback text-body-lg js-hero-sub-text">От&nbsp;одного зуба до&nbsp;полного восстановления челюсти. Лечим без&nbsp;боли&nbsp;— под&nbsp;местной анестезией или&nbsp;в&nbsp;седации. Гарантию на&nbsp;приживление имплантов закрепляем письменно.</p>
           </div>
           <div class="hero-alt__actions">
-            <button class="btn btn--primary btn--lg text-button-lg js-hero-primary" data-open-modal>Записаться на&nbsp;прием</button>
-            <button class="btn btn--white btn--lg text-button-lg js-hero-secondary" data-open-modal>Рассчитать стоимость</button>
-            <div class="hero-offer js-hero-counter">
-              <p class="hero-offer__title text-body-md">До&nbsp;31&nbsp;июля консультация&nbsp;— бесплатно!</p>
-              <div class="hero-offer__countdown text-body-md">Осталось <span class="hero-offer__cell">48</span>:<span class="hero-offer__cell">31</span>:<span class="hero-offer__cell">59</span></div>
+            <button class="btn btn--primary btn--lg text-button-lg js-hero-primary" data-open-modal>Записаться на&nbsp;консультацию</button>
+            <button class="btn btn--white btn--lg text-button-lg js-hero-secondary" data-open-modal>Узнать стоимость</button>
+            <div class="hero-offer">
+              <p class="hero-offer__title text-body-md">All-on-4&nbsp;— от&nbsp;145&nbsp;000&nbsp;₽ за&nbsp;челюсть</p>
+              <p class="hero-offer__countdown text-caption">Имеются противопоказания. Необходима консультация специалиста</p>
             </div>
           </div>
         </div>
         <div class="hero-alt__media">
-          <img class="media-img" src="assets/hero-photo-2.png" alt="Пациентка клиники Кристалис" loading="eager">
+          <img class="media-img" src="assets/hero-photo-2.png" alt="Главный врач Борис Кузнецов" loading="eager">
           <div class="hero-alt__stats js-hero-stats">
-            <div class="hero-mini-stat glass"><div class="hero-mini-stat__value text-h2">99%</div><div class="hero-mini-stat__label text-label-md">Приживаемость имплантов</div></div>
-            <div class="hero-mini-stat glass"><div class="hero-mini-stat__value text-h2">20&nbsp;000+</div><div class="hero-mini-stat__label text-label-md">установленных имплантов</div></div>
+            <div class="hero-mini-stat glass"><div class="hero-mini-stat__value text-h2">20&nbsp;лет</div><div class="hero-mini-stat__label text-label-md">клинике</div></div>
+            <div class="hero-mini-stat glass"><div class="hero-mini-stat__value text-h2">4&nbsp;импланта</div><div class="hero-mini-stat__label text-label-md">на&nbsp;челюсть вместо 14</div></div>
           </div>
         </div>
       </div>
-    </div>
-
-    <!-- HERO — вариант 2 (светлая панель) -->
-    <div class="hero-slot band reveal" data-hero-variant="2" hidden>
-      <div class="hero-alt hero-alt--light">
-        <div class="hero-alt__panel">
-          <div class="hero-alt__copy">
-            <h1 class="hero-alt__title text-display"><span class="accent">Имплантация</span> зубов под&nbsp;ключ в&nbsp;Москве</h1>
-            <ul class="hero-alt__features js-hero-sub-list">
-              <li class="hero-feature"><span class="hero-feature__icon"><img src="assets/hero.png" alt="" loading="lazy"></span><span class="text-body-lg">От&nbsp;одного зуба до&nbsp;полного восстановления челюсти</span></li>
-              <li class="hero-feature"><span class="hero-feature__icon"><img src="assets/hero.png" alt="" loading="lazy"></span><span class="text-body-lg">Лечим без&nbsp;боли&nbsp;— под&nbsp;местной анестезией или&nbsp;в&nbsp;седации</span></li>
-              <li class="hero-feature"><span class="hero-feature__icon"><img src="assets/hero.png" alt="" loading="lazy"></span><span class="text-body-lg">Гарантию на&nbsp;приживление имплантов закрепляем письменно</span></li>
-            </ul>
-            <p class="hero-alt__text-fallback text-body-lg js-hero-sub-text">От&nbsp;одного зуба до&nbsp;полного восстановления челюсти. Лечим без&nbsp;боли&nbsp;— под&nbsp;местной анестезией или&nbsp;в&nbsp;седации. Гарантию на&nbsp;приживление имплантов закрепляем письменно.</p>
-          </div>
-          <div class="hero-alt__actions">
-            <button class="btn btn--primary btn--lg text-button-lg js-hero-primary" data-open-modal>Записаться на&nbsp;прием</button>
-            <button class="btn btn--outline btn--lg text-button-lg js-hero-secondary" data-open-modal>Рассчитать стоимость</button>
-            <div class="hero-offer js-hero-counter">
-              <p class="hero-offer__title text-body-md">До&nbsp;31&nbsp;июля консультация&nbsp;— бесплатно!</p>
-              <div class="hero-offer__countdown text-body-md">Осталось <span class="hero-offer__cell">48</span>:<span class="hero-offer__cell">31</span>:<span class="hero-offer__cell">59</span></div>
-            </div>
-          </div>
-        </div>
-        <div class="hero-alt__media">
-          <img class="media-img" src="assets/hero-photo-2.png" alt="Пациентка клиники Кристалис" loading="eager">
-          <div class="hero-alt__stats js-hero-stats">
-            <div class="hero-mini-stat glass"><div class="hero-mini-stat__value text-h2">99%</div><div class="hero-mini-stat__label text-label-md">Приживаемость имплантов</div></div>
-            <div class="hero-mini-stat glass"><div class="hero-mini-stat__value text-h2">20&nbsp;000+</div><div class="hero-mini-stat__label text-label-md">установленных имплантов</div></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- HERO — вариант 3 (исходный, широкий) -->
-    <div class="hero-slot band band--wide reveal" data-hero-variant="3" hidden>
-      <section class="hero">
-        <div class="inner hero__inner">
-          <div class="hero__content">
-            <div class="hero__copy">
-              <h1 class="hero__title text-display"><span class="accent-on-dark">Имплантация</span> зубов под&nbsp;ключ</h1>
-              <p class="hero__subtitle text-body-lg">От&nbsp;одного зуба до&nbsp;полного восстановления челюсти. Лечим без&nbsp;боли&nbsp;— под&nbsp;местной анестезией или&nbsp;в&nbsp;седации. Гарантию на&nbsp;приживление имплантов закрепляем письменно.</p>
-            </div>
-            <div class="hero__actions">
-              <button class="btn btn--primary btn--lg text-button-lg js-hero-primary" data-open-modal>Записаться на&nbsp;бесплатный прием</button>
-              <button class="btn btn--white btn--lg text-button-lg js-hero-secondary" data-open-modal>Рассчитать стоимость</button>
-            </div>
-          </div>
-          <div class="hero__media"><img class="media-img" src="assets/hero.png" alt="3D-модель имплантации зуба" loading="eager"></div>
-        </div>
-      </section>
     </div>
 
     </div><!-- /.hero-wrap -->
@@ -260,8 +132,8 @@
     <section class="band stats-sec reveal">
       <div class="stats-sec__content">
         <div class="stats-sec__heading">
-          <h2 class="section-title text-h1">Более <span class="accent">20&nbsp;000</span> имплантов</h2>
-          <p class="text-body-lg">Один из&nbsp;крупнейших в&nbsp;Центральном округе Москвы по&nbsp;числу установленных имплантов и&nbsp;количеству довольных улыбок.</p>
+          <h2 class="section-title text-h1"><span class="accent">20&nbsp;лет</span> возвращаем пациентам улыбку</h2>
+          <p class="text-body-lg">Одна из&nbsp;первых клиник Челябинска с&nbsp;полным цифровым циклом: от&nbsp;3D-снимка до&nbsp;протеза из&nbsp;собственной лаборатории.</p>
         </div>
         <div class="stats-sec__avatars" aria-hidden="true">
           <span class="ava"><img src="assets/avatar-1.png" alt="" loading="lazy"></span>
@@ -271,240 +143,102 @@
           <span class="ava"><img src="assets/avatar-5.png" alt="" loading="lazy"></span>
         </div>
         <div class="stats-sec__row">
-          <div class="stats-sec__item"><div class="text-h2">12&nbsp;лет</div><div class="text-label-md">лечим в&nbsp;Москве и&nbsp;МО</div></div>
-          <div class="stats-sec__item"><div class="text-h2">60%</div><div class="text-label-md">пациентов рекомендуют нас</div></div>
-          <div class="stats-sec__item"><div class="text-h2">32&nbsp;000+</div><div class="text-label-md">постоянных клиентов</div></div>
+          <div class="stats-sec__item"><div class="text-h2">2006</div><div class="text-label-md">год основания</div></div>
+          <div class="stats-sec__item"><div class="text-h2">13</div><div class="text-label-md">врачей в&nbsp;команде</div></div>
+          <div class="stats-sec__item"><div class="text-h2">183</div><div class="text-label-md">отзыва пациентов на&nbsp;сайте</div></div>
         </div>
       </div>
       <div class="stats-award">
         <div class="stats-award__media"><img src="assets/stats-award-medal.png" alt="" loading="lazy"></div>
         <div class="stats-award__content">
-          <p class="text-label-lg">Удостоены награды</p>
-          <p class="text-h4">Лучшие стоматологии РФ</p>
-          <p class="text-body-md">По&nbsp;результатам исследования научно-исследовательского института «СтатЭксперт» наша клиника была названа лучшей стоматологией и&nbsp;удостоена почётного звания Лауреата лучших стоматологий России.</p>
+          <p class="text-label-lg">Победитель чемпионата России</p>
+          <p class="text-h4">по&nbsp;стоматологическому мастерству</p>
+          <p class="text-body-md">Главный врач Борис Кузнецов, 2011&nbsp;год.</p>
         </div>
       </div>
     </section>
 
     <!-- УСЛУГИ (аккордеон, карточки внахлёст) -->
     <section class="band" id="services" data-services-variant="1">
-      <h2 class="section-title text-h1 reveal"><span class="accent">Услуги</span> клиники</h2>
+      <h2 class="section-title text-h1 reveal"><span class="accent">Варианты</span> восстановления всей челюсти</h2>
       <div class="services-slot" data-services-slot="1">
         <div class="accordion services-list" data-single="true" data-stagger="60">
           <div class="accordion__item service-item reveal is-open">
             <div class="service-item__header">
-              <div class="service-item__photo"><img src="assets/service-1.png" alt="Имплантация одного зуба" loading="lazy"></div>
+              <div class="service-item__photo"><img src="assets/service-1.png" alt="Протез на 4 имплантах" loading="lazy"></div>
               <div class="service-item__content">
-                <button class="accordion__head service-item__head" aria-expanded="true"><span class="acc__title service-item__title text-h3">Имплантация одного или&nbsp;нескольких зубов</span></button>
+                <button class="accordion__head service-item__head" aria-expanded="true"><span class="acc__title service-item__title text-h3">All-on-4&nbsp;— протез на&nbsp;4&nbsp;имплантах</span></button>
                 <div class="service-item__tags">
-                  <span class="chip text-label-lg">От&nbsp;16&nbsp;000&nbsp;₽</span>
-                  <span class="chip text-label-lg">Рассрочка 0%</span>
-                  <span class="chip text-label-lg">Гарантия на&nbsp;работу</span>
+                  <span class="chip text-label-lg">от&nbsp;145&nbsp;000&nbsp;₽</span>
+                  <span class="chip text-label-lg">Протез в&nbsp;день операции</span>
                 </div>
               </div>
               <button class="icon-toggle" aria-label="Развернуть услугу"></button>
             </div>
             <div class="accordion__panel">
               <div class="service-item__body">
-                <p class="service-item__desc text-body-lg">Поставим имплант на&nbsp;месте удалённого зуба. Соседние зубы останутся целыми&nbsp;— их не&nbsp;нужно обтачивать под&nbsp;мост.</p>
-                <button class="btn btn--primary btn--lg text-button-lg service-item__btn" data-open-modal>Записаться на&nbsp;бесплатный прием</button>
+                <p class="service-item__desc text-body-lg">Для&nbsp;полного или&nbsp;почти полного отсутствия зубов. Импланты ставят под&nbsp;углом, поэтому кость чаще всего не&nbsp;наращивают. Временный несъёмный протез&nbsp;— в&nbsp;день операции.</p>
+                <button class="btn btn--primary btn--lg text-button-lg service-item__btn" data-open-modal>Записаться на&nbsp;консультацию</button>
               </div>
             </div>
           </div>
           <div class="accordion__item service-item reveal">
             <div class="service-item__header">
-              <div class="service-item__photo"><img src="assets/service-2.png" alt="Полное восстановление зубов" loading="lazy"></div>
+              <div class="service-item__photo"><img src="assets/service-2.png" alt="Протез на 6 имплантах" loading="lazy"></div>
               <div class="service-item__content">
-                <button class="accordion__head service-item__head" aria-expanded="false"><span class="acc__title service-item__title text-h3">Полное восстановление зубов</span></button>
+                <button class="accordion__head service-item__head" aria-expanded="false"><span class="acc__title service-item__title text-h3">All-on-6&nbsp;— протез на&nbsp;6&nbsp;имплантах</span></button>
                 <div class="service-item__tags">
-                  <span class="chip text-label-lg">Цена от&nbsp;149&nbsp;900&nbsp;₽</span>
-                  <span class="chip text-label-lg">Новые зубы за&nbsp;1&nbsp;день</span>
-                  <span class="chip text-label-lg">Без&nbsp;долгой костной пластики</span>
+                  <span class="chip text-label-lg">от&nbsp;190&nbsp;000&nbsp;₽</span>
+                  <span class="chip text-label-lg">Протез в&nbsp;день операции</span>
                 </div>
               </div>
               <button class="icon-toggle" aria-label="Развернуть услугу"></button>
             </div>
             <div class="accordion__panel">
               <div class="service-item__body">
-                <p class="service-item__desc text-body-lg">Вернём зубы на&nbsp;челюсти, даже если своих не&nbsp;осталось. Несъёмный протез ставим в&nbsp;день операции&nbsp;— домой вы уходите с&nbsp;зубами.</p>
-                <button class="btn btn--primary btn--lg text-button-lg service-item__btn" data-open-modal>Записаться на&nbsp;бесплатный прием</button>
+                <p class="service-item__desc text-body-lg">Когда нужна дополнительная опора, например на&nbsp;верхней челюсти. Тот&nbsp;же принцип: операция и&nbsp;временный протез за&nbsp;один визит.</p>
+                <button class="btn btn--primary btn--lg text-button-lg service-item__btn" data-open-modal>Записаться на&nbsp;консультацию</button>
               </div>
             </div>
           </div>
           <div class="accordion__item service-item reveal">
             <div class="service-item__header">
-              <div class="service-item__photo"><img src="assets/service-3.png" alt="Протезирование на имплантах" loading="lazy"></div>
+              <div class="service-item__photo"><img src="assets/service-3.png" alt="Постоянный протез на имплантах" loading="lazy"></div>
               <div class="service-item__content">
-                <button class="accordion__head service-item__head" aria-expanded="false"><span class="acc__title service-item__title text-h3">Протезирование на&nbsp;имплантах</span></button>
+                <button class="accordion__head service-item__head" aria-expanded="false"><span class="acc__title service-item__title text-h3">Постоянный протез</span></button>
                 <div class="service-item__tags">
-                  <span class="chip text-label-lg">Цена от&nbsp;24&nbsp;900&nbsp;₽</span>
-                  <span class="chip text-label-lg">Своя лаборатория</span>
-                  <span class="chip text-label-lg">Срок от&nbsp;1&nbsp;дня</span>
+                  <span class="chip text-label-lg">от&nbsp;120&nbsp;000&nbsp;₽</span>
+                  <span class="chip text-label-lg">Цирконий или&nbsp;композит</span>
                 </div>
               </div>
               <button class="icon-toggle" aria-label="Развернуть услугу"></button>
             </div>
             <div class="accordion__panel">
               <div class="service-item__body">
-                <p class="service-item__desc text-body-lg">Изготовим коронку, мост или&nbsp;полный протез в&nbsp;собственной лаборатории. Подберём цвет и&nbsp;форму под&nbsp;лицо, чтобы зубы выглядели естественно.</p>
-                <button class="btn btn--primary btn--lg text-button-lg service-item__btn" data-open-modal>Записаться на&nbsp;бесплатный прием</button>
+                <p class="service-item__desc text-body-lg">Изготавливают по&nbsp;цифровой модели из&nbsp;циркония или&nbsp;композита. Временный протез служит от&nbsp;6&nbsp;месяцев до&nbsp;2&nbsp;лет&nbsp;— за&nbsp;это время импланты приживаются.</p>
+                <button class="btn btn--primary btn--lg text-button-lg service-item__btn" data-open-modal>Записаться на&nbsp;консультацию</button>
               </div>
             </div>
           </div>
           <div class="accordion__item service-item reveal">
             <div class="service-item__header">
-              <div class="service-item__photo"><img src="assets/service-4.png" alt="Имплантация без боли" loading="lazy"></div>
+              <div class="service-item__photo"><img src="assets/service-4.png" alt="Имплант" loading="lazy"></div>
               <div class="service-item__content">
-                <button class="accordion__head service-item__head" aria-expanded="false"><span class="acc__title service-item__title text-h3">Имплантация без&nbsp;боли</span></button>
+                <button class="accordion__head service-item__head" aria-expanded="false"><span class="acc__title service-item__title text-h3">Имплантация по&nbsp;шаблону через прокол</span></button>
                 <div class="service-item__tags">
-                  <span class="chip text-label-lg">Седация</span>
-                  <span class="chip text-label-lg">Лечение во&nbsp;сне</span>
-                  <span class="chip text-label-lg">Подходит при&nbsp;страхе стоматолога</span>
+                  <span class="chip text-label-lg">Ankylos от&nbsp;55&nbsp;216&nbsp;₽</span>
+                  <span class="chip text-label-lg">30–40&nbsp;минут</span>
                 </div>
               </div>
               <button class="icon-toggle" aria-label="Развернуть услугу"></button>
             </div>
             <div class="accordion__panel">
               <div class="service-item__body">
-                <p class="service-item__desc text-body-lg">Операцию проводим под&nbsp;местной анестезией, в&nbsp;седации или&nbsp;в&nbsp;медикаментозном сне. Боли вы не&nbsp;почувствуете, саму процедуру не&nbsp;запомните.</p>
-                <button class="btn btn--primary btn--lg text-button-lg service-item__btn" data-open-modal>Записаться на&nbsp;бесплатный прием</button>
+                <p class="service-item__desc text-body-lg">Если зубов не&nbsp;хватает частично: 3D-план, шаблон и&nbsp;установка импланта без&nbsp;разрезов за&nbsp;30–40&nbsp;минут.</p>
+                <button class="btn btn--primary btn--lg text-button-lg service-item__btn" data-open-modal>Записаться на&nbsp;консультацию</button>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="services-slot" data-services-slot="2" hidden>
-        <div class="services-grid">
-        <div class="services-row">
-          <article class="service-card service-card--wide reveal">
-            <h3 class="service-card__title text-h4">Имплантация одного или&nbsp;нескольких зубов</h3>
-            <div class="service-card__body">
-              <div class="service-card__media">
-                <img src="assets/service-1.png" alt="" loading="lazy">
-                <span class="service-card__badge text-label-lg">-10%</span>
-              </div>
-              <div class="service-card__details">
-              <div class="service-card__detail">
-                <span class="service-card__label text-label-lg">Цена</span>
-                <div class="service-card__price"><span class="service-card__value text-h4">от&nbsp;125&nbsp;000&nbsp;₽</span><span class="service-card__old text-label-lg">от&nbsp;137&nbsp;500&nbsp;₽</span></div>
-              </div>
-              <div class="service-card__detail">
-                <span class="service-card__label text-label-lg">Рассрочка</span>
-                <span class="service-card__value text-h4">0%</span>
-              </div>
-              </div>
-            </div>
-          </article>
-          <article class="service-card service-card--wide reveal">
-            <h3 class="service-card__title text-h4">Полное восстановление зубов</h3>
-            <div class="service-card__body">
-              <div class="service-card__media">
-                <img src="assets/service-2.png" alt="" loading="lazy">
-                <span class="service-card__badge text-label-lg">-10%</span>
-              </div>
-              <div class="service-card__details">
-              <div class="service-card__detail">
-                <span class="service-card__label text-label-lg">Цена</span>
-                <div class="service-card__price"><span class="service-card__value text-h4">от&nbsp;149&nbsp;900&nbsp;₽</span><span class="service-card__old text-label-lg">от&nbsp;164&nbsp;890&nbsp;₽</span></div>
-              </div>
-              <div class="service-card__detail">
-                <span class="service-card__label text-label-lg">Новые зубы</span>
-                <span class="service-card__value text-h4">за&nbsp;1&nbsp;день</span>
-              </div>
-              </div>
-            </div>
-          </article>
-        </div>
-        <div class="services-row">
-          <article class="service-card service-card--wide reveal">
-            <h3 class="service-card__title text-h4">Протезирование на&nbsp;имплантах</h3>
-            <div class="service-card__body">
-              <div class="service-card__media">
-                <img src="assets/service-3.png" alt="" loading="lazy">
-                <span class="service-card__badge text-label-lg">-15%</span>
-              </div>
-              <div class="service-card__details">
-              <div class="service-card__detail">
-                <span class="service-card__label text-label-lg">Скуловая имплантация</span>
-                <div class="service-card__price"><span class="service-card__value text-h4">от&nbsp;21&nbsp;165&nbsp;₽</span><span class="service-card__old text-label-lg">от&nbsp;24&nbsp;900&nbsp;₽</span></div>
-              </div>
-              <div class="service-card__detail">
-                <span class="service-card__label text-label-lg">Срок</span>
-                <span class="service-card__value text-h4">от&nbsp;1&nbsp;дня</span>
-              </div>
-              </div>
-            </div>
-          </article>
-          <article class="service-card service-card--wide reveal">
-            <h3 class="service-card__title text-h4">Имплантация без&nbsp;боли</h3>
-            <div class="service-card__body">
-              <div class="service-card__media">
-                <img src="assets/service-4.png" alt="" loading="lazy">
-                <span class="service-card__badge text-label-lg">-20%</span>
-              </div>
-              <div class="service-card__details">
-              <div class="service-card__detail">
-                <span class="service-card__label text-label-lg">Цена</span>
-                <div class="service-card__price"><span class="service-card__value text-h4">от&nbsp;9&nbsp;600&nbsp;₽</span><span class="service-card__old text-label-lg">от&nbsp;12&nbsp;000&nbsp;₽</span></div>
-              </div>
-              <div class="service-card__detail">
-                <span class="service-card__label text-label-lg">Лечение во&nbsp;сне</span>
-                <span class="service-card__value text-h4">Седация</span>
-              </div>
-              </div>
-            </div>
-          </article>
-        </div>
-        <div class="services-row services-row--thirds">
-          <article class="service-card reveal">
-            <h3 class="service-card__title text-h4">Эстетика</h3>
-            <div class="service-card__details">
-              <div class="service-card__detail">
-                <span class="service-card__label text-label-lg">Виниры</span>
-                <div class="service-card__price"><span class="service-card__value text-h4">от&nbsp;21&nbsp;165&nbsp;₽</span><span class="service-card__old service-card__old--plain text-label-lg">от&nbsp;24&nbsp;900&nbsp;₽</span></div>
-                <span class="service-card__badge text-label-lg">-15%</span>
-              </div>
-              <div class="service-card__detail">
-                <span class="service-card__label text-label-lg">Отбеливание</span>
-                <span class="service-card__value text-h4">от&nbsp;12&nbsp;000&nbsp;₽</span>
-              </div>
-            </div>
-          </article>
-          <article class="service-card reveal">
-            <h3 class="service-card__title text-h4">Лечение зубов</h3>
-            <div class="service-card__details">
-              <div class="service-card__detail">
-                <span class="service-card__label text-label-lg">Кариес</span>
-                <span class="service-card__value text-h4">от&nbsp;3&nbsp;500&nbsp;₽</span>
-              </div>
-              <div class="service-card__detail">
-                <span class="service-card__label text-label-lg">Лечение каналов</span>
-                <span class="service-card__value text-h4">от&nbsp;6&nbsp;900&nbsp;₽</span>
-              </div>
-            </div>
-          </article>
-          <article class="service-card reveal">
-            <h3 class="service-card__title text-h4">Гигиена и&nbsp;чистка</h3>
-            <div class="service-card__details">
-              <div class="service-card__detail">
-                <span class="service-card__label text-label-lg">Комплексная чистка</span>
-                <span class="service-card__value text-h4">от&nbsp;5&nbsp;900&nbsp;₽</span>
-              </div>
-              <div class="service-card__detail">
-                <span class="service-card__label text-label-lg">Air Flow</span>
-                <div class="service-card__price"><span class="service-card__value text-h4">от&nbsp;3&nbsp;675&nbsp;₽</span><span class="service-card__old service-card__old--plain text-label-lg">от&nbsp;4&nbsp;900&nbsp;₽</span></div>
-                <span class="service-card__badge text-label-lg">-25%</span>
-              </div>
-            </div>
-          </article>
-        </div>
-        <div class="services-note reveal">
-          <div class="services-note__text">
-            <p class="services-note__title text-h5">Каждый случай индивидуален</p>
-            <p class="services-note__sub text-body-lg">точная стоимость лечения определяется в&nbsp;клинике после консультации</p>
-          </div>
-          <button class="btn btn--primary btn--lg text-button-lg" data-open-modal>Записаться на&nbsp;бесплатный прием</button>
-        </div>
         </div>
       </div>
     </section>
@@ -512,43 +246,42 @@
     <!-- ГЛАВНЫЙ ВРАЧ -->
     <section class="band chief-doctor reveal">
       <div class="chief-doctor__card">
-        <div class="chief-doctor__photo"><img class="media-img" src="assets/chief-doctor-photo.png" alt="Александр Соколов" loading="lazy"></div>
+        <div class="chief-doctor__photo"><img class="media-img" src="assets/chief-doctor-photo.png" alt="Борис Кузнецов" loading="lazy"></div>
         <div class="chief-doctor__info">
           <div class="chief-doctor__heading">
-            <p class="text-h4">Александр Соколов</p>
-            <p class="text-label-lg">Главный врач клиники. Челюстно-лицевой хирург, имплантолог</p>
+            <p class="text-h4">Кузнецов Борис Валерьевич</p>
+            <p class="text-label-lg">Главный врач, стоматолог-ортопед. Победитель чемпионата России по&nbsp;стоматологическому мастерству</p>
           </div>
           <div class="chief-doctor__stats">
-            <div><p class="text-label-md">Опыт работы</p><p class="text-h4">16&nbsp;лет</p></div>
-            <div><p class="text-label-md">Установил имплантов</p><p class="text-h4">10&nbsp;000+</p></div>
+            <div><p class="text-label-md">Опыт работы</p><p class="text-h4">24&nbsp;года</p></div>
           </div>
         </div>
       </div>
       <div class="chief-doctor__content">
         <div class="chief-doctor__copy">
-          <p class="text-h1">Отвечаю за&nbsp;<span class="accent">результат</span> каждого лечения в&nbsp;клинике</p>
-          <p class="text-body-lg">Меня зовут Александр Соколов. Я&nbsp;главный врач «Кристалис»: собрал команду клиники и&nbsp;выстроил её&nbsp;стандарты. Вот пять правил, которые мы&nbsp;соблюдаем на&nbsp;каждом приёме:</p>
+          <p class="text-h1">Отвечаю за&nbsp;то, как&nbsp;вы будете <span class="accent">жевать и&nbsp;улыбаться</span> через 10&nbsp;лет</p>
+          <p class="text-body-lg">В&nbsp;клиниках Европы и&nbsp;США All-on-4&nbsp;давно выбирают для&nbsp;пациентов старшего возраста. Мы делаем так&nbsp;же, но&nbsp;каждую операцию сначала проводим на&nbsp;компьютере: хирург и&nbsp;ортопед вместе планируют, где встанут импланты и&nbsp;каким будет протез.</p>
         </div>
         <ul class="chief-doctor__rules">
-          <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><circle cx="12" cy="12" r="9.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.3 12.4l2.6 2.6 4.8-5.4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="text-body-lg">Честно говорим о&nbsp;диагнозе и&nbsp;вариантах лечения</span></li>
-          <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><circle cx="12" cy="12" r="9.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.3 12.4l2.6 2.6 4.8-5.4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="text-body-lg">Назначаем только то, что&nbsp;нужно по&nbsp;показаниям</span></li>
-          <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><circle cx="12" cy="12" r="9.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.3 12.4l2.6 2.6 4.8-5.4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="text-body-lg">Фиксируем стоимость в&nbsp;плане до&nbsp;начала лечения</span></li>
-          <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><circle cx="12" cy="12" r="9.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.3 12.4l2.6 2.6 4.8-5.4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="text-body-lg">Лечим без&nbsp;боли&nbsp;— с&nbsp;анестезией и&nbsp;седацией</span></li>
-          <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><circle cx="12" cy="12" r="9.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.3 12.4l2.6 2.6 4.8-5.4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="text-body-lg">Ведём пациента и&nbsp;после окончания лечения</span></li>
+          <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><circle cx="12" cy="12" r="9.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.3 12.4l2.6 2.6 4.8-5.4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="text-body-lg">Сначала 3D-диагностика, потом план&nbsp;— не&nbsp;наоборот</span></li>
+          <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><circle cx="12" cy="12" r="9.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.3 12.4l2.6 2.6 4.8-5.4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="text-body-lg">Хирург и&nbsp;ортопед ведут вас вместе с&nbsp;первого приёма</span></li>
+          <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><circle cx="12" cy="12" r="9.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.3 12.4l2.6 2.6 4.8-5.4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="text-body-lg">Показываем будущий результат на&nbsp;экране до&nbsp;операции</span></li>
+          <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><circle cx="12" cy="12" r="9.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.3 12.4l2.6 2.6 4.8-5.4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="text-body-lg">Цена и&nbsp;этапы&nbsp;— в&nbsp;плане лечения до&nbsp;начала работ</span></li>
+          <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><circle cx="12" cy="12" r="9.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.3 12.4l2.6 2.6 4.8-5.4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="text-body-lg">Наблюдаем после установки постоянного протеза</span></li>
         </ul>
       </div>
     </section>
 
     <!-- КОМАНДА -->
     <section class="band team reveal">
-      <h2 class="section-title text-h1"><span class="accent">Врачи</span>, которым по&nbsp;силам сложные случаи</h2>
+      <h2 class="section-title text-h1"><span class="accent">Хирург и&nbsp;ортопед</span> работают в&nbsp;паре</h2>
       <div class="team__body">
-        <div class="team__photo"><img class="media-img" src="assets/team-photo.png" alt="Команда врачей клиники Кристалис" loading="lazy"></div>
+        <div class="team__photo"><img class="media-img" src="assets/team-photo.png" alt="Команда клиники Доминанта" loading="lazy"></div>
         <div class="team__stats">
-          <div class="team-stat"><p class="text-h2">12</p><p class="text-label-md">врачей в&nbsp;команде</p></div>
-          <div class="team-stat"><p class="text-h2">10</p><p class="text-label-md">с&nbsp;высшей категорией</p></div>
-          <div class="team-stat"><p class="text-h2">от&nbsp;8&nbsp;лет</p><p class="text-label-md">стаж в&nbsp;имплантологии</p></div>
-          <div class="team-stat"><p class="text-h2">от&nbsp;300&nbsp;ч.</p><p class="text-label-md">обучения ежегодно</p></div>
+          <div class="team-stat"><p class="text-h2">13</p><p class="text-label-md">врачей в&nbsp;команде</p></div>
+          <div class="team-stat"><p class="text-h2">27&nbsp;лет</p><p class="text-label-md">стаж ведущего хирурга-имплантолога</p></div>
+          <div class="team-stat"><p class="text-h2">1000+</p><p class="text-label-md">имплантаций провела Оксана Нуриева</p></div>
+          <div class="team-stat"><p class="text-h2">с&nbsp;2009</p><p class="text-label-md">года&nbsp;— цифровые технологии</p></div>
         </div>
       </div>
     </section>
@@ -557,17 +290,18 @@
     <section class="band specialization">
       <div class="specialization__header reveal">
         <div class="specialization__heading">
-          <h2 class="section-title text-h1">Наш профиль&nbsp;— <span class="accent">сложная имплантация</span> и&nbsp;протезирование зубов</h2>
-          <p class="specialization__sub text-body-lg">Уверенно работаем с&nbsp;критическими случаями, от&nbsp;которых отказываются в&nbsp;других клиниках</p>
+          <h2 class="section-title text-h1">Беремся, когда другие <span class="accent">отказали</span> из-за нехватки кости</h2>
+          <p class="specialization__sub text-body-lg">Импланты All-on-4&nbsp;ставят под&nbsp;углом в&nbsp;самые плотные участки кости. Поэтому наращивание не&nbsp;требуется в&nbsp;9&nbsp;случаях из&nbsp;10.</p>
         </div>
         <div class="specialization__tags">
-          <span class="chip text-label-lg">ЛОР-патологии</span>
-          <span class="chip text-label-lg">Остеопороз</span>
+          <span class="chip text-label-lg">Полная потеря зубов</span>
           <span class="chip text-label-lg">Атрофия кости</span>
+          <span class="chip text-label-lg">Пародонтит</span>
+          <span class="chip text-label-lg">Съёмный протез не&nbsp;держится</span>
         </div>
       </div>
       <div class="specialization__media" data-expand>
-        <video src="assets/clinic-2.mp4" poster="assets/specialization-photo.png" muted loop playsinline preload="metadata" aria-label="Консультация врача и пациентки в клинике"></video>
+        <video src="assets/clinic-2.mp4" poster="assets/specialization-photo.png" muted loop playsinline preload="metadata" aria-label="Врач показывает 3D-модель челюсти"></video>
       </div>
     </section>
 
@@ -575,17 +309,17 @@
     <section class="cta-mid band band--wide reveal">
       <div class="cta-mid__inner"><div class="inner cta-mid__row">
         <div class="cta-mid__media">
-          <img class="media-img" src="assets/cta-mid-image.png" alt="Врач клиники Кристалис" loading="lazy">
+          <img class="media-img" src="assets/cta-mid-image.png" alt="Хирург-имплантолог Оксана Нуриева" loading="lazy">
           <div class="cta-mid__badges">
-            <div class="cta-mid__badge glass"><p class="text-h2">0₽</p><p class="text-label-md">осмотр и&nbsp;консультация</p></div>
-            <div class="cta-mid__badge cta-mid__badge--2 glass"><p class="text-h2">0₽</p><p class="text-label-md">план лечения</p></div>
+            <div class="cta-mid__badge glass"><p class="text-h2">1&nbsp;759&nbsp;₽</p><p class="text-label-md">консультация хирурга</p></div>
+            <div class="cta-mid__badge cta-mid__badge--2 glass"><p class="text-h2">3&nbsp;328&nbsp;₽</p><p class="text-label-md">КТ челюстей</p></div>
           </div>
         </div>
         <div class="cta-mid__content">
           <div class="cta-mid__copy">
-            <p class="text-h2">Начните с&nbsp;<span class="accent-on-dark">бесплатной</span> консультации</p>
-            <p class="text-body-lg">Оставьте заявку&nbsp;— специалист свяжется с&nbsp;вами в&nbsp;течение 15‑ти минут и&nbsp;подберёт удобное время визита.</p>
-            <p class="text-body-lg">Или позвоните: <a class="cta-mid__phone" href="tel:+74951234567">+7&nbsp;(495) 123-45-67</a> с&nbsp;9:00 до&nbsp;21:00 по&nbsp;Мск</p>
+            <p class="text-h2">Начните с&nbsp;<span class="accent-on-dark">консультации</span> и&nbsp;3D-снимка</p>
+            <p class="text-body-lg">Хирург осмотрит, сделает КТ и&nbsp;скажет, подходит&nbsp;ли вам All-on-4. Перезвоним в&nbsp;течение 15&nbsp;минут в&nbsp;рабочее время.</p>
+            <p class="text-body-lg">Или&nbsp;позвоните: <a class="cta-mid__phone" href="tel:+73512251505">+7&nbsp;(351) 225-15-05</a> ежедневно с&nbsp;9:00&nbsp;до&nbsp;20:00</p>
           </div>
           <button class="btn btn--primary btn--lg text-button-lg" data-open-modal>Записаться на&nbsp;удобное время</button>
         </div>
@@ -596,36 +330,37 @@
     <section class="band save-teeth reveal">
       <div class="save-teeth__hero">
         <div class="save-teeth__avatar">
-          <img src="assets/save-teeth-avatar.png" alt="Врач клиники Кристалис" loading="lazy">
+          <img src="assets/save-teeth-avatar.png" alt="Хирург-имплантолог Анастасия Лаптева" loading="lazy">
           <span class="save-teeth__quote" aria-hidden="true">
             <svg viewBox="0 0 20 15" width="20" height="15" fill="currentColor"><path d="M12.992 14.3951L11.368 12.0991C11.8907 11.7258 12.4133 11.2778 12.936 10.7551C13.4587 10.2324 13.9253 9.67244 14.336 9.07511C14.7467 8.44044 15.0267 7.84311 15.176 7.28311C14.168 7.20844 13.328 6.85378 12.656 6.21911C11.984 5.58444 11.648 4.74444 11.648 3.69911C11.648 2.46711 12.04 1.53378 12.824 0.89911C13.608 0.264442 14.5413 -0.0342237 15.624 0.00311139C17.0053 0.0404442 17.9947 0.563111 18.592 1.57111C19.1893 2.57911 19.488 3.71778 19.488 4.98711C19.488 6.36844 19.1707 7.71244 18.536 9.01911C17.9387 10.3258 17.136 11.4644 16.128 12.4351C15.1573 13.3684 14.112 14.0218 12.992 14.3951ZM1.624 14.3951L0 12.0991C0.522667 11.7258 1.04533 11.2778 1.568 10.7551C2.09067 10.2324 2.55733 9.67244 2.968 9.07511C3.416 8.44044 3.71467 7.84311 3.864 7.28311C2.856 7.20844 2.016 6.85378 1.344 6.21911C0.672 5.58444 0.336 4.74444 0.336 3.69911C0.336 2.46711 0.709334 1.53378 1.456 0.89911C2.24 0.264442 3.17333 -0.0342237 4.256 0.00311139C5.63733 0.0404442 6.62667 0.563111 7.224 1.57111C7.82133 2.57911 8.12 3.71778 8.12 4.98711C8.12 6.36844 7.80267 7.71244 7.168 9.01911C6.57067 10.3258 5.768 11.4644 4.76 12.4351C3.78933 13.3684 2.744 14.0218 1.624 14.3951Z"/></svg>
           </span>
         </div>
-        <h2 class="section-title text-h1">Находим способ <span class="accent">сохранить зуб</span>, а&nbsp;не&nbsp;повод его&nbsp;удалить</h2>
-        <p class="text-body-lg save-teeth__sub">Отговариваем пациентов от&nbsp;имплантации и&nbsp;All-on-4, пока остаётся хотя&nbsp;бы один шанс сохранить живой зуб</p>
+        <h2 class="section-title text-h1">Сохраним всё, что&nbsp;можно <span class="accent">сохранить</span></h2>
+        <p class="text-body-lg save-teeth__sub">All-on-4&nbsp;нужен не&nbsp;всем. Если зубы можно вылечить, начнём с&nbsp;этого.</p>
       </div>
       <div class="save-teeth__panel">
-        <p class="save-teeth__panel-title text-h3">Сохраняем зубы благодаря точному и&nbsp;вовремя подобранному лечению</p>
+        <p class="save-teeth__panel-title text-h3">«На&nbsp;первое место&nbsp;— медицина, здоровье человека и&nbsp;работа по&nbsp;показаниям»</p>
+        <p class="text-body-lg">Анастасия Лаптева, хирург-имплантолог</p>
         <div class="save-teeth__cards">
           <div class="save-teeth-card">
             <span class="advantage__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="40" height="40"><circle cx="12" cy="12" r="9.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.3 12.4l2.6 2.6 4.8-5.4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             <div class="save-teeth-card__content">
-              <p class="text-quote">Находим скрытые повреждения</p>
-              <p class="text-body-lg">на&nbsp;высокоточной 3D-диагностике</p>
+              <p class="text-quote">3D-диагностика</p>
+              <p class="text-body-lg">видим кость и&nbsp;корни целиком</p>
             </div>
           </div>
           <div class="save-teeth-card">
             <span class="advantage__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="40" height="40"><circle cx="12" cy="12" r="9.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.3 12.4l2.6 2.6 4.8-5.4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             <div class="save-teeth-card__content">
-              <p class="text-quote">Лечим до&nbsp;6&nbsp;раз точнее и&nbsp;надёжнее</p>
-              <p class="text-body-lg">под&nbsp;дентальным микроскопом</p>
+              <p class="text-quote">Лечение под&nbsp;микроскопом</p>
+              <p class="text-body-lg">каналы и&nbsp;трещины видны при&nbsp;увеличении</p>
             </div>
           </div>
           <div class="save-teeth-card">
             <span class="advantage__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="40" height="40"><circle cx="12" cy="12" r="9.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.3 12.4l2.6 2.6 4.8-5.4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             <div class="save-teeth-card__content">
-              <p class="text-quote">Восстанавливаем ткани зуба</p>
-              <p class="text-body-lg">биоактивными материалами</p>
+              <p class="text-quote">Работа только по&nbsp;показаниям</p>
+              <p class="text-body-lg">не&nbsp;удаляем то, что&nbsp;можно вылечить</p>
             </div>
           </div>
         </div>
@@ -635,21 +370,20 @@
     <!-- ВОССТАНОВЛЕНИЕ (title 1200 + body 1840) -->
     <section class="restoration">
       <div class="band restoration__header">
-        <h2 class="section-title text-h1 reveal">Помогаем в&nbsp;самых <span class="accent">запущенных</span> случаях</h2>
-        <p class="restoration__lede text-body-lg reveal">Если спасти родные зубы невозможно, вы получите идеальную замену</p>
+        <h2 class="section-title text-h1 reveal">Раньше на&nbsp;челюсть нужно было 14&nbsp;имплантов. Теперь достаточно <span class="accent">четырёх</span></h2>
       </div>
       <div class="restoration__body band--wide reveal">
         <div class="inner">
           <div class="restoration__details" data-stagger="70">
-            <div class="restoration-detail reveal"><div class="restoration-detail__media"><img class="media-img" src="assets/restoration-detail-1.png" alt="" loading="lazy"></div><p class="text-quote">Нехватка объёма кости требует от&nbsp;имплантолога высокого мастерства</p></div>
-            <div class="restoration-detail reveal"><div class="restoration-detail__media"><img class="media-img" src="assets/restoration-detail-2.png" alt="" loading="lazy"></div><p class="text-quote">В&nbsp;нашей клинике врач надёжно поставит импланты даже при&nbsp;минимальном объёме кости</p></div>
+            <div class="restoration-detail reveal"><div class="restoration-detail__media"><img class="media-img" src="assets/restoration-detail-1.png" alt="" loading="lazy"></div><p class="text-quote">Кость атрофировалась? Наклонные импланты обходят участки без&nbsp;кости</p></div>
+            <div class="restoration-detail reveal"><div class="restoration-detail__media"><img class="media-img" src="assets/restoration-detail-2.png" alt="" loading="lazy"></div><p class="text-quote">Правило «1&nbsp;зуб = 1&nbsp;имплант» больше не&nbsp;действует</p></div>
           </div>
           <div class="restoration__content">
-          <p class="restoration__sub-title text-h3 reveal">Мы владеем всеми способами имплантации при&nbsp;патологиях челюсти</p>
+          <p class="restoration__sub-title text-h3 reveal">Выберем метод под&nbsp;ваш случай</p>
           <div class="restoration__options" data-stagger="70">
             <div class="resto-option reveal"><div class="resto-option__media"><img class="media-img" src="assets/resto-allon4.png" alt="All-on-4" loading="lazy"></div><div class="resto-option__content"><div class="resto-option__title text-h4">All-on-4</div><div class="resto-option__desc text-body-lg">несъёмный протез на&nbsp;4&nbsp;имплантах</div></div></div>
-            <div class="resto-option reveal"><div class="resto-option__media"><img class="media-img" src="assets/resto-allon6.png" alt="All-on-6" loading="lazy"></div><div class="resto-option__content"><div class="resto-option__title text-h4">All-on-6</div><div class="resto-option__desc text-body-lg">на&nbsp;6&nbsp;имплантах, когда нужна большая опора</div></div></div>
-            <div class="resto-option reveal"><div class="resto-option__media"><img class="media-img" src="assets/resto-zygoma.png" alt="Скуловая имплантация" loading="lazy"></div><div class="resto-option__content"><div class="resto-option__title text-h4">Скуловая имплантация</div><div class="resto-option__desc text-body-lg">при&nbsp;сильной нехватке кости на&nbsp;верхней челюсти</div></div></div>
+            <div class="resto-option reveal"><div class="resto-option__media"><img class="media-img" src="assets/resto-allon6.png" alt="All-on-6" loading="lazy"></div><div class="resto-option__content"><div class="resto-option__title text-h4">All-on-6</div><div class="resto-option__desc text-body-lg">на&nbsp;6&nbsp;имплантах, когда нужна дополнительная опора</div></div></div>
+            <div class="resto-option reveal"><div class="resto-option__media"><img class="media-img" src="assets/resto-zygoma.png" alt="Хирургический шаблон" loading="lazy"></div><div class="resto-option__content"><div class="resto-option__title text-h4">Имплантация по&nbsp;шаблону через прокол</div><div class="resto-option__desc text-body-lg">без&nbsp;разрезов, за&nbsp;30–40&nbsp;минут</div></div></div>
           </div>
           </div>
         </div>
@@ -660,29 +394,27 @@
     <section class="band guarantee reveal">
       <div class="guarantee__content">
         <div class="guarantee__heading">
-          <h2 class="section-title text-h1">Получите <span class="accent">гарантии</span>, а&nbsp;не&nbsp;пустые обещания</h2>
-          <p class="text-body-lg">Мы&nbsp;уверены в&nbsp;своём профессионализме, поэтому даём гарантию на&nbsp;все виды работ</p>
+          <h2 class="section-title text-h1"><span class="accent">Гарантии</span> записаны в&nbsp;договоре</h2>
         </div>
         <div class="guarantee__row">
           <div class="guarantee__item">
             <span class="guarantee__icon"><img src="assets/guarantee-icon-1.png" alt="" loading="lazy"></span>
-            <div class="guarantee__item-text"><div class="text-h4">До&nbsp;10&nbsp;лет</div><div class="text-label-lg">на&nbsp;работу врачей</div></div>
+            <div class="guarantee__item-text"><div class="text-h4">Пожизненно</div><div class="text-label-lg">гарантия производителя на&nbsp;импланты Ankylos и&nbsp;Astra Tech</div></div>
           </div>
           <div class="guarantee__item">
             <span class="guarantee__icon"><img src="assets/guarantee-icon-2.png" alt="" loading="lazy"></span>
-            <div class="guarantee__item-text"><div class="text-h4">Пожизненно</div><div class="text-label-lg">на&nbsp;все виды имплантов</div></div>
+            <div class="guarantee__item-text"><div class="text-h4">3&nbsp;года</div><div class="text-label-lg">гарантия клиники на&nbsp;протез</div></div>
           </div>
         </div>
       </div>
       <div class="guarantee-flyer">
         <div class="guarantee-flyer__head">
-          <p class="text-h4">Все работы заранее фиксируем в&nbsp;договоре</p>
+          <p class="text-h4">Все работы фиксируем в&nbsp;плане лечения</p>
           <ul class="guarantee-flyer__list text-body-md">
-            <li>Стоимость лечения не&nbsp;изменится ни&nbsp;на&nbsp;рубль</li>
-            <li>Доводим работу до&nbsp;конца, с&nbsp;полной ответственностью</li>
+            <li>Цена и&nbsp;этапы не&nbsp;меняются после подписания</li>
           </ul>
         </div>
-        <img src="assets/guarantee-flyer.png" alt="Образец договора" loading="lazy">
+        <img src="assets/guarantee-flyer.png" alt="Образец плана лечения" loading="lazy">
       </div>
     </section>
 
@@ -691,18 +423,18 @@
       <div class="surgery__row" data-stagger="60">
         <div class="surgery-item reveal">
           <span class="advantage__icon advantage__icon--lg" aria-hidden="true"><svg viewBox="0 0 24 24" width="64" height="64"><circle cx="12" cy="12" r="9.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.3 12.4l2.6 2.6 4.8-5.4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          <p class="text-h5">Работаем по&nbsp;официальной лицензии</p>
-          <p class="text-body-lg">Сложные челюстно-лицевые операции проводим каждый день</p>
+          <p class="text-h5">Работаем по&nbsp;лицензии</p>
+          <p class="text-body-lg">ЛО-74-01-003355&nbsp;от&nbsp;05.12.2015</p>
         </div>
         <div class="surgery-item reveal">
           <span class="advantage__icon advantage__icon--lg" aria-hidden="true"><svg viewBox="0 0 24 24" width="64" height="64"><circle cx="12" cy="12" r="9.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.3 12.4l2.6 2.6 4.8-5.4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          <p class="text-h5">Оперируем в&nbsp;хирургическом блоке</p>
-          <p class="text-body-lg">Стерильная операционная с&nbsp;полным оснащением, а&nbsp;не&nbsp;обычный стоматологический кабинет</p>
+          <p class="text-h5">Стерильная операционная</p>
+          <p class="text-body-lg">и&nbsp;собственная стерилизационная</p>
         </div>
         <div class="surgery-item reveal">
           <span class="advantage__icon advantage__icon--lg" aria-hidden="true"><svg viewBox="0 0 24 24" width="64" height="64"><circle cx="12" cy="12" r="9.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.3 12.4l2.6 2.6 4.8-5.4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          <p class="text-h5">Комфортное лечение, в&nbsp;том числе во&nbsp;сне</p>
-          <p class="text-body-lg">Анестезию подбираем под&nbsp;показатели вашего организма</p>
+          <p class="text-h5">Эрбиевый лазер LiteTouch</p>
+          <p class="text-body-lg">Меньше травма, ниже риск воспаления</p>
         </div>
       </div>
       <div class="surgery__quote reveal">
@@ -710,20 +442,21 @@
           <span class="surgery__quote-mark" aria-hidden="true">
             <svg viewBox="0 0 20 15" width="47" height="35" fill="currentColor"><path d="M12.992 14.3951L11.368 12.0991C11.8907 11.7258 12.4133 11.2778 12.936 10.7551C13.4587 10.2324 13.9253 9.67244 14.336 9.07511C14.7467 8.44044 15.0267 7.84311 15.176 7.28311C14.168 7.20844 13.328 6.85378 12.656 6.21911C11.984 5.58444 11.648 4.74444 11.648 3.69911C11.648 2.46711 12.04 1.53378 12.824 0.89911C13.608 0.264442 14.5413 -0.0342237 15.624 0.00311139C17.0053 0.0404442 17.9947 0.563111 18.592 1.57111C19.1893 2.57911 19.488 3.71778 19.488 4.98711C19.488 6.36844 19.1707 7.71244 18.536 9.01911C17.9387 10.3258 17.136 11.4644 16.128 12.4351C15.1573 13.3684 14.112 14.0218 12.992 14.3951ZM1.624 14.3951L0 12.0991C0.522667 11.7258 1.04533 11.2778 1.568 10.7551C2.09067 10.2324 2.55733 9.67244 2.968 9.07511C3.416 8.44044 3.71467 7.84311 3.864 7.28311C2.856 7.20844 2.016 6.85378 1.344 6.21911C0.672 5.58444 0.336 4.74444 0.336 3.69911C0.336 2.46711 0.709334 1.53378 1.456 0.89911C2.24 0.264442 3.17333 -0.0342237 4.256 0.00311139C5.63733 0.0404442 6.62667 0.563111 7.224 1.57111C7.82133 2.57911 8.12 3.71778 8.12 4.98711C8.12 6.36844 7.80267 7.71244 7.168 9.01911C6.57067 10.3258 5.768 11.4644 4.76 12.4351C3.78933 13.3684 2.744 14.0218 1.624 14.3951Z"/></svg>
           </span>
-          <p class="text-quote">Мне в&nbsp;тридцати клиниках отказали. Сказали, что&nbsp;кость слишком тонкая. А&nbsp;в&nbsp;Кристалис импланты <span class="accent">поставили за&nbsp;один раз</span>!</p>
+          <p class="text-quote">Теперь не&nbsp;стесняюсь улыбаться и&nbsp;ем любую еду. <span class="accent">Я помолодел</span></p>
+          <p class="text-label-lg">Борис Злобин, 65&nbsp;лет</p>
         </div>
-        <div class="surgery__quote-media"><img src="assets/surgery-testimonial.png" alt="Пациентка клиники до и после лечения" loading="lazy"></div>
+        <div class="surgery__quote-media"><img src="assets/surgery-testimonial.png" alt="Хирург и ассистент в стерильной операционной" loading="lazy"></div>
       </div>
     </section>
 
     <!-- БРЕНДЫ -->
     <section class="band">
-      <h2 class="section-title text-h1 reveal"><span class="accent">Импланты</span> под&nbsp;ваш случай и&nbsp;бюджет</h2>
+      <h2 class="section-title text-h1 reveal">Работаем с&nbsp;<span class="accent">проверенными</span> системами</h2>
       <div class="brands" data-stagger="70">
-        <div class="brand-item reveal"><div class="brand-item__logo"><img class="brand-logo" src="assets/logo-straumann.png" alt="Straumann"></div><div class="brand-item__content"><div class="brand-item__name text-h4">Straumann</div><div class="brand-item__country text-label-lg">Швейцария</div></div></div>
-        <div class="brand-item reveal"><div class="brand-item__logo"><img class="brand-logo" src="assets/logo-nobel.png" alt="Nobel Biocare"></div><div class="brand-item__content"><div class="brand-item__name text-h4">Nobel Biocare</div><div class="brand-item__country text-label-lg">США</div></div></div>
-        <div class="brand-item reveal"><div class="brand-item__logo"><img class="brand-logo" src="assets/logo-astra.png" alt="Astra Tech"></div><div class="brand-item__content"><div class="brand-item__name text-h4">Astra Tech</div><div class="brand-item__country text-label-lg">Швеция</div></div></div>
-        <div class="brand-item reveal"><div class="brand-item__logo"><img class="brand-logo" src="assets/logo-osstem.png" alt="Osstem"></div><div class="brand-item__content"><div class="brand-item__name text-h4">Osstem</div><div class="brand-item__country text-label-lg">Южная Корея</div></div></div>
+        <div class="brand-item reveal"><div class="brand-item__logo"><img class="brand-logo" src="assets/logo-straumann.png" alt="Ankylos"></div><div class="brand-item__content"><div class="brand-item__name text-h4">Ankylos</div><div class="brand-item__country text-label-lg">Германия, пожизненная гарантия</div></div></div>
+        <div class="brand-item reveal"><div class="brand-item__logo"><img class="brand-logo" src="assets/logo-nobel.png" alt="Astra Tech"></div><div class="brand-item__content"><div class="brand-item__name text-h4">Astra Tech</div><div class="brand-item__country text-label-lg">Швеция, пожизненная гарантия</div></div></div>
+        <div class="brand-item reveal"><div class="brand-item__logo"><img class="brand-logo" src="assets/logo-astra.png" alt="Dentsply Sirona"></div><div class="brand-item__content"><div class="brand-item__name text-h4">Dentsply Sirona</div><div class="brand-item__country text-label-lg">системы и&nbsp;оборудование CEREC</div></div></div>
+        <div class="brand-item reveal"><div class="brand-item__logo"><img class="brand-logo" src="assets/logo-osstem.png" alt="Impro"></div><div class="brand-item__content"><div class="brand-item__name text-h4">Impro</div><div class="brand-item__country text-label-lg">Германия</div></div></div>
       </div>
     </section>
 
@@ -733,35 +466,35 @@
         <div class="inner pricing__inner">
           <div class="pricing__content">
             <div class="pricing__copy">
-            <h3 class="text-h3">Стоимость известна заранее</h3>
-            <p class="text-body-lg pricing__text">Перед лечением составляем смету с&nbsp;тремя вариантами на&nbsp;разный бюджет. Всё, что&nbsp;входит в&nbsp;работу, перечислено в&nbsp;договоре: диагностика, операция, имплант, коронка. Стоимость не&nbsp;изменится, пока идёт лечение.</p>
+            <h3 class="text-h3">Стоимость известна до&nbsp;операции</h3>
+            <p class="text-body-lg pricing__text">После КТ составим план лечения с&nbsp;ценой каждого этапа. В&nbsp;цену входят материалы, работа и&nbsp;контрольные осмотры.</p>
             <ul class="pricing__features">
-              <li class="text-body-lg"><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M5 12.5l4 4 10-10.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Три варианта плана на&nbsp;выбор</li>
-              <li class="text-body-lg"><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M5 12.5l4 4 10-10.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Все этапы и&nbsp;цены&nbsp;— в&nbsp;договоре</li>
-              <li class="text-body-lg"><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M5 12.5l4 4 10-10.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Возможна рассрочка на&nbsp;весь курс</li>
+              <li class="text-body-lg"><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M5 12.5l4 4 10-10.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>План лечения до&nbsp;операции</li>
+              <li class="text-body-lg"><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M5 12.5l4 4 10-10.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Кредит в&nbsp;клинике по&nbsp;паспорту&nbsp;— банки-партнёры</li>
+              <li class="text-body-lg"><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M5 12.5l4 4 10-10.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Налоговый вычет 13%&nbsp;— справку оформим</li>
             </ul>
             </div>
             <div class="pricing__actions">
               <button class="btn btn--primary btn--lg text-button-lg" data-open-modal>Рассчитать стоимость</button>
-              <button class="btn btn--white btn--lg text-button-lg" data-open-modal>Скачать прайс-лист</button>
+              <a class="btn btn--white btn--lg text-button-lg" href="https://dominanta74.ru/tseny-na-lechenie-zubov/" target="_blank" rel="noopener">Смотреть прайс-лист</a>
             </div>
           </div>
-          <div class="pricing__media"><img class="media-img" src="assets/pricing.jpg" alt="Образец сметы лечения" loading="lazy"></div>
+          <div class="pricing__media"><img class="media-img" src="assets/pricing.jpg" alt="Образец плана лечения" loading="lazy"></div>
         </div>
       </div>
     </section>
 
     <!-- ГАЛЕРЕЯ -->
     <section class="band">
-      <h2 class="section-title text-h1 reveal">Как&nbsp;устроена <span class="accent">клиника</span></h2>
+      <h2 class="section-title text-h1 reveal">Полный цифровой цикл&nbsp;— <span class="accent">в&nbsp;одном здании</span></h2>
       <div class="gallery" data-stagger="60">
-        <div class="gallery__photo gallery__photo--a reveal"><img class="media-img" src="assets/gallery-1.png" alt="Интерьер клиники" loading="lazy"></div>
-        <div class="gallery__photo gallery__photo--b reveal"><img class="media-img" src="assets/gallery-2.png" alt="Интерьер клиники" loading="lazy"></div>
-        <div class="gallery__photo gallery__photo--c reveal"><img class="media-img" src="assets/gallery-3.png" alt="Интерьер клиники" loading="lazy"></div>
-        <div class="gallery__photo gallery__photo--d reveal"><img class="media-img" src="assets/gallery-4.png" alt="Интерьер клиники" loading="lazy"></div>
-        <div class="gallery__photo gallery__photo--e reveal"><img class="media-img" src="assets/gallery-5.png" alt="Интерьер клиники" loading="lazy"></div>
-        <div class="gallery__photo gallery__photo--f reveal"><img class="media-img" src="assets/gallery-6.png" alt="Интерьер клиники" loading="lazy"></div>
-        <div class="gallery__photo gallery__photo--g reveal"><img class="media-img" src="assets/gallery-7.png" alt="Интерьер клиники" loading="lazy"></div>
+        <div class="gallery__photo gallery__photo--a reveal"><img class="media-img" src="assets/gallery-1.png" alt="Ресепшн клиники" loading="lazy"></div>
+        <div class="gallery__photo gallery__photo--b reveal"><img class="media-img" src="assets/gallery-2.png" alt="Компьютерный томограф" loading="lazy"></div>
+        <div class="gallery__photo gallery__photo--c reveal"><img class="media-img" src="assets/gallery-3.png" alt="Врач изучает снимок с имплантами" loading="lazy"></div>
+        <div class="gallery__photo gallery__photo--d reveal"><img class="media-img" src="assets/gallery-4.png" alt="Кабинет с микроскопом" loading="lazy"></div>
+        <div class="gallery__photo gallery__photo--e reveal"><img class="media-img" src="assets/gallery-5.png" alt="Цифровое моделирование протеза" loading="lazy"></div>
+        <div class="gallery__photo gallery__photo--f reveal"><img class="media-img" src="assets/gallery-6.png" alt="Стерилизационная" loading="lazy"></div>
+        <div class="gallery__photo gallery__photo--g reveal"><img class="media-img" src="assets/gallery-7.png" alt="Зона ожидания" loading="lazy"></div>
       </div>
     </section>
 
@@ -769,12 +502,12 @@
     <section class="band">
       <h2 class="section-title text-h1 reveal">Почему <span class="accent">пациенты выбирают</span> нас</h2>
       <div class="advantages" data-stagger="60">
-        <div class="advantage reveal"><span class="advantage__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="64" height="64"><circle cx="12" cy="12" r="9.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.3 12.4l2.6 2.6 4.8-5.4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="advantage__title text-h4">Цена закреплена в&nbsp;договоре</h3><p class="advantage__text text-body-lg">Стоимость не&nbsp;меняется в&nbsp;процессе лечения. Скрытых доплат нет&nbsp;— вы платите ровно столько, сколько указано в&nbsp;смете.</p></div>
-        <div class="advantage reveal"><span class="advantage__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="64" height="64"><circle cx="12" cy="12" r="9.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.3 12.4l2.6 2.6 4.8-5.4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="advantage__title text-h4">Своя зуботехническая лаборатория</h3><p class="advantage__text text-body-lg">Коронки и&nbsp;протезы делаем сами, без&nbsp;посредников. За&nbsp;счёт этого короче сроки и&nbsp;точнее посадка.</p></div>
-        <div class="advantage reveal"><span class="advantage__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="64" height="64"><circle cx="12" cy="12" r="9.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.3 12.4l2.6 2.6 4.8-5.4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="advantage__title text-h4">Расчёт операции по&nbsp;3D-снимку</h3><p class="advantage__text text-body-lg">Имплант ставим по&nbsp;навигационному шаблону, который повторяет план с&nbsp;компьютерной томографии. Меньше травма, точнее результат.</p></div>
-        <div class="advantage reveal"><span class="advantage__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="64" height="64"><circle cx="12" cy="12" r="9.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.3 12.4l2.6 2.6 4.8-5.4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="advantage__title text-h4">Покажем результат до&nbsp;лечения</h3><p class="advantage__text text-body-lg">Смоделируем будущую улыбку заранее, чтобы вы видели, к&nbsp;чему идём.</p></div>
-        <div class="advantage reveal"><span class="advantage__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="64" height="64"><circle cx="12" cy="12" r="9.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.3 12.4l2.6 2.6 4.8-5.4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="advantage__title text-h4">Лечение без&nbsp;боли</h3><p class="advantage__text text-body-lg">Анестезия, седация или&nbsp;сон&nbsp;— выбираете вместе с&nbsp;врачом.</p></div>
-        <div class="advantage reveal"><span class="advantage__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="64" height="64"><circle cx="12" cy="12" r="9.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.3 12.4l2.6 2.6 4.8-5.4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="advantage__title text-h4">Личный координатор</h3><p class="advantage__text text-body-lg">Ведёт от&nbsp;первого визита до&nbsp;установки коронки, держит связь и&nbsp;отвечает на&nbsp;вопросы между приёмами.</p></div>
+        <div class="advantage reveal"><span class="advantage__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="64" height="64"><circle cx="12" cy="12" r="9.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.3 12.4l2.6 2.6 4.8-5.4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="advantage__title text-h4">Зубы в&nbsp;день операции</h3><p class="advantage__text text-body-lg">Временный несъёмный протез фиксируют в&nbsp;тот&nbsp;же визит.</p></div>
+        <div class="advantage reveal"><span class="advantage__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="64" height="64"><circle cx="12" cy="12" r="9.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.3 12.4l2.6 2.6 4.8-5.4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="advantage__title text-h4">Точность шаблона &lt; 10&nbsp;мкм</h3><p class="advantage__text text-body-lg">Импланты встают ровно туда, куда запланировали.</p></div>
+        <div class="advantage reveal"><span class="advantage__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="64" height="64"><circle cx="12" cy="12" r="9.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.3 12.4l2.6 2.6 4.8-5.4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="advantage__title text-h4">Своя цифровая лаборатория</h3><p class="advantage__text text-body-lg">Протез CEREC изготавливают в&nbsp;клинике, процесс можно увидеть.</p></div>
+        <div class="advantage reveal"><span class="advantage__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="64" height="64"><circle cx="12" cy="12" r="9.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.3 12.4l2.6 2.6 4.8-5.4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="advantage__title text-h4">Результат до&nbsp;лечения</h3><p class="advantage__text text-body-lg">Показываем будущую улыбку на&nbsp;экране.</p></div>
+        <div class="advantage reveal"><span class="advantage__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="64" height="64"><circle cx="12" cy="12" r="9.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.3 12.4l2.6 2.6 4.8-5.4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="advantage__title text-h4">Хирург + ортопед</h3><p class="advantage__text text-body-lg">Два специалиста ведут вас с&nbsp;планирования.</p></div>
+        <div class="advantage reveal"><span class="advantage__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="64" height="64"><circle cx="12" cy="12" r="9.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.3 12.4l2.6 2.6 4.8-5.4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 class="advantage__title text-h4">Оплата частями</h3><p class="advantage__text text-body-lg">Кредит по&nbsp;паспорту, налоговый вычет.</p></div>
       </div>
     </section>
 
@@ -782,8 +515,8 @@
     <section class="band social-proof reveal">
       <div class="social-proof__avatars" aria-hidden="true"><span class="ava"><img src="assets/avatar-1.png" alt="" loading="lazy"></span><span class="ava"><img src="assets/avatar-2.png" alt="" loading="lazy"></span><span class="ava"><img src="assets/avatar-3.png" alt="" loading="lazy"></span><span class="ava"><img src="assets/avatar-4.png" alt="" loading="lazy"></span><span class="ava"><img src="assets/avatar-5.png" alt="" loading="lazy"></span></div>
       <div class="social-proof__content">
-        <div class="social-proof__title"><span class="accent">5000+</span> счастливых улыбок</div>
-        <div class="social-proof__sub">подтверждают наш профессионализм и&nbsp;индивидуальный подход</div>
+        <div class="social-proof__title"><span class="accent">183&nbsp;отзыва</span> пациентов</div>
+        <div class="social-proof__sub">на&nbsp;сайте клиники</div>
       </div>
     </section>
 
@@ -793,144 +526,120 @@
       <div class="doctors band--wide reveal">
         <div class="inner doc-grid" data-stagger="60">
           <article class="doc-card2 reveal">
-            <div class="doc-card2__photo"><img class="media-img" src="assets/doctor.jpg" alt="Сергей Орлов" loading="lazy"></div>
+            <div class="doc-card2__photo"><img class="media-img" src="assets/doctor.jpg" alt="Борис Кузнецов" loading="lazy"></div>
             <div class="doc-card2__body">
               <div class="doc-card2__head">
-                <p class="doc-card2__name text-h5">Сергей Орлов</p>
-                <div class="doc-card2__tags"><span class="chip chip--sm">ЧЛХ</span><span class="chip chip--sm">Имплантолог</span></div>
+                <p class="doc-card2__name text-h5">Кузнецов Борис Валерьевич</p>
+                <div class="doc-card2__tags"><span class="chip chip--sm">Главврач</span><span class="chip chip--sm">Ортопед</span><span class="chip chip--sm">CEREC</span></div>
+                <p class="doc-card2__fact text-body-sm">Чемпион России по&nbsp;стоматологическому мастерству</p>
               </div>
               <div class="doc-card2__details">
                 <button type="button" class="doc-card2__cert text-label-md" data-cert-open><svg viewBox="0 0 14 15" width="14" height="15" fill="currentColor" aria-hidden="true"><path d="M13.5 10.5L8.9976 15H0.75C0.33579 15 0 14.6642 0 14.25V0.75C0 0.33579 0.33579 0 0.75 0H12.75C13.1642 0 13.5 0.33579 13.5 0.75V10.5ZM12 9.75V1.5H1.5V13.5H8.25V9.75H12Z"/></svg>Сертификаты</button>
                 <div class="doc-card2__stats">
                   <div class="doc-card2__stat">
                     <span class="doc-card2__stat-label text-label-lg">Опыт</span>
-                    <span class="doc-card2__stat-value text-h4">16+</span>
-                    <span class="doc-card2__stat-unit text-label-md">лет</span>
-                  </div>
-                  <div class="doc-card2__stat">
-                    <span class="doc-card2__stat-label text-label-lg">Установил</span>
-                    <span class="doc-card2__stat-value text-h4">10&nbsp;000+</span>
-                    <span class="doc-card2__stat-unit text-label-md">имплантов</span>
+                    <span class="doc-card2__stat-value text-h4">24</span>
+                    <span class="doc-card2__stat-unit text-label-md">года</span>
                   </div>
                 </div>
               </div>
             </div>
           </article>
           <article class="doc-card2 reveal">
-            <div class="doc-card2__photo"><img class="media-img" src="assets/doctor.jpg" alt="Сергей Орлов" loading="lazy"></div>
+            <div class="doc-card2__photo"><img class="media-img" src="assets/doctor.jpg" alt="Оксана Нуриева" loading="lazy"></div>
             <div class="doc-card2__body">
               <div class="doc-card2__head">
-                <p class="doc-card2__name text-h5">Сергей Орлов</p>
-                <div class="doc-card2__tags"><span class="chip chip--sm">ЧЛХ</span><span class="chip chip--sm">Имплантолог</span></div>
+                <p class="doc-card2__name text-h5">Нуриева Оксана Николаевна</p>
+                <div class="doc-card2__tags"><span class="chip chip--sm">Хирург-имплантолог</span></div>
+                <p class="doc-card2__fact text-body-sm">Более 1000&nbsp;имплантаций</p>
               </div>
               <div class="doc-card2__details">
                 <button type="button" class="doc-card2__cert text-label-md" data-cert-open><svg viewBox="0 0 14 15" width="14" height="15" fill="currentColor" aria-hidden="true"><path d="M13.5 10.5L8.9976 15H0.75C0.33579 15 0 14.6642 0 14.25V0.75C0 0.33579 0.33579 0 0.75 0H12.75C13.1642 0 13.5 0.33579 13.5 0.75V10.5ZM12 9.75V1.5H1.5V13.5H8.25V9.75H12Z"/></svg>Сертификаты</button>
                 <div class="doc-card2__stats">
                   <div class="doc-card2__stat">
                     <span class="doc-card2__stat-label text-label-lg">Опыт</span>
-                    <span class="doc-card2__stat-value text-h4">16+</span>
+                    <span class="doc-card2__stat-value text-h4">27</span>
                     <span class="doc-card2__stat-unit text-label-md">лет</span>
-                  </div>
-                  <div class="doc-card2__stat">
-                    <span class="doc-card2__stat-label text-label-lg">Установил</span>
-                    <span class="doc-card2__stat-value text-h4">10&nbsp;000+</span>
-                    <span class="doc-card2__stat-unit text-label-md">имплантов</span>
                   </div>
                 </div>
               </div>
             </div>
           </article>
           <article class="doc-card2 reveal">
-            <div class="doc-card2__photo"><img class="media-img" src="assets/doctor.jpg" alt="Сергей Орлов" loading="lazy"></div>
+            <div class="doc-card2__photo"><img class="media-img" src="assets/doctor.jpg" alt="Анастасия Лаптева" loading="lazy"></div>
             <div class="doc-card2__body">
               <div class="doc-card2__head">
-                <p class="doc-card2__name text-h5">Сергей Орлов</p>
-                <div class="doc-card2__tags"><span class="chip chip--sm">ЧЛХ</span><span class="chip chip--sm">Имплантолог</span></div>
+                <p class="doc-card2__name text-h5">Лаптева Анастасия Вячеславовна</p>
+                <div class="doc-card2__tags"><span class="chip chip--sm">Хирург-имплантолог</span></div>
+                <p class="doc-card2__fact text-body-sm">Преподаватель кафедры хирургической стоматологии ЮУГМУ</p>
               </div>
               <div class="doc-card2__details">
                 <button type="button" class="doc-card2__cert text-label-md" data-cert-open><svg viewBox="0 0 14 15" width="14" height="15" fill="currentColor" aria-hidden="true"><path d="M13.5 10.5L8.9976 15H0.75C0.33579 15 0 14.6642 0 14.25V0.75C0 0.33579 0.33579 0 0.75 0H12.75C13.1642 0 13.5 0.33579 13.5 0.75V10.5ZM12 9.75V1.5H1.5V13.5H8.25V9.75H12Z"/></svg>Сертификаты</button>
                 <div class="doc-card2__stats">
                   <div class="doc-card2__stat">
                     <span class="doc-card2__stat-label text-label-lg">Опыт</span>
-                    <span class="doc-card2__stat-value text-h4">16+</span>
+                    <span class="doc-card2__stat-value text-h4">12</span>
                     <span class="doc-card2__stat-unit text-label-md">лет</span>
-                  </div>
-                  <div class="doc-card2__stat">
-                    <span class="doc-card2__stat-label text-label-lg">Установил</span>
-                    <span class="doc-card2__stat-value text-h4">10&nbsp;000+</span>
-                    <span class="doc-card2__stat-unit text-label-md">имплантов</span>
                   </div>
                 </div>
               </div>
             </div>
           </article>
           <article class="doc-card2 reveal">
-            <div class="doc-card2__photo"><img class="media-img" src="assets/doctor.jpg" alt="Сергей Орлов" loading="lazy"></div>
+            <div class="doc-card2__photo"><img class="media-img" src="assets/doctor.jpg" alt="Игорь Губанов" loading="lazy"></div>
             <div class="doc-card2__body">
               <div class="doc-card2__head">
-                <p class="doc-card2__name text-h5">Сергей Орлов</p>
-                <div class="doc-card2__tags"><span class="chip chip--sm">ЧЛХ</span><span class="chip chip--sm">Имплантолог</span></div>
+                <p class="doc-card2__name text-h5">Губанов Игорь Сергеевич</p>
+                <div class="doc-card2__tags"><span class="chip chip--sm">Ортопед</span><span class="chip chip--sm">CEREC</span></div>
+                <p class="doc-card2__fact text-body-sm">Обучение немедленной нагрузке у&nbsp;Marco Degidi</p>
               </div>
               <div class="doc-card2__details">
                 <button type="button" class="doc-card2__cert text-label-md" data-cert-open><svg viewBox="0 0 14 15" width="14" height="15" fill="currentColor" aria-hidden="true"><path d="M13.5 10.5L8.9976 15H0.75C0.33579 15 0 14.6642 0 14.25V0.75C0 0.33579 0.33579 0 0.75 0H12.75C13.1642 0 13.5 0.33579 13.5 0.75V10.5ZM12 9.75V1.5H1.5V13.5H8.25V9.75H12Z"/></svg>Сертификаты</button>
                 <div class="doc-card2__stats">
                   <div class="doc-card2__stat">
                     <span class="doc-card2__stat-label text-label-lg">Опыт</span>
-                    <span class="doc-card2__stat-value text-h4">16+</span>
+                    <span class="doc-card2__stat-value text-h4">19</span>
                     <span class="doc-card2__stat-unit text-label-md">лет</span>
-                  </div>
-                  <div class="doc-card2__stat">
-                    <span class="doc-card2__stat-label text-label-lg">Установил</span>
-                    <span class="doc-card2__stat-value text-h4">10&nbsp;000+</span>
-                    <span class="doc-card2__stat-unit text-label-md">имплантов</span>
                   </div>
                 </div>
               </div>
             </div>
           </article>
           <article class="doc-card2 reveal">
-            <div class="doc-card2__photo"><img class="media-img" src="assets/doctor.jpg" alt="Сергей Орлов" loading="lazy"></div>
+            <div class="doc-card2__photo"><img class="media-img" src="assets/doctor.jpg" alt="Евгений Попов" loading="lazy"></div>
             <div class="doc-card2__body">
               <div class="doc-card2__head">
-                <p class="doc-card2__name text-h5">Сергей Орлов</p>
-                <div class="doc-card2__tags"><span class="chip chip--sm">ЧЛХ</span><span class="chip chip--sm">Имплантолог</span></div>
+                <p class="doc-card2__name text-h5">Попов Евгений Петрович</p>
+                <div class="doc-card2__tags"><span class="chip chip--sm">Ортопед</span><span class="chip chip--sm">CEREC</span></div>
+                <p class="doc-card2__fact text-body-sm">15&nbsp;лет работал зубным техником</p>
               </div>
               <div class="doc-card2__details">
                 <button type="button" class="doc-card2__cert text-label-md" data-cert-open><svg viewBox="0 0 14 15" width="14" height="15" fill="currentColor" aria-hidden="true"><path d="M13.5 10.5L8.9976 15H0.75C0.33579 15 0 14.6642 0 14.25V0.75C0 0.33579 0.33579 0 0.75 0H12.75C13.1642 0 13.5 0.33579 13.5 0.75V10.5ZM12 9.75V1.5H1.5V13.5H8.25V9.75H12Z"/></svg>Сертификаты</button>
                 <div class="doc-card2__stats">
                   <div class="doc-card2__stat">
                     <span class="doc-card2__stat-label text-label-lg">Опыт</span>
-                    <span class="doc-card2__stat-value text-h4">16+</span>
+                    <span class="doc-card2__stat-value text-h4">8</span>
                     <span class="doc-card2__stat-unit text-label-md">лет</span>
-                  </div>
-                  <div class="doc-card2__stat">
-                    <span class="doc-card2__stat-label text-label-lg">Установил</span>
-                    <span class="doc-card2__stat-value text-h4">10&nbsp;000+</span>
-                    <span class="doc-card2__stat-unit text-label-md">имплантов</span>
                   </div>
                 </div>
               </div>
             </div>
           </article>
           <article class="doc-card2 reveal">
-            <div class="doc-card2__photo"><img class="media-img" src="assets/doctor.jpg" alt="Сергей Орлов" loading="lazy"></div>
+            <div class="doc-card2__photo"><img class="media-img" src="assets/doctor.jpg" alt="Анастасия Ризаева" loading="lazy"></div>
             <div class="doc-card2__body">
               <div class="doc-card2__head">
-                <p class="doc-card2__name text-h5">Сергей Орлов</p>
-                <div class="doc-card2__tags"><span class="chip chip--sm">ЧЛХ</span><span class="chip chip--sm">Имплантолог</span></div>
+                <p class="doc-card2__name text-h5">Ризаева Анастасия Вячеславовна</p>
+                <div class="doc-card2__tags"><span class="chip chip--sm">Ортопед</span></div>
+                <p class="doc-card2__fact text-body-sm">Протезирование на&nbsp;имплантах</p>
               </div>
               <div class="doc-card2__details">
                 <button type="button" class="doc-card2__cert text-label-md" data-cert-open><svg viewBox="0 0 14 15" width="14" height="15" fill="currentColor" aria-hidden="true"><path d="M13.5 10.5L8.9976 15H0.75C0.33579 15 0 14.6642 0 14.25V0.75C0 0.33579 0.33579 0 0.75 0H12.75C13.1642 0 13.5 0.33579 13.5 0.75V10.5ZM12 9.75V1.5H1.5V13.5H8.25V9.75H12Z"/></svg>Сертификаты</button>
                 <div class="doc-card2__stats">
                   <div class="doc-card2__stat">
                     <span class="doc-card2__stat-label text-label-lg">Опыт</span>
-                    <span class="doc-card2__stat-value text-h4">16+</span>
+                    <span class="doc-card2__stat-value text-h4">10</span>
                     <span class="doc-card2__stat-unit text-label-md">лет</span>
-                  </div>
-                  <div class="doc-card2__stat">
-                    <span class="doc-card2__stat-label text-label-lg">Установил</span>
-                    <span class="doc-card2__stat-value text-h4">10&nbsp;000+</span>
-                    <span class="doc-card2__stat-unit text-label-md">имплантов</span>
                   </div>
                 </div>
               </div>
@@ -946,22 +655,22 @@
       <div class="reviews reveal" data-reviews>
         <div class="reviews__viewport">
         <div class="reviews__grid">
-          <article class="review-card"><div class="review-card__head"><span class="ava ava--brand">ИП</span><div><div class="review-card__name text-label-lg">Игорь Петров</div><div class="review-card__spec text-body-sm">Лечение кариеса</div></div></div><div class="rating" aria-label="5 из 5">★★★★★</div><p class="review-card__body text-body-md">Прекрасная клиника! Врачи внимательные, всё объяснили, лечение прошло безболезненно. Рекомендую.</p></article>
-          <article class="review-card"><div class="review-card__head"><span class="ava ava--brand">СВ</span><div><div class="review-card__name text-label-lg">Сергей Власов</div><div class="review-card__spec text-body-sm">Протезирование</div></div></div><div class="rating" aria-label="5 из 5">★★★★★</div><p class="review-card__body text-body-md">Делал протезирование нескольких зубов. До&nbsp;этого консультировался в&nbsp;разных клиниках, но&nbsp;именно в&nbsp;«Кристалис» получил самое понятное объяснение вариантов и&nbsp;стоимости. Работа выполнена аккуратно, новые зубы выглядят естественно и&nbsp;не&nbsp;доставляют никакого дискомфорта. Уже несколько месяцев пользуюсь&nbsp;— всё отлично.</p></article>
-          <article class="review-card"><div class="review-card__head"><span class="ava ava--brand">АР</span><div><div class="review-card__name text-label-lg">Анна Романова</div><div class="review-card__spec text-body-sm">Лечение кариеса</div></div></div><div class="rating" aria-label="5 из 5">★★★★★</div><p class="review-card__body text-body-md">Пришла на&nbsp;обычный осмотр и&nbsp;оказалось, что&nbsp;есть несколько небольших кариесов. Всё вылечили за&nbsp;два посещения. Особенно понравилось, что&nbsp;не&nbsp;навязывали лишних процедур и&nbsp;подробно показывали снимки. Пломбы совершенно незаметны, зубы выглядят естественно. Очень приятное впечатление от&nbsp;клиники.</p></article>
-          <article class="review-card"><div class="review-card__head"><span class="ava ava--brand">АМ</span><div><div class="review-card__name text-label-lg">Александр Морозов</div><div class="review-card__spec text-body-sm">Имплантация</div></div></div><div class="rating" aria-label="5 из 5">★★★★★</div><p class="review-card__body text-body-md">Долго откладывал установку импланта, потому что&nbsp;боялся самой процедуры. В&nbsp;«Кристалис» всё подробно объяснили на&nbsp;консультации, показали план лечения и&nbsp;ответили на&nbsp;все вопросы. Операция прошла намного легче, чем&nbsp;я ожидал, а&nbsp;восстановление заняло минимум времени. Сейчас уже поставили коронку&nbsp;— ощущается как&nbsp;свой зуб. Спасибо врачам за&nbsp;профессионализм и&nbsp;спокойную атмосферу.</p></article>
-          <article class="review-card"><div class="review-card__head"><span class="ava ava--brand">МБ</span><div><div class="review-card__name text-label-lg">Марина Белова</div><div class="review-card__spec text-body-sm">Профессиональная гигиена</div></div></div><div class="rating" aria-label="5 из 5">★★★★★</div><p class="review-card__body text-body-md">Записалась на&nbsp;профессиональную чистку по&nbsp;рекомендации знакомой. Очень понравился внимательный подход и&nbsp;аккуратность специалиста. После процедуры зубы стали заметно светлее, исчез налет, а&nbsp;врач дал полезные рекомендации по&nbsp;домашнему уходу. Теперь планирую проходить профилактику регулярно именно здесь.</p></article>
-          <article class="review-card"><div class="review-card__head"><span class="ava ava--brand">ИП</span><div><div class="review-card__name text-label-lg">Игорь Павлов</div><div class="review-card__spec text-body-sm">Имплантация после потери зуба</div></div></div><div class="rating" aria-label="5 из 5">★★★★★</div><p class="review-card__body text-body-md">После потери переднего зуба долго искал клинику, которой можно доверить восстановление улыбки. Выбрал «Кристалис» и&nbsp;ни&nbsp;разу не&nbsp;пожалел. Весь процесс&nbsp;— от&nbsp;диагностики до&nbsp;установки коронки&nbsp;— был организован очень чётко. Результат превзошёл ожидания: визуально невозможно отличить имплант от&nbsp;соседних зубов.</p></article>
-          <article class="review-card"><div class="review-card__head"><span class="ava ava--brand">ЕС</span><div><div class="review-card__name text-label-lg">Елена Соколова</div><div class="review-card__spec text-body-sm">Лечение пульпита</div></div></div><div class="rating" aria-label="5 из 5">★★★★★</div><p class="review-card__body text-body-md">Обратилась с&nbsp;сильной зубной болью, которая не&nbsp;давала спать несколько дней. Диагностировали пульпит и&nbsp;приняли практически сразу. Лечение прошло безболезненно, врач постоянно интересовался самочувствием и&nbsp;объяснял каждый этап. После приёма боль полностью исчезла. Очень благодарна за&nbsp;оперативную помощь.</p></article>
-          <article class="review-card"><div class="review-card__head"><span class="ava ava--brand">ДК</span><div><div class="review-card__name text-label-lg">Дмитрий Кузнецов</div><div class="review-card__spec text-body-sm">Удаление зуба мудрости</div></div></div><div class="rating" aria-label="5 из 5">★★★★★</div><p class="review-card__body text-body-md">Удаляли сложный зуб мудрости, которого боялся несколько лет. Честно говоря, переживал больше, чем&nbsp;нужно. Врач работал уверенно и&nbsp;спокойно, удаление прошло быстро, а&nbsp;послеоперационный период оказался гораздо легче, чем&nbsp;рассказывали знакомые. Спасибо всей команде клиники за&nbsp;поддержку и&nbsp;заботу.</p></article>
-          <article class="review-card"><div class="review-card__head"><span class="ava ava--brand">ОН</span><div><div class="review-card__name text-label-lg">Ольга Никитина</div><div class="review-card__spec text-body-sm">Детская стоматология</div></div></div><div class="rating" aria-label="5 из 5">★★★★★</div><p class="review-card__body text-body-md">Приводила сына на&nbsp;лечение молочного зуба. До&nbsp;этого у&nbsp;нас был неудачный опыт в&nbsp;другой клинике, поэтому ребёнок очень боялся стоматологов. Здесь врач быстро нашёл подход, общался спокойно и&nbsp;доброжелательно. В&nbsp;итоге лечение прошло без&nbsp;слёз и&nbsp;стресса. Теперь ребёнок не&nbsp;боится идти на&nbsp;приём, а&nbsp;это для&nbsp;меня главный показатель качества работы.</p></article>
+          <article class="review-card"><div class="review-card__head"><span class="ava ava--brand">ВН</span><div><div class="review-card__name text-label-lg">Вера Никонова</div><div class="review-card__spec text-body-sm">Имплантация нижней челюсти</div></div></div><div class="rating" aria-label="5 из 5">★★★★★</div><p class="review-card__body text-body-md">Протез заранее смоделировали в&nbsp;программе. Смотрится красиво и&nbsp;натурально, как&nbsp;свои родные зубы.</p></article>
+          <article class="review-card"><div class="review-card__head"><span class="ava ava--brand">БЗ</span><div><div class="review-card__name text-label-lg">Борис Злобин</div><div class="review-card__spec text-body-sm">Все зубы</div></div></div><div class="rating" aria-label="5 из 5">★★★★★</div><p class="review-card__body text-body-md">В&nbsp;65&nbsp;лет сделал все зубы. Не&nbsp;стесняюсь улыбаться и&nbsp;ем любую еду.</p></article>
+          <article class="review-card"><div class="review-card__head"><span class="ava ava--brand">АЛ</span><div><div class="review-card__name text-label-lg">Анатолий Латыш</div></div></div><div class="rating" aria-label="5 из 5">★★★★★</div><p class="review-card__body text-body-md">Три года назад вы мне кардинально улучшили качество жизни.</p></article>
+          <article class="review-card"><div class="review-card__head"><span class="ava ava--brand">НМ</span><div><div class="review-card__name text-label-lg">Н. М. Максимова</div><div class="review-card__spec text-body-sm">Имплантация и&nbsp;протезирование</div></div></div><div class="rating" aria-label="5 из 5">★★★★★</div><p class="review-card__body text-body-md">Особое спасибо хирургу Лаптевой А. В. и&nbsp;главному врачу Кузнецову Б. В.</p></article>
+          <article class="review-card"><div class="review-card__head"><span class="ava ava--brand">НГ</span><div><div class="review-card__name text-label-lg">Никита Галкин</div><div class="review-card__spec text-body-sm">Имплантация</div></div></div><div class="rating" aria-label="5 из 5">★★★★★</div><p class="review-card__body text-body-md">Во&nbsp;время установки я почти ничего не&nbsp;чувствовал.</p></article>
+          <article class="review-card"><div class="review-card__head"><span class="ava ava--brand">ОБ</span><div><div class="review-card__name text-label-lg">Олег Боклан</div><div class="review-card__spec text-body-sm">Имплантация через прокол</div></div></div><div class="rating" aria-label="5 из 5">★★★★★</div><p class="review-card__body text-body-md">Ни&nbsp;одного лишнего пореза или&nbsp;шва, десна зажила быстро.</p></article>
+          <article class="review-card"><div class="review-card__head"><span class="ava ava--brand">ДГ</span><div><div class="review-card__name text-label-lg">Дарья Глухих</div><div class="review-card__spec text-body-sm">Имплантация</div></div></div><div class="rating" aria-label="5 из 5">★★★★★</div><p class="review-card__body text-body-md">За&nbsp;один сеанс удалили зуб и&nbsp;поставили имплант с&nbsp;временной коронкой.</p></article>
+          <article class="review-card"><div class="review-card__head"><span class="ava ava--brand">ДБ</span><div><div class="review-card__name text-label-lg">Денис Багрянцев</div><div class="review-card__spec text-body-sm">Имплантация в&nbsp;кредит</div></div></div><div class="rating" aria-label="5 из 5">★★★★★</div><p class="review-card__body text-body-md">Единственная клиника, где мне одобрили имплантацию в&nbsp;кредит.</p></article>
+          <article class="review-card"><div class="review-card__head"><span class="ava ava--brand">АК</span><div><div class="review-card__name text-label-lg">Анна Куць</div><div class="review-card__spec text-body-sm">Имплантация</div></div></div><div class="rating" aria-label="5 из 5">★★★★★</div><p class="review-card__body text-body-md">Это не&nbsp;быстро, не&nbsp;дешево и&nbsp;не&nbsp;безболезненно. Зато красиво и&nbsp;надёжно.</p></article>
         </div>
         </div>
         <div class="reviews__more">
-          <p class="text-body-lg">Оставьте ваш отзыв или посмотрите 500+ отзывов других людей</p>
+          <p class="text-body-lg">183&nbsp;отзыва на&nbsp;сайте клиники. Оставьте свой или&nbsp;почитайте другие на&nbsp;картах</p>
           <div class="reviews__badges">
-            <a class="reviews__badge" href="#" target="_blank" rel="noopener"><span class="reviews__logo reviews__logo--yamap"><img src="assets/yamap-badge.png" alt="Яндекс Карты" loading="lazy"></span></a>
-            <a class="reviews__badge" href="#" target="_blank" rel="noopener"><span class="reviews__logo reviews__logo--2gis"><img src="assets/2gis-badge.png" alt="2ГИС" loading="lazy"></span></a>
+            <a class="reviews__badge" href="https://yandex.ru/maps/org/1074228405/reviews/" target="_blank" rel="noopener"><span class="reviews__logo reviews__logo--yamap"><img src="assets/yamap-badge.png" alt="Яндекс Карты" loading="lazy"></span></a>
+            <a class="reviews__badge" href="https://2gis.ru/chelyabinsk/firm/70000001018805819/tab/reviews" target="_blank" rel="noopener"><span class="reviews__logo reviews__logo--2gis"><img src="assets/2gis-badge.png" alt="2ГИС" loading="lazy"></span></a>
           </div>
         </div>
       </div>
@@ -971,15 +680,15 @@
     <section class="cta band band--wide reveal" id="cta">
       <div class="inner cta__inner">
         <div class="cta__content">
-          <h2 class="cta__title text-h2">Запишитесь на&nbsp;<span class="accent-on-dark">бесплатную</span> консультацию</h2>
-          <p class="cta__sub text-body-lg">Оставьте заявку&nbsp;— специалист свяжется с&nbsp;вами в&nbsp;течение 15‑ти минут и&nbsp;подберёт удобное время визита.</p>
-          <p class="cta__phone-line text-body-lg">Или позвоните: <a class="cta__phone-link" href="tel:+74951234567">+7&nbsp;(495) 123-45-67</a> с&nbsp;9:00 до&nbsp;21:00 по&nbsp;Мск</p>
+          <h2 class="cta__title text-h2">Узнайте, подходит&nbsp;ли вам <span class="accent-on-dark" style="white-space:nowrap">All-on-4</span></h2>
+          <p class="cta__sub text-body-lg">Оставьте телефон&nbsp;— администратор перезвонит, подберёт время консультации и&nbsp;расскажет, что&nbsp;взять с&nbsp;собой.</p>
+          <p class="cta__phone-line text-body-lg">Или&nbsp;позвоните: <a class="cta__phone-link" href="tel:+73512251505">+7&nbsp;(351) 225-15-05</a> ежедневно с&nbsp;9:00&nbsp;до&nbsp;20:00</p>
         </div>
         <form class="cta__form" data-inline-form novalidate>
           <div class="cta__success">
             <span class="success-badge" aria-hidden="true"><svg viewBox="0 0 24 24" width="40" height="40"><path d="M17 1.2l1.3 2.5L20.8 5l-2.5 1.3L17 8.8l-1.3-2.5L13.2 5l2.5-1.3zM8 4.3l2.7 5 5 2.7-5 2.7L8 19.7l-2.7-5-5-2.7 5-2.7zM19.7 16.3L18 13.2l-1.7 3.1-3.1 1.7 3.1 1.7L18 22.8l1.7-3.1 3.1-1.7z" fill="currentColor"/></svg></span>
             <div class="cta__success-title text-h4">Заявка отправлена!</div>
-            <p class="text-body-md">Мы перезвоним в&nbsp;течение 15&nbsp;минут и&nbsp;подберём удобное время.</p>
+            <p class="text-body-md">Перезвоним в&nbsp;течение 15&nbsp;минут в&nbsp;рабочее время.</p>
           </div>
           <div class="cta__form-fields">
             <div class="cta__row">
@@ -988,7 +697,7 @@
             </div>
             <div class="cta__submit">
               <button class="btn btn--primary btn--lg text-button-lg" type="submit">Записаться</button>
-              <p class="cta__note text-caption">Нажимая кнопку, вы соглашаетесь с&nbsp;политикой конфиденциальности.</p>
+              <p class="cta__note text-caption">Нажимая кнопку, вы соглашаетесь на&nbsp;обработку персональных данных.</p>
             </div>
           </div>
         </form>
@@ -999,14 +708,14 @@
     <section class="band">
       <h2 class="section-title text-h1 reveal">Часто задаваемые <span class="accent">вопросы</span></h2>
       <div class="accordion faq-list" data-single="true" data-stagger="40">
-        <div class="accordion__item faq-item reveal"><button class="accordion__head" aria-expanded="false"><span class="acc__num text-body-lg">01</span><span class="acc__title faq-item__q text-h3">Больно&nbsp;ли ставить имплант?</span><span class="icon-toggle" aria-hidden="true"></span></button><div class="accordion__panel"><div class="faq-item__a"><p class="text-body-lg">Нет. Операцию проводим под&nbsp;местной анестезией. При&nbsp;страхе или&nbsp;большом объёме работ предлагаем седацию или&nbsp;медикаментозный сон&nbsp;— вы проспите процедуру и&nbsp;не&nbsp;почувствуете боли.</p></div></div></div>
-        <div class="accordion__item faq-item reveal"><button class="accordion__head" aria-expanded="false"><span class="acc__num text-body-lg">02</span><span class="acc__title faq-item__q text-h3">Сколько приживается имплант?</span><span class="icon-toggle" aria-hidden="true"></span></button><div class="accordion__panel"><div class="faq-item__a"><p class="text-body-lg">Обычно от&nbsp;3&nbsp;до&nbsp;6&nbsp;месяцев в&nbsp;зависимости от&nbsp;челюсти и&nbsp;плотности кости. На&nbsp;это время устанавливаем временную коронку, чтобы вы не&nbsp;оставались без&nbsp;зуба.</p></div></div></div>
-        <div class="accordion__item faq-item reveal"><button class="accordion__head" aria-expanded="false"><span class="acc__num text-body-lg">03</span><span class="acc__title faq-item__q text-h3">Можно&nbsp;ли поставить зуб сразу после удаления?</span><span class="icon-toggle" aria-hidden="true"></span></button><div class="accordion__panel"><div class="faq-item__a"><p class="text-body-lg">Во&nbsp;многих случаях да&nbsp;— это одномоментная имплантация. Решение принимаем по&nbsp;3D-снимку: оцениваем объём кости и&nbsp;состояние лунки.</p></div></div></div>
-        <div class="accordion__item faq-item reveal"><button class="accordion__head" aria-expanded="false"><span class="acc__num text-body-lg">04</span><span class="acc__title faq-item__q text-h3">Что&nbsp;делать, если не&nbsp;хватает кости?</span><span class="icon-toggle" aria-hidden="true"></span></button><div class="accordion__panel"><div class="faq-item__a"><p class="text-body-lg">Проводим костную пластику или&nbsp;подбираем методики, которые её не&nbsp;требуют&nbsp;— например, скуловые импланты или&nbsp;протоколы All-on-4&nbsp;/ All-on-6.</p></div></div></div>
-        <div class="accordion__item faq-item reveal"><button class="accordion__head" aria-expanded="false"><span class="acc__num text-body-lg">05</span><span class="acc__title faq-item__q text-h3">Какой имплант выбрать?</span><span class="icon-toggle" aria-hidden="true"></span></button><div class="accordion__panel"><div class="faq-item__a"><p class="text-body-lg">Подбираем систему под&nbsp;ваш случай и&nbsp;бюджет: премиум (Straumann, Nobel Biocare) или&nbsp;надёжные решения среднего сегмента. Все варианты обсуждаем на&nbsp;консультации.</p></div></div></div>
-        <div class="accordion__item faq-item reveal"><button class="accordion__head" aria-expanded="false"><span class="acc__num text-body-lg">06</span><span class="acc__title faq-item__q text-h3">Сколько служит имплант?</span><span class="icon-toggle" aria-hidden="true"></span></button><div class="accordion__panel"><div class="faq-item__a"><p class="text-body-lg">При&nbsp;правильном уходе имплант служит десятилетиями. На&nbsp;приживление и&nbsp;работу даём письменную гарантию.</p></div></div></div>
-        <div class="accordion__item faq-item reveal"><button class="accordion__head" aria-expanded="false"><span class="acc__num text-body-lg">07</span><span class="acc__title faq-item__q text-h3">Есть&nbsp;ли противопоказания?</span><span class="icon-toggle" aria-hidden="true"></span></button><div class="accordion__panel"><div class="faq-item__a"><p class="text-body-lg">Большинство ограничений относительные. Мы работаем со&nbsp;сложными случаями&nbsp;— ЛОР-патологии, остеопороз, атрофия кости. Точный ответ даём после диагностики.</p></div></div></div>
-        <div class="accordion__item faq-item reveal"><button class="accordion__head" aria-expanded="false"><span class="acc__num text-body-lg">08</span><span class="acc__title faq-item__q text-h3">Можно&nbsp;ли оформить рассрочку?</span><span class="icon-toggle" aria-hidden="true"></span></button><div class="accordion__panel"><div class="faq-item__a"><p class="text-body-lg">Да, доступна рассрочка 0% на&nbsp;весь курс лечения. Условия подбираем индивидуально на&nbsp;консультации.</p></div></div></div>
+        <div class="accordion__item faq-item reveal"><button class="accordion__head" aria-expanded="false"><span class="acc__num text-body-lg">01</span><span class="acc__title faq-item__q text-h3">Больно&nbsp;ли?</span><span class="icon-toggle" aria-hidden="true"></span></button><div class="accordion__panel"><div class="faq-item__a"><p class="text-body-lg">Операцию проводят под&nbsp;местной анестезией, препарат подбирают индивидуально. Первые дни возможны отёк и&nbsp;дискомфорт.</p></div></div></div>
+        <div class="accordion__item faq-item reveal"><button class="accordion__head" aria-expanded="false"><span class="acc__num text-body-lg">02</span><span class="acc__title faq-item__q text-h3">Когда можно есть?</span><span class="icon-toggle" aria-hidden="true"></span></button><div class="accordion__panel"><div class="faq-item__a"><p class="text-body-lg">Жевательная нагрузка на&nbsp;временный протез разрешена сразу после выхода из&nbsp;клиники. Первые две недели лучше мягкая пища.</p></div></div></div>
+        <div class="accordion__item faq-item reveal"><button class="accordion__head" aria-expanded="false"><span class="acc__num text-body-lg">03</span><span class="acc__title faq-item__q text-h3">Что&nbsp;если кости мало?</span><span class="icon-toggle" aria-hidden="true"></span></button><div class="accordion__panel"><div class="faq-item__a"><p class="text-body-lg">В&nbsp;90% случаев All-on-4&nbsp;обходится без&nbsp;наращивания: импланты ставят под&nbsp;углом в&nbsp;плотные участки кости.</p></div></div></div>
+        <div class="accordion__item faq-item reveal"><button class="accordion__head" aria-expanded="false"><span class="acc__num text-body-lg">04</span><span class="acc__title faq-item__q text-h3">Можно&nbsp;ли удалить зубы и&nbsp;поставить импланты в&nbsp;один день?</span><span class="icon-toggle" aria-hidden="true"></span></button><div class="accordion__panel"><div class="faq-item__a"><p class="text-body-lg">Да, оставшиеся зубы удаляют во&nbsp;время той&nbsp;же операции.</p></div></div></div>
+        <div class="accordion__item faq-item reveal"><button class="accordion__head" aria-expanded="false"><span class="acc__num text-body-lg">05</span><span class="acc__title faq-item__q text-h3">Есть&nbsp;ли ограничения по&nbsp;возрасту?</span><span class="icon-toggle" aria-hidden="true"></span></button><div class="accordion__panel"><div class="faq-item__a"><p class="text-body-lg">Нет. Клиника ставила импланты пациентам старше 80&nbsp;лет. Временное противопоказание&nbsp;— беременность; при&nbsp;диабете и&nbsp;курении импланты приживаются дольше.</p></div></div></div>
+        <div class="accordion__item faq-item reveal"><button class="accordion__head" aria-expanded="false"><span class="acc__num text-body-lg">06</span><span class="acc__title faq-item__q text-h3">Сколько служит временный протез и&nbsp;когда ставят постоянный?</span><span class="icon-toggle" aria-hidden="true"></span></button><div class="accordion__panel"><div class="faq-item__a"><p class="text-body-lg">Временный&nbsp;— от&nbsp;6&nbsp;месяцев до&nbsp;2&nbsp;лет. Постоянный из&nbsp;циркония или&nbsp;композита обычно ставят через 3–6&nbsp;месяцев, когда импланты приживутся.</p></div></div></div>
+        <div class="accordion__item faq-item reveal"><button class="accordion__head" aria-expanded="false"><span class="acc__num text-body-lg">07</span><span class="acc__title faq-item__q text-h3">Какие импланты вы ставите?</span><span class="icon-toggle" aria-hidden="true"></span></button><div class="accordion__panel"><div class="faq-item__a"><p class="text-body-lg">Ankylos (Германия) и&nbsp;Astra Tech (Швеция) с&nbsp;пожизненной гарантией производителя.</p></div></div></div>
+        <div class="accordion__item faq-item reveal"><button class="accordion__head" aria-expanded="false"><span class="acc__num text-body-lg">08</span><span class="acc__title faq-item__q text-h3">Можно&nbsp;ли оплатить частями?</span><span class="icon-toggle" aria-hidden="true"></span></button><div class="accordion__panel"><div class="faq-item__a"><p class="text-body-lg">Да, кредит оформляется в&nbsp;клинике по&nbsp;паспорту. Также можно вернуть 13% через налоговый вычет.</p></div></div></div>
       </div>
     </section>
 
@@ -1014,86 +723,51 @@
     <section class="band" id="contacts">
       <h2 class="section-title text-h1 reveal">Наши <span class="accent">контакты</span></h2>
       <div class="contacts reveal">
-        <div class="contacts__map"><iframe title="Карта — Москва, Кремль" loading="lazy" src="https://yandex.ru/map-widget/v1/?ll=37.617499%2C55.752023&z=12&l=map&pt=37.617499,55.752023,pm2rdm&scroll=false" allowfullscreen></iframe></div>
+        <div class="contacts__map"><iframe title="Карта — Челябинск, ул. Российская, 49" loading="lazy" src="https://yandex.ru/map-widget/v1/?ll=61.415055%2C55.180844&z=16&l=map&pt=61.415055,55.180844,pm2rdm&scroll=false" allowfullscreen></iframe></div>
         <div class="contacts__card">
-          <div class="contact-item"><span class="contact-item__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M12 21s-6-5-6-10a6 6 0 1112 0c0 5-6 10-6 10z" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="11" r="2.2" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span><div><div class="contact-item__label text-label-sm">Адрес</div><div class="contact-item__value text-label-lg">ул. Примерная, 12</div></div></div>
-          <div class="contact-item"><span class="contact-item__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M6 3h3l2 5-2 1c1 2 3 4 5 5l1-2 5 2v3c0 1-1 2-2 2C12 21 3 12 3 5c0-1 1-2 3-2z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></span><div><div class="contact-item__label text-label-sm">Телефон</div><a class="contact-item__value text-label-lg" href="tel:+74951234567">+7&nbsp;(495) 123-45-67</a></div></div>
-          <div class="contact-item"><span class="contact-item__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M4 6h16v12H4z" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M4 7l8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></span><div><div class="contact-item__label text-label-sm">Почта</div><a class="contact-item__value text-label-lg" href="mailto:hello@kristalis.ru">hello@kristalis.ru</a></div></div>
-          <div class="contact-item"><span class="contact-item__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span><div><div class="contact-item__label text-label-sm">Часы работы</div><div class="contact-item__value text-label-lg">Пн–Вс 9:00–21:00</div></div></div>
+          <div class="contact-item"><span class="contact-item__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M12 21s-6-5-6-10a6 6 0 1112 0c0 5-6 10-6 10z" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="11" r="2.2" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span><div><div class="contact-item__label text-label-sm">Адрес</div><div class="contact-item__value text-label-lg">Челябинск, ул. Российская, 49</div><div class="contact-item__label text-label-sm">Парковка у&nbsp;входа, остановка «Дворец спорта ЧЭМК»</div></div></div>
+          <div class="contact-item"><span class="contact-item__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M6 3h3l2 5-2 1c1 2 3 4 5 5l1-2 5 2v3c0 1-1 2-2 2C12 21 3 12 3 5c0-1 1-2 3-2z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></span><div><div class="contact-item__label text-label-sm">Телефон</div><a class="contact-item__value text-label-lg" href="tel:+73512251505">+7&nbsp;(351) 225-15-05</a></div></div>
+          <div class="contact-item"><span class="contact-item__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M4 6h16v12H4z" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M4 7l8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></span><div><div class="contact-item__label text-label-sm">Почта</div><a class="contact-item__value text-label-lg" href="mailto:info@dominanta74.ru">info@dominanta74.ru</a></div></div>
+          <div class="contact-item"><span class="contact-item__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span><div><div class="contact-item__label text-label-sm">Часы работы</div><div class="contact-item__value text-label-lg">Пн–Вс 9:00–20:00</div></div></div>
         </div>
       </div>
       <div class="contacts__actions reveal">
-        <a class="btn btn--outline btn--lg text-button-lg" href="https://yandex.ru/maps/?rtext=~55.752023,37.617499&rtt=auto&z=15" target="_blank" rel="noopener noreferrer">Построить маршрут на&nbsp;карте</a>
+        <a class="btn btn--outline btn--lg text-button-lg" href="https://yandex.ru/maps/?rtext=~55.180844,61.415055&rtt=auto&z=15" target="_blank" rel="noopener noreferrer">Построить маршрут на&nbsp;карте</a>
       </div>
     </section>
 
     <!-- FOOTER (широкий) -->
-    <footer class="footer" data-footer-variant="1">
-      <div class="footer-slot" data-footer-slot="1">
-        <div class="footer__card footer__card--compact band--wide">
-          <div class="inner">
-            <div class="footer-c__top">
-              <div class="footer-c__brand">
-                <a class="hdr__logo hdr__logo--inverse" href="#top" aria-label="Кристалис">
-                  <svg class="logo-svg" viewBox="0 0 162 32" aria-hidden="true"><use href="#kr-logo"/></svg>
-                </a>
-                <p class="footer__tagline text-body-sm">Современная стоматология с&nbsp;заботой о&nbsp;каждом пациенте.</p>
-              </div>
-              <div class="footer-c__contacts">
-                <div class="footer-c__contacts-title text-label-lg">Контакты</div>
-                <div class="footer-c__contacts-list">
-                  <div class="footer-c__col">
-                    <span class="text-body-sm">г. Москва, ул. Примерная, 12</span>
-                    <span class="text-body-sm">Пн–Вс: 9:00–21:00</span>
-                  </div>
-                  <div class="footer-c__col">
-                    <a href="tel:+74951234567" class="text-body-sm">+7&nbsp;(495) 123-45-67</a>
-                    <a href="mailto:hello@kristalis.ru" class="text-body-sm">hello@kristalis.ru</a>
-                  </div>
-                </div>
-              </div>
-              <div class="footer__social">
-              <a href="#" aria-label="Telegram"><svg viewBox="0 0 15 15" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M13.5 7.5C13.5 10.8137 10.8137 13.5 7.5 13.5C4.18629 13.5 1.5 10.8137 1.5 7.5C1.5 4.18629 4.18629 1.5 7.5 1.5C10.8137 1.5 13.5 4.18629 13.5 7.5ZM7.5 15C11.6421 15 15 11.6421 15 7.5C15 3.35786 11.6421 0 7.5 0C3.35786 0 0 3.35786 0 7.5C0 11.6421 3.35786 15 7.5 15ZM7.7688 5.53684C7.03928 5.84026 5.58135 6.4683 3.39495 7.42087C3.03991 7.56203 2.85393 7.70018 2.837 7.83518C2.80838 8.06348 3.09421 8.15333 3.48343 8.27572C3.53638 8.29237 3.59124 8.30962 3.64747 8.32792C4.03041 8.45235 4.54553 8.598 4.81332 8.60378C5.05623 8.60903 5.32735 8.5089 5.62667 8.30333C7.6695 6.92438 8.724 6.2274 8.79023 6.2124C8.83695 6.20175 8.90168 6.18847 8.94548 6.2274C8.98935 6.2664 8.985 6.3402 8.98042 6.36C8.95208 6.48075 7.83008 7.52385 7.24942 8.06363C7.07632 8.22458 6.90758 8.38898 6.73748 8.55293C6.38175 8.89583 6.11497 9.153 6.75225 9.573C7.3983 9.99877 8.04922 10.4237 8.6793 10.8728C8.99003 11.0944 9.26925 11.2934 9.6141 11.2617C9.81458 11.2432 10.0216 11.0548 10.1266 10.4927C10.3751 9.16448 10.8635 6.28657 10.9764 5.10062C10.9863 4.99673 10.9739 4.86375 10.9639 4.80538C10.9539 4.747 10.933 4.66383 10.8572 4.60226C10.7672 4.52935 10.6285 4.51397 10.5665 4.51507C10.2844 4.52004 9.85163 4.67053 7.7688 5.53684Z"/></svg></a>
-              <a href="#" aria-label="WhatsApp"><svg viewBox="0 0 15 15" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M3.93947 12.3708L4.48302 12.6877C5.39108 13.2172 6.42309 13.5 7.50002 13.5C10.8137 13.5 13.5 10.8137 13.5 7.5C13.5 4.18629 10.8137 1.5 7.50002 1.5C4.18629 1.5 1.5 4.18629 1.5 7.5C1.5 8.57722 1.78292 9.6096 2.31276 10.5178L2.62955 11.0609L2.13943 12.8621L3.93947 12.3708ZM0.00313514 15L1.01711 11.2736C0.37047 10.1652 0 8.87587 0 7.5C0 3.35786 3.35786 0 7.50002 0C11.6421 0 15 3.35786 15 7.5C15 11.6421 11.6421 15 7.50002 15C6.12459 15 4.83565 14.6298 3.72741 13.9835L0.00313514 15ZM4.7935 3.98125C4.89391 3.97419 4.99466 3.97311 5.09521 3.97801C5.13583 3.98068 5.17625 3.98538 5.21671 3.99005C5.33615 4.00384 5.4675 4.07659 5.51166 4.17671C5.7354 4.68402 5.9525 5.19424 6.16292 5.70722C6.20934 5.82046 6.18136 5.96725 6.09301 6.10928C6.04816 6.1821 5.97773 6.28425 5.89613 6.38873C5.81131 6.49725 5.62876 6.69683 5.62876 6.69683C5.62876 6.69683 5.5548 6.78547 5.58268 6.8958C5.59354 6.9375 5.62817 6.99825 5.65957 7.04932C5.67697 7.0776 5.69312 7.10288 5.70359 7.12035C5.89553 7.44082 6.15354 7.76572 6.46869 8.0712C6.55899 8.15872 6.64659 8.24805 6.74079 8.331C7.09202 8.64067 7.48936 8.89373 7.91851 9.08115L7.92234 9.08288C7.98571 9.11018 8.01826 9.1251 8.11104 9.16448C8.15784 9.18428 8.20569 9.20138 8.25482 9.21435C8.27259 9.219 8.29081 9.22163 8.30911 9.2229C8.43039 9.23018 8.50051 9.1524 8.53044 9.11662C9.07307 8.45925 9.12271 8.41635 9.12646 8.41665V8.41785C9.19779 8.3427 9.30991 8.3166 9.40996 8.32275C9.45564 8.32553 9.50109 8.3343 9.54264 8.35328C9.94149 8.53522 10.5936 8.81903 10.5936 8.81903L11.0297 9.01507C11.1028 9.05032 11.1695 9.13335 11.1727 9.21405C11.1746 9.26423 11.18 9.34523 11.1621 9.49343C11.1386 9.68745 11.0796 9.92107 11.021 10.0435C10.9797 10.1293 10.9263 10.2056 10.8642 10.2701C10.78 10.3575 10.7174 10.4106 10.6162 10.486C10.5545 10.5319 10.5226 10.5535 10.5226 10.5535C10.4184 10.6192 10.3597 10.6521 10.2356 10.7182C10.0425 10.821 9.82922 10.8801 9.61074 10.8913C9.47147 10.8985 9.33256 10.9085 9.19344 10.901C9.18729 10.9007 8.76729 10.8362 8.76729 10.8362C7.70087 10.5556 6.71461 10.0302 5.88702 9.3015C5.71781 9.15255 5.56089 8.99137 5.40072 8.83192C4.73392 8.1681 4.22913 7.4523 3.92303 6.7752C3.77209 6.4413 3.67651 6.0837 3.675 5.71574C3.67223 5.26054 3.82126 4.8174 4.09853 4.4564C4.15319 4.38523 4.20507 4.31141 4.29458 4.22689C4.38938 4.13738 4.44971 4.08933 4.51469 4.05608C4.60132 4.01177 4.69646 3.98807 4.7935 3.98125Z"/></svg></a>
-              </div>
-            </div>
-            <div class="footer__divider"></div>
-            <div class="footer__bottom">
-              <span class="text-body-sm">© 2026&nbsp;Кристалис. Все права защищены.</span>
-              <div class="footer__policy"><a href="#" class="text-body-sm">Политика конфиденциальности</a><a href="#" class="text-body-sm">Согласие на&nbsp;обработку данных</a><a href="https://alkon.pro" class="text-body-sm" target="_blank" rel="noopener noreferrer">Разработано в&nbsp;Alkon</a></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="footer-slot" data-footer-slot="2" hidden>
+    <footer class="footer" data-footer-variant="2">
+      <div class="footer-slot" data-footer-slot="2">
         <div class="footer__card band--wide">
           <div class="inner">
             <div class="footer__top">
               <div class="footer__brand">
-                <a class="hdr__logo hdr__logo--inverse" href="#top" aria-label="Кристалис">
+                <a class="hdr__logo hdr__logo--inverse" href="#top" aria-label="Доминанта">
                   <svg class="logo-svg" viewBox="0 0 162 32" aria-hidden="true"><use href="#kr-logo"/></svg>
                 </a>
-                <p class="footer__tagline text-body-sm">Современная стоматология с&nbsp;заботой о&nbsp;каждом пациенте.</p>
+                <p class="footer__tagline text-body-sm">Стоматология с&nbsp;расширенной гарантией</p>
                 <div class="footer__social">
+                  <a href="https://vk.com/dominantachel" target="_blank" rel="noopener" aria-label="ВКонтакте">VK</a>
                   <a href="#" aria-label="Telegram"><svg viewBox="0 0 15 15" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M13.5 7.5C13.5 10.8137 10.8137 13.5 7.5 13.5C4.18629 13.5 1.5 10.8137 1.5 7.5C1.5 4.18629 4.18629 1.5 7.5 1.5C10.8137 1.5 13.5 4.18629 13.5 7.5ZM7.5 15C11.6421 15 15 11.6421 15 7.5C15 3.35786 11.6421 0 7.5 0C3.35786 0 0 3.35786 0 7.5C0 11.6421 3.35786 15 7.5 15ZM7.7688 5.53684C7.03928 5.84026 5.58135 6.4683 3.39495 7.42087C3.03991 7.56203 2.85393 7.70018 2.837 7.83518C2.80838 8.06348 3.09421 8.15333 3.48343 8.27572C3.53638 8.29237 3.59124 8.30962 3.64747 8.32792C4.03041 8.45235 4.54553 8.598 4.81332 8.60378C5.05623 8.60903 5.32735 8.5089 5.62667 8.30333C7.6695 6.92438 8.724 6.2274 8.79023 6.2124C8.83695 6.20175 8.90168 6.18847 8.94548 6.2274C8.98935 6.2664 8.985 6.3402 8.98042 6.36C8.95208 6.48075 7.83008 7.52385 7.24942 8.06363C7.07632 8.22458 6.90758 8.38898 6.73748 8.55293C6.38175 8.89583 6.11497 9.153 6.75225 9.573C7.3983 9.99877 8.04922 10.4237 8.6793 10.8728C8.99003 11.0944 9.26925 11.2934 9.6141 11.2617C9.81458 11.2432 10.0216 11.0548 10.1266 10.4927C10.3751 9.16448 10.8635 6.28657 10.9764 5.10062C10.9863 4.99673 10.9739 4.86375 10.9639 4.80538C10.9539 4.747 10.933 4.66383 10.8572 4.60226C10.7672 4.52935 10.6285 4.51397 10.5665 4.51507C10.2844 4.52004 9.85163 4.67053 7.7688 5.53684Z"/></svg></a>
                   <a href="#" aria-label="WhatsApp"><svg viewBox="0 0 15 15" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M3.93947 12.3708L4.48302 12.6877C5.39108 13.2172 6.42309 13.5 7.50002 13.5C10.8137 13.5 13.5 10.8137 13.5 7.5C13.5 4.18629 10.8137 1.5 7.50002 1.5C4.18629 1.5 1.5 4.18629 1.5 7.5C1.5 8.57722 1.78292 9.6096 2.31276 10.5178L2.62955 11.0609L2.13943 12.8621L3.93947 12.3708ZM0.00313514 15L1.01711 11.2736C0.37047 10.1652 0 8.87587 0 7.5C0 3.35786 3.35786 0 7.50002 0C11.6421 0 15 3.35786 15 7.5C15 11.6421 11.6421 15 7.50002 15C6.12459 15 4.83565 14.6298 3.72741 13.9835L0.00313514 15ZM4.7935 3.98125C4.89391 3.97419 4.99466 3.97311 5.09521 3.97801C5.13583 3.98068 5.17625 3.98538 5.21671 3.99005C5.33615 4.00384 5.4675 4.07659 5.51166 4.17671C5.7354 4.68402 5.9525 5.19424 6.16292 5.70722C6.20934 5.82046 6.18136 5.96725 6.09301 6.10928C6.04816 6.1821 5.97773 6.28425 5.89613 6.38873C5.81131 6.49725 5.62876 6.69683 5.62876 6.69683C5.62876 6.69683 5.5548 6.78547 5.58268 6.8958C5.59354 6.9375 5.62817 6.99825 5.65957 7.04932C5.67697 7.0776 5.69312 7.10288 5.70359 7.12035C5.89553 7.44082 6.15354 7.76572 6.46869 8.0712C6.55899 8.15872 6.64659 8.24805 6.74079 8.331C7.09202 8.64067 7.48936 8.89373 7.91851 9.08115L7.92234 9.08288C7.98571 9.11018 8.01826 9.1251 8.11104 9.16448C8.15784 9.18428 8.20569 9.20138 8.25482 9.21435C8.27259 9.219 8.29081 9.22163 8.30911 9.2229C8.43039 9.23018 8.50051 9.1524 8.53044 9.11662C9.07307 8.45925 9.12271 8.41635 9.12646 8.41665V8.41785C9.19779 8.3427 9.30991 8.3166 9.40996 8.32275C9.45564 8.32553 9.50109 8.3343 9.54264 8.35328C9.94149 8.53522 10.5936 8.81903 10.5936 8.81903L11.0297 9.01507C11.1028 9.05032 11.1695 9.13335 11.1727 9.21405C11.1746 9.26423 11.18 9.34523 11.1621 9.49343C11.1386 9.68745 11.0796 9.92107 11.021 10.0435C10.9797 10.1293 10.9263 10.2056 10.8642 10.2701C10.78 10.3575 10.7174 10.4106 10.6162 10.486C10.5545 10.5319 10.5226 10.5535 10.5226 10.5535C10.4184 10.6192 10.3597 10.6521 10.2356 10.7182C10.0425 10.821 9.82922 10.8801 9.61074 10.8913C9.47147 10.8985 9.33256 10.9085 9.19344 10.901C9.18729 10.9007 8.76729 10.8362 8.76729 10.8362C7.70087 10.5556 6.71461 10.0302 5.88702 9.3015C5.71781 9.15255 5.56089 8.99137 5.40072 8.83192C4.73392 8.1681 4.22913 7.4523 3.92303 6.7752C3.77209 6.4413 3.67651 6.0837 3.675 5.71574C3.67223 5.26054 3.82126 4.8174 4.09853 4.4564C4.15319 4.38523 4.20507 4.31141 4.29458 4.22689C4.38938 4.13738 4.44971 4.08933 4.51469 4.05608C4.60132 4.01177 4.69646 3.98807 4.7935 3.98125Z"/></svg></a>
                 </div>
               </div>
               <div class="footer__links">
-                <div class="footer__col"><div class="footer__col-title text-label-lg">Услуги</div><a href="#services" class="text-body-sm">Терапия</a><a href="#services" class="text-body-sm">Хирургия</a><a href="#services" class="text-body-sm">Имплантация</a><a href="#services" class="text-body-sm">Ортодонтия</a><a href="#services" class="text-body-sm">Гигиена</a></div>
-                <div class="footer__col"><div class="footer__col-title text-label-lg">Клиника</div><a href="#" class="text-body-sm">О&nbsp;нас</a><a href="#doctors" class="text-body-sm">Врачи</a><a href="#pricing" class="text-body-sm">Цены</a><a href="#reviews" class="text-body-sm">Отзывы</a><a href="#contacts" class="text-body-sm">Контакты</a></div>
-                <div class="footer__col"><div class="footer__col-title text-label-lg">Контакты</div><span class="text-body-sm">г. Москва, ул. Примерная, 12</span><a href="tel:+74951234567" class="text-body-sm">+7&nbsp;(495) 123-45-67</a><a href="mailto:hello@kristalis.ru" class="text-body-sm">hello@kristalis.ru</a><span class="text-body-sm">Пн–Вс: 9:00–21:00</span></div>
+                <div class="footer__col"><div class="footer__col-title text-label-lg">Имплантация</div><a href="#services" class="text-body-sm">All-on-4</a><a href="#services" class="text-body-sm">All-on-6</a><a href="#services" class="text-body-sm">Через прокол</a><a href="#services" class="text-body-sm">Протезирование</a></div>
+                <div class="footer__col"><div class="footer__col-title text-label-lg">Клиника</div><a href="#doctors" class="text-body-sm">Врачи</a><a href="#pricing" class="text-body-sm">Цены</a><a href="#reviews" class="text-body-sm">Отзывы</a><a href="#contacts" class="text-body-sm">Контакты</a></div>
+                <div class="footer__col"><div class="footer__col-title text-label-lg">Контакты</div><span class="text-body-sm">Челябинск, ул. Российская, 49</span><a href="tel:+73512251505" class="text-body-sm">+7&nbsp;(351) 225-15-05</a><a href="mailto:info@dominanta74.ru" class="text-body-sm">info@dominanta74.ru</a><span class="text-body-sm">Пн–Вс: 9:00–20:00</span></div>
               </div>
             </div>
             <div class="footer__divider"></div>
             <div class="footer__bottom">
-              <span class="text-body-sm">© 2026&nbsp;Кристалис. Все права защищены.</span>
+              <span class="text-body-sm">© 2006–2026&nbsp;ООО «Доминанта», ИНН 7448082217, ОГРН 1067448054739, лицензия ЛО-74-01-003355</span>
               <div class="footer__policy"><a href="#" class="text-body-sm">Политика конфиденциальности</a><a href="#" class="text-body-sm">Согласие на&nbsp;обработку данных</a><a href="https://alkon.pro" class="text-body-sm" target="_blank" rel="noopener noreferrer">Разработано в&nbsp;Alkon</a></div>
             </div>
+            <p class="footer__disclaimer text-body-sm">Имеются противопоказания. Необходима консультация специалиста</p>
           </div>
         </div>
       </div>
-
     </footer>
 
   </main>
@@ -1114,13 +788,13 @@
       <button class="modal__close" data-close-modal aria-label="Закрыть"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
       <div class="modal__form">
         <div class="modal__head">
-          <h2 class="text-h4" id="modalTitle">Запись на&nbsp;приём</h2>
-          <p class="modal__sub text-body-sm">Оставьте контакты&nbsp;— перезвоним в&nbsp;течение 15&nbsp;минут и&nbsp;подберём удобное время.</p>
+          <h2 class="text-h4" id="modalTitle">Запись на&nbsp;консультацию</h2>
+          <p class="modal__sub text-body-sm">Оставьте контакты&nbsp;— перезвоним в&nbsp;течение 15&nbsp;минут в&nbsp;рабочее время.</p>
         </div>
         <form novalidate>
           <label class="field"><span class="field__label text-label-md">Имя</span><input class="field__control js-name" type="text" placeholder="Ваше имя" autocomplete="name"></label>
           <label class="field"><span class="field__label text-label-md">Телефон <span class="field__req">*</span></span><input class="field__control js-phone" type="tel" placeholder="+7 (___) ___-__-__"><span class="field__error text-caption">Введите номер полностью</span></label>
-          <label class="field"><span class="field__label text-label-md">Услуга</span><span class="select"><select class="field__control"><option value="" selected disabled hidden>Выберите услугу</option><option>Имплантация</option><option>Протезирование</option><option>Лечение и&nbsp;гигиена</option><option>Консультация</option></select><span class="select__chevron" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></label>
+          <label class="field"><span class="field__label text-label-md">Услуга</span><span class="select"><select class="field__control"><option value="" selected disabled hidden>Выберите услугу</option><option>All-on-4</option><option>All-on-6</option><option>Имплантация через прокол</option><option>Консультация</option></select><span class="select__chevron" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></label>
           <button class="btn btn--primary btn--lg text-button-lg modal__submit" type="submit">Записаться</button>
           <p class="modal__consent text-caption">Нажимая кнопку, вы соглашаетесь с&nbsp;политикой конфиденциальности.</p>
         </form>
@@ -1128,7 +802,7 @@
       <div class="modal__success" hidden>
         <span class="success-badge" aria-hidden="true"><svg viewBox="0 0 24 24" width="48" height="48"><path d="M17 1.2l1.3 2.5L20.8 5l-2.5 1.3L17 8.8l-1.3-2.5L13.2 5l2.5-1.3zM8 4.3l2.7 5 5 2.7-5 2.7L8 19.7l-2.7-5-5-2.7 5-2.7zM19.7 16.3L18 13.2l-1.7 3.1-3.1 1.7 3.1 1.7L18 22.8l1.7-3.1 3.1-1.7z" fill="currentColor"/></svg></span>
         <h2 class="text-h4">Ваша заявка отправлена!</h2>
-        <p class="modal__success-text text-body-md">Мы перезвоним в&nbsp;течение 15&nbsp;минут и&nbsp;подберём удобное время.</p>
+        <p class="modal__success-text text-body-md">Перезвоним в&nbsp;течение 15&nbsp;минут в&nbsp;рабочее время.</p>
         <button class="btn btn--neutral btn--lg text-button-lg" data-close-modal data-autofocus>Понятно</button>
       </div>
     </div>
