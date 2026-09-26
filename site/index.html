@@ -23,6 +23,27 @@
 </head>
 <body>
 
+  <!-- Панель настроек превью: только вариант формы записи (content-map 20b) -->
+  <div class="cfg" id="cfg">
+    <button class="cfg__toggle" type="button" aria-label="Настройки страницы" aria-expanded="false" aria-controls="cfgPanel">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+    </button>
+    <aside class="cfg__panel" id="cfgPanel" role="region" aria-label="Настройки страницы">
+      <h2 class="cfg__title text-h5">Форма записи (окно)</h2>
+      <div class="cfg__seg" role="group" aria-label="Вариант формы">
+        <button type="button" class="cfg__seg-btn text-button-sm" data-form-variant="1" aria-pressed="false">1 — обычная</button>
+        <button type="button" class="cfg__seg-btn text-button-sm is-active" data-form-variant="2" aria-pressed="true">2 — с зубом</button>
+      </div>
+      <div class="cfg__group" data-mascot-opts>
+        <span class="cfg__label text-label-md">Как следит за курсором</span>
+        <div class="cfg__seg cfg__seg--sm" role="group" aria-label="Слежение">
+          <button type="button" class="cfg__seg-btn text-button-sm is-active" data-mascot-track="svg" aria-pressed="true">Зрачки</button>
+          <button type="button" class="cfg__seg-btn text-button-sm" data-mascot-track="video" aria-pressed="false">Видео</button>
+        </div>
+      </div>
+    </aside>
+  </div>
+
   <!-- Логотип Доминанты (dominanta74.ru/new_layout/img/dominanta_logo.svg): знак — --logo-accent, надпись — currentColor -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
     <symbol id="logo" viewBox="0 0 245 46">
@@ -97,8 +118,8 @@
             <h1 class="hero-alt__title text-display"><span class="accent-on-dark">Все зубы</span> за&nbsp;один день на&nbsp;4&nbsp;имплантах</h1>
             <ul class="hero-alt__features js-hero-sub-list">
               <li class="hero-feature"><span class="hero-feature__icon"><img src="assets/hero.png" alt="" loading="lazy"></span><span class="text-body-lg">Несъёмный протез&nbsp;— в&nbsp;день операции, жевать можно сразу</span></li>
-              <li class="hero-feature"><span class="hero-feature__icon"><img src="assets/hero.png" alt="" loading="lazy"></span><span class="text-body-lg">Операция по&nbsp;цифровому плану и&nbsp;3D-шаблону&nbsp;— с&nbsp;минимальной травмой десны</span></li>
-              <li class="hero-feature"><span class="hero-feature__icon"><img src="assets/hero.png" alt="" loading="lazy"></span><span class="text-body-lg">В&nbsp;90% случаев без&nbsp;наращивания кости</span></li>
+              <li class="hero-feature"><span class="hero-feature__icon"><img src="assets/hero-feature-2.png" alt="" loading="lazy"></span><span class="text-body-lg">Операция по&nbsp;цифровому плану и&nbsp;3D-шаблону&nbsp;— с&nbsp;минимальной травмой десны</span></li>
+              <li class="hero-feature"><span class="hero-feature__icon"><img src="assets/hero-feature-3.png" alt="" loading="lazy"></span><span class="text-body-lg">В&nbsp;90% случаев без&nbsp;наращивания кости</span></li>
             </ul>
           </div>
           <div class="hero-alt__actions">
@@ -111,7 +132,7 @@
           </div>
         </div>
         <div class="hero-alt__media">
-          <img class="media-img" src="assets/hero-photo-2.png" alt="Главный врач Борис Кузнецов" loading="eager">
+          <img class="media-img" src="assets/hero-photo-2.png" alt="Пациентка с новой улыбкой" loading="eager">
           <div class="hero-alt__stats js-hero-stats">
             <div class="hero-mini-stat glass"><div class="hero-mini-stat__value text-h2">20&nbsp;лет</div><div class="hero-mini-stat__label text-label-md">клинике</div></div>
             <div class="hero-mini-stat glass"><div class="hero-mini-stat__value text-h2">4&nbsp;импланта</div><div class="hero-mini-stat__label text-label-md">на&nbsp;челюсть вместо 14</div></div>
@@ -135,6 +156,7 @@
           <span class="ava"><img src="assets/avatar-3.png" alt="" loading="lazy"></span>
           <span class="ava"><img src="assets/avatar-4.png" alt="" loading="lazy"></span>
           <span class="ava"><img src="assets/avatar-5.png" alt="" loading="lazy"></span>
+          <span class="ava"><img src="assets/avatar-6.png" alt="" loading="lazy"></span>
         </div>
         <div class="stats-sec__row">
           <div class="stats-sec__item"><div class="text-h2">2006</div><div class="text-label-md">год основания</div></div>
@@ -143,7 +165,7 @@
         </div>
       </div>
       <div class="stats-award">
-        <div class="stats-award__media"><img src="assets/stats-award-medal.png" alt="" loading="lazy"></div>
+        <div class="stats-award__media"><img src="assets/stats-award-medal.jpg" alt="" loading="lazy"></div>
         <div class="stats-award__content">
           <p class="text-label-lg">Победитель чемпионата России</p>
           <p class="text-h4">по&nbsp;стоматологическому мастерству</p>
@@ -324,7 +346,7 @@
     <section class="band save-teeth reveal">
       <div class="save-teeth__hero">
         <div class="save-teeth__avatar">
-          <img src="assets/save-teeth-avatar.png" alt="Хирург-имплантолог Анастасия Лаптева" loading="lazy">
+          <img src="assets/save-teeth-avatar.png" alt="Главный врач Борис Кузнецов" loading="lazy">
           <span class="save-teeth__quote" aria-hidden="true">
             <svg viewBox="0 0 20 15" width="20" height="15" fill="currentColor"><path d="M12.992 14.3951L11.368 12.0991C11.8907 11.7258 12.4133 11.2778 12.936 10.7551C13.4587 10.2324 13.9253 9.67244 14.336 9.07511C14.7467 8.44044 15.0267 7.84311 15.176 7.28311C14.168 7.20844 13.328 6.85378 12.656 6.21911C11.984 5.58444 11.648 4.74444 11.648 3.69911C11.648 2.46711 12.04 1.53378 12.824 0.89911C13.608 0.264442 14.5413 -0.0342237 15.624 0.00311139C17.0053 0.0404442 17.9947 0.563111 18.592 1.57111C19.1893 2.57911 19.488 3.71778 19.488 4.98711C19.488 6.36844 19.1707 7.71244 18.536 9.01911C17.9387 10.3258 17.136 11.4644 16.128 12.4351C15.1573 13.3684 14.112 14.0218 12.992 14.3951ZM1.624 14.3951L0 12.0991C0.522667 11.7258 1.04533 11.2778 1.568 10.7551C2.09067 10.2324 2.55733 9.67244 2.968 9.07511C3.416 8.44044 3.71467 7.84311 3.864 7.28311C2.856 7.20844 2.016 6.85378 1.344 6.21911C0.672 5.58444 0.336 4.74444 0.336 3.69911C0.336 2.46711 0.709334 1.53378 1.456 0.89911C2.24 0.264442 3.17333 -0.0342237 4.256 0.00311139C5.63733 0.0404442 6.62667 0.563111 7.224 1.57111C7.82133 2.57911 8.12 3.71778 8.12 4.98711C8.12 6.36844 7.80267 7.71244 7.168 9.01911C6.57067 10.3258 5.768 11.4644 4.76 12.4351C3.78933 13.3684 2.744 14.0218 1.624 14.3951Z"/></svg>
           </span>
@@ -333,8 +355,8 @@
         <p class="text-body-lg save-teeth__sub">All-on-4&nbsp;нужен не&nbsp;всем. Если зубы можно вылечить, начнём с&nbsp;этого.</p>
       </div>
       <div class="save-teeth__panel">
-        <p class="save-teeth__panel-title text-h3">«На&nbsp;первое место&nbsp;— медицина, здоровье человека и&nbsp;работа по&nbsp;показаниям»</p>
-        <p class="text-body-lg">Анастасия Лаптева, хирург-имплантолог</p>
+        <p class="save-teeth__panel-title text-h3">«Цифровые технологии и&nbsp;3D-диагностика позволяют планировать лечение с&nbsp;ювелирной точностью»</p>
+        <p class="text-body-lg">Борис Кузнецов, главный врач</p>
         <div class="save-teeth__cards">
           <div class="save-teeth-card">
             <span class="advantage__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="40" height="40"><circle cx="12" cy="12" r="9.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.3 12.4l2.6 2.6 4.8-5.4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
@@ -436,10 +458,10 @@
           <span class="surgery__quote-mark" aria-hidden="true">
             <svg viewBox="0 0 20 15" width="47" height="35" fill="currentColor"><path d="M12.992 14.3951L11.368 12.0991C11.8907 11.7258 12.4133 11.2778 12.936 10.7551C13.4587 10.2324 13.9253 9.67244 14.336 9.07511C14.7467 8.44044 15.0267 7.84311 15.176 7.28311C14.168 7.20844 13.328 6.85378 12.656 6.21911C11.984 5.58444 11.648 4.74444 11.648 3.69911C11.648 2.46711 12.04 1.53378 12.824 0.89911C13.608 0.264442 14.5413 -0.0342237 15.624 0.00311139C17.0053 0.0404442 17.9947 0.563111 18.592 1.57111C19.1893 2.57911 19.488 3.71778 19.488 4.98711C19.488 6.36844 19.1707 7.71244 18.536 9.01911C17.9387 10.3258 17.136 11.4644 16.128 12.4351C15.1573 13.3684 14.112 14.0218 12.992 14.3951ZM1.624 14.3951L0 12.0991C0.522667 11.7258 1.04533 11.2778 1.568 10.7551C2.09067 10.2324 2.55733 9.67244 2.968 9.07511C3.416 8.44044 3.71467 7.84311 3.864 7.28311C2.856 7.20844 2.016 6.85378 1.344 6.21911C0.672 5.58444 0.336 4.74444 0.336 3.69911C0.336 2.46711 0.709334 1.53378 1.456 0.89911C2.24 0.264442 3.17333 -0.0342237 4.256 0.00311139C5.63733 0.0404442 6.62667 0.563111 7.224 1.57111C7.82133 2.57911 8.12 3.71778 8.12 4.98711C8.12 6.36844 7.80267 7.71244 7.168 9.01911C6.57067 10.3258 5.768 11.4644 4.76 12.4351C3.78933 13.3684 2.744 14.0218 1.624 14.3951Z"/></svg>
           </span>
-          <p class="text-quote">Теперь не&nbsp;стесняюсь улыбаться и&nbsp;ем любую еду. <span class="accent">Я помолодел</span></p>
-          <p class="text-label-lg">Борис Злобин, 65&nbsp;лет</p>
+          <p class="text-quote">Протез смотрится красиво и&nbsp;натурально, <span class="accent">как свои родные зубы</span></p>
+          <p class="text-label-lg">Вера Никонова</p>
         </div>
-        <div class="surgery__quote-media"><img src="assets/surgery-testimonial.png" alt="Хирург и ассистент в стерильной операционной" loading="lazy"></div>
+        <div class="surgery__quote-media"><img src="assets/surgery-testimonial.png" alt="Пациентка до и после лечения" loading="lazy"></div>
       </div>
     </section>
 
@@ -507,7 +529,7 @@
 
     <!-- СОЦ-ДОКАЗАТЕЛЬСТВО -->
     <section class="band social-proof reveal">
-      <div class="social-proof__avatars" aria-hidden="true"><span class="ava"><img src="assets/avatar-1.png" alt="" loading="lazy"></span><span class="ava"><img src="assets/avatar-2.png" alt="" loading="lazy"></span><span class="ava"><img src="assets/avatar-3.png" alt="" loading="lazy"></span><span class="ava"><img src="assets/avatar-4.png" alt="" loading="lazy"></span><span class="ava"><img src="assets/avatar-5.png" alt="" loading="lazy"></span></div>
+      <div class="social-proof__avatars" aria-hidden="true"><span class="ava"><img src="assets/patient-1.png" alt="" loading="lazy"></span><span class="ava"><img src="assets/patient-2.png" alt="" loading="lazy"></span><span class="ava"><img src="assets/patient-3.png" alt="" loading="lazy"></span><span class="ava"><img src="assets/patient-4.png" alt="" loading="lazy"></span><span class="ava"><img src="assets/patient-5.png" alt="" loading="lazy"></span></div>
       <div class="social-proof__content">
         <div class="social-proof__title"><span class="accent">183&nbsp;отзыва</span> пациентов</div>
         <div class="social-proof__sub">на&nbsp;сайте клиники</div>
@@ -520,7 +542,7 @@
       <div class="doctors band--wide reveal">
         <div class="inner doc-grid" data-stagger="60">
           <article class="doc-card2 reveal">
-            <div class="doc-card2__photo"><img class="media-img" src="assets/doctor.jpg" alt="Борис Кузнецов" loading="lazy"></div>
+            <div class="doc-card2__photo"><video class="media-img" data-autovideo src="assets/doctor-1.mp4" poster="assets/doctor-1.jpg" muted loop playsinline preload="none" aria-label="Борис Кузнецов"></video></div>
             <div class="doc-card2__body">
               <div class="doc-card2__head">
                 <p class="doc-card2__name text-h5">Кузнецов Борис Валерьевич</p>
@@ -540,7 +562,7 @@
             </div>
           </article>
           <article class="doc-card2 reveal">
-            <div class="doc-card2__photo"><img class="media-img" src="assets/doctor.jpg" alt="Оксана Нуриева" loading="lazy"></div>
+            <div class="doc-card2__photo"><video class="media-img" data-autovideo src="assets/doctor-2.mp4" poster="assets/doctor-2.jpg" muted loop playsinline preload="none" aria-label="Оксана Нуриева"></video></div>
             <div class="doc-card2__body">
               <div class="doc-card2__head">
                 <p class="doc-card2__name text-h5">Нуриева Оксана Николаевна</p>
@@ -560,7 +582,7 @@
             </div>
           </article>
           <article class="doc-card2 reveal">
-            <div class="doc-card2__photo"><img class="media-img" src="assets/doctor.jpg" alt="Анастасия Лаптева" loading="lazy"></div>
+            <div class="doc-card2__photo"><video class="media-img" data-autovideo src="assets/doctor-3.mp4" poster="assets/doctor-3.jpg" muted loop playsinline preload="none" aria-label="Анастасия Лаптева"></video></div>
             <div class="doc-card2__body">
               <div class="doc-card2__head">
                 <p class="doc-card2__name text-h5">Лаптева Анастасия Вячеславовна</p>
@@ -580,7 +602,7 @@
             </div>
           </article>
           <article class="doc-card2 reveal">
-            <div class="doc-card2__photo"><img class="media-img" src="assets/doctor.jpg" alt="Игорь Губанов" loading="lazy"></div>
+            <div class="doc-card2__photo"><video class="media-img" data-autovideo src="assets/doctor-4.mp4" poster="assets/doctor-4.jpg" muted loop playsinline preload="none" aria-label="Игорь Губанов"></video></div>
             <div class="doc-card2__body">
               <div class="doc-card2__head">
                 <p class="doc-card2__name text-h5">Губанов Игорь Сергеевич</p>
@@ -600,7 +622,7 @@
             </div>
           </article>
           <article class="doc-card2 reveal">
-            <div class="doc-card2__photo"><img class="media-img" src="assets/doctor.jpg" alt="Евгений Попов" loading="lazy"></div>
+            <div class="doc-card2__photo"><video class="media-img" data-autovideo src="assets/doctor-5.mp4" poster="assets/doctor-5.jpg" muted loop playsinline preload="none" aria-label="Евгений Попов"></video></div>
             <div class="doc-card2__body">
               <div class="doc-card2__head">
                 <p class="doc-card2__name text-h5">Попов Евгений Петрович</p>
@@ -620,7 +642,7 @@
             </div>
           </article>
           <article class="doc-card2 reveal">
-            <div class="doc-card2__photo"><img class="media-img" src="assets/doctor.jpg" alt="Анастасия Ризаева" loading="lazy"></div>
+            <div class="doc-card2__photo"><video class="media-img" data-autovideo src="assets/doctor-6.mp4" poster="assets/doctor-6.jpg" muted loop playsinline preload="none" aria-label="Анастасия Ризаева"></video></div>
             <div class="doc-card2__body">
               <div class="doc-card2__head">
                 <p class="doc-card2__name text-h5">Ризаева Анастасия Вячеславовна</p>
@@ -776,9 +798,24 @@
     </div>
   </div>
 
-  <div class="modal" id="bookingModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal" id="bookingModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle" data-form-variant="2" data-mascot-track="svg">
     <div class="modal__scrim"></div>
     <div class="modal__card">
+      <!-- Вариант 2 формы: левая половина — панель #003A3C с маскотом (content-map 20b). Кадры sad/happy + видео nod/heal/look, зрачки — SVG поверх кадра -->
+      <div class="modal__art" aria-hidden="true">
+        <div class="mascot" aria-hidden="true" data-state="sad">
+          <img class="mascot__layer mascot__sad" src="assets/mascot-implant-sad.png" alt="" width="720" height="720" loading="lazy">
+          <img class="mascot__layer mascot__happy" src="assets/mascot-implant-happy.png" alt="" width="720" height="720" loading="lazy">
+          <video class="mascot__layer mascot__look" src="assets/mascot-implant-look.mp4" poster="assets/mascot-implant-look.jpg" muted playsinline preload="none"></video>
+          <video class="mascot__layer mascot__nod" src="assets/mascot-implant-nod.mp4" muted playsinline loop preload="none"></video>
+          <video class="mascot__layer mascot__heal" src="assets/mascot-implant-heal.mp4" muted playsinline preload="none"></video>
+          <svg class="mascot__layer mascot__eyes" viewBox="0 0 720 720">
+            <g class="mascot__pupil" data-cx="325" data-cy="316" data-r="40"><circle cx="325" cy="316" r="15"/><circle class="mascot__glint" cx="330" cy="310" r="4.5"/></g>
+            <g class="mascot__pupil" data-cx="444" data-cy="309" data-r="38"><circle cx="444" cy="309" r="15"/><circle class="mascot__glint" cx="449" cy="303" r="4.5"/></g>
+          </svg>
+        </div>
+      </div>
+      <div class="modal__main">
       <button class="modal__close" data-close-modal aria-label="Закрыть"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
       <div class="modal__form">
         <div class="modal__head">
@@ -798,6 +835,7 @@
         <h2 class="text-h4">Ваша заявка отправлена!</h2>
         <p class="modal__success-text text-body-md">Перезвоним в&nbsp;течение 15&nbsp;минут в&nbsp;рабочее время.</p>
         <button class="btn btn--neutral btn--lg text-button-lg" data-close-modal data-autofocus>Понятно</button>
+      </div>
       </div>
     </div>
   </div>

@@ -19,12 +19,14 @@
   function applyTheme(t) {
     if (t === 'kristalis') document.documentElement.removeAttribute('data-theme');
     else document.documentElement.setAttribute('data-theme', t);
-    localStorage.setItem('kr-theme', t);
+    localStorage.setItem('dm-theme', t);
     syncThemeUI();
   }
   function initThemes() {
-    const saved = localStorage.getItem('kr-theme');
-    if (saved && saved !== 'kristalis') document.documentElement.setAttribute('data-theme', saved);
+    // сохранённую тему берём, только если на странице есть её переключатель:
+    // шаблон Dental AI на том же домене пишет свою тему, она не должна перебивать тему проекта
+    const saved = localStorage.getItem('dm-theme');
+    if (saved && $('.cfg__seg-btn[data-theme-set="' + saved + '"]')) applyTheme(saved);
     syncThemeUI();
   }
 
@@ -441,6 +443,110 @@
     update();
   }
 
+  /* ---------- Маскот в окне записи (content-map 20b) ----------
+     sad — по умолчанию, следит за курсором: SVG-зрачки (track=svg) или перемотка видео look по X курсора (track=video);
+     nod — пока курсор на «Записаться» / фокус в телефоне или на кнопке (ролик — только отрезок с закрытыми глазами, петля);
+     heal → happy — после отправки формы (ролик обрезан до превращения, ×1.25 ≈ 1.5 с); у happy те же SVG-зрачки.
+     Телефон (нет hover): зрачки сами медленно оглядываются. reduced-motion: только статичные кадры. */
+  function initMascot() {
+    const box = $('#bookingModal');
+    const m = box && $('.mascot', box);
+    if (!m) return;
+    const btn = $('.modal__submit', box);
+    const phone = $('.js-phone', box);
+    const success = $('.modal__success', box);
+    const nod = $('.mascot__nod', m), heal = $('.mascot__heal', m), look = $('.mascot__look', m);
+    const pupils = $$('.mascot__pupil', m).map(g => ({ g, cx: +g.dataset.cx, cy: +g.dataset.cy, max: +g.dataset.r - 19, x: 0, y: 0 }));
+    const hover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+    const active = () => box.dataset.formVariant === '2' && box.classList.contains('is-open');
+    const setState = s => { m.dataset.state = s; };
+    const load = v => { if (v.preload !== 'auto') { v.preload = 'auto'; v.load(); } };
+
+    /* открытие окна: подгружаем видео, сбрасываем в sad */
+    new MutationObserver(() => {
+      if (!box.classList.contains('is-open')) { [nod, heal].forEach(v => v.pause()); return; }
+      if (box.dataset.formVariant !== '2') return;
+      setState('sad');
+      if (!prefersReduced) [nod, heal, look].forEach(load);
+    }).observe(box, { attributes: true, attributeFilter: ['class'] });
+
+    /* --- nod --- */
+    let intent = false;
+    const nodOn = () => {
+      if (!active() || prefersReduced || m.dataset.state !== 'sad') return;
+      // сначала показываем слой (первый кадр nod = кадр sad), потом play: невидимое muted-видео Chrome ставит на паузу
+      intent = true; load(nod); nod.currentTime = 0; setState('nod');
+      nod.play().catch(() => { if (m.dataset.state === 'nod') setState('sad'); });
+    };
+    const nodOff = () => {
+      intent = false;
+      if (m.dataset.state === 'nod') { setState('sad'); nod.pause(); }
+    };
+    btn.addEventListener('mouseenter', nodOn);
+    btn.addEventListener('mouseleave', nodOff);
+    [btn, phone].forEach(el => { el.addEventListener('focus', nodOn); el.addEventListener('blur', () => setTimeout(() => { if (![btn, phone].includes(document.activeElement)) nodOff(); }, 0)); });
+
+    /* --- heal → happy: после отправки initModal показывает .modal__success --- */
+    new MutationObserver(() => {
+      if (success.hidden || !active() || /heal|happy/.test(m.dataset.state)) return;
+      intent = false; nod.pause();
+      if (prefersReduced) { setState('happy'); return; }
+      load(heal); heal.currentTime = 0; heal.playbackRate = 1.25; setState('heal');
+      heal.play().catch(() => setState('happy'));
+      heal.addEventListener('ended', () => setState('happy'), { once: true });
+      setTimeout(() => { if (m.dataset.state === 'heal') setState('happy'); }, 3000); // страховка: видео не доиграло
+    }).observe(success, { attributes: true, attributeFilter: ['hidden'] });
+
+    /* --- слежение за курсором --- */
+    if (prefersReduced) return;
+    let mx = null, my = null, t0 = performance.now();
+    if (hover) window.addEventListener('pointermove', e => { mx = e.clientX; my = e.clientY; }, { passive: true });
+    let lookT = 0;
+    const tick = now => {
+      requestAnimationFrame(tick);
+      const st = m.dataset.state;
+      if (!active() || (st !== 'sad' && st !== 'happy')) return;
+      const r = m.getBoundingClientRect();
+      const k = r.width / 720;
+      if (st === 'sad' && box.dataset.mascotTrack === 'video') {
+        // перемотка look: X курсора по ширине окна → время ролика (слева направо)
+        if (!look.duration) { load(look); return; }
+        const fx = mx === null ? 0.5 + 0.45 * Math.sin((now - t0) / 2600) : mx / innerWidth;
+        lookT += (Math.min(1, Math.max(0, fx)) * (look.duration - 0.05) - lookT) * 0.18;
+        if (Math.abs(look.currentTime - lookT) > 0.02 && !look.seeking) look.currentTime = lookT;
+        return;
+      }
+      pupils.forEach((p, i) => {
+        let dx, dy;
+        if (mx === null) { // телефон или курсор ещё не двигался — сами «оглядываются»
+          const a = (now - t0) / 1800;
+          dx = Math.sin(a) * p.max * 0.8; dy = Math.sin(a * 0.7 + i * 0.2) * p.max * 0.35;
+        } else {
+          const ex = r.left + p.cx * k, ey = r.top + p.cy * k;
+          const vx = mx - ex, vy = my - ey, d = Math.hypot(vx, vy) || 1;
+          const s = Math.min(1, d / 260) * p.max; // ближе к зубу — меньше отклонение
+          dx = vx / d * s; dy = vy / d * s;
+        }
+        p.x += (dx - p.x) * 0.2; p.y += (dy - p.y) * 0.2;
+        p.g.setAttribute('transform', `translate(${p.x.toFixed(2)} ${p.y.toFixed(2)})`);
+      });
+    };
+    requestAnimationFrame(tick);
+  }
+
+  /* ---------- Видео-портреты врачей: играют только в зоне видимости, reduced-motion → постер ---------- */
+  function initAutoVideos() {
+    const vids = $$('video[data-autovideo]');
+    if (!vids.length || prefersReduced || !('IntersectionObserver' in window)) return;
+    const io = new IntersectionObserver(function (es) {
+      es.forEach(function (en) {
+        const v = en.target;
+        if (en.isIntersecting) { v.preload = 'auto'; v.play().catch(function () {}); } else v.pause();
+      });
+    }, { threshold: 0.3 });
+    vids.forEach(function (v) { io.observe(v); });
+  }
+
   /* ---------- Просмотр сертификата ----------
      Ссылка «Сертификаты» ведёт не на страницу, а открывает просмотрщик.
      Пока вместо файла показываем пустой лист А4 на затемнённом фоне. */
@@ -520,6 +626,12 @@
         if (btn.dataset.themeSet) applyTheme(btn.dataset.themeSet);
         if (btn.dataset.servicesVariant) setServicesVariant(btn.dataset.servicesVariant);
         if (btn.dataset.footerVariant) setFooterVariant(btn.dataset.footerVariant);
+        const bm = $('#bookingModal');
+        if (bm && btn.dataset.formVariant) {
+          bm.dataset.formVariant = btn.dataset.formVariant;
+          $$('[data-mascot-opts]', cfg).forEach(g => { g.style.display = btn.dataset.formVariant === '2' ? '' : 'none'; });
+        }
+        if (bm && btn.dataset.mascotTrack) bm.dataset.mascotTrack = btn.dataset.mascotTrack;
       }));
     });
 
@@ -585,5 +697,7 @@
     initDots();
     initScrollbarWidth();
     initExpandMedia();
+    initAutoVideos();
+    initMascot();
   });
 })();
