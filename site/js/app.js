@@ -551,33 +551,111 @@
      Ссылка «Сертификаты» ведёт не на страницу, а открывает просмотрщик.
      Пока вместо файла показываем пустой лист А4 на затемнённом фоне. */
   function initCertViewer() {
-    const m = document.querySelector('#certModal');
+    const m = $('#certModal');
     if (!m) return;
-    let opener = null;
-    const onKey = e => { if (e.key === 'Escape') close(); };
+    const img = $('.cert-modal__img', m), stage = $('.cert-modal__stage', m), thumbs = $('.cert-modal__thumbs', m);
+    const title = $('#certTitle', m), count = $('.cert-modal__count', m);
+    const prev = $('[data-cert-prev]', m), next = $('[data-cert-next]', m);
+    const btns = $$('[data-cert-open]');
+    let data = null, list = [], idx = 0, opener = null;
+    // зум: transform-origin 0 0, translate(tx,ty) scale(z)
+    const Z = 2.5; let z = 1, tx = 0, ty = 0;
+
+    // манифест; врач без сканов — кнопки нет
+    fetch('assets/certs/certs.json').then(r => r.json()).then(j => {
+      data = j;
+      btns.forEach(b => { if (!(j[b.dataset.certOpen] || []).length) b.hidden = true; });
+    }).catch(() => btns.forEach(b => { b.hidden = true; }));
+
+    const applyZoom = () => { img.style.transform = z === 1 ? '' : `translate(${tx}px, ${ty}px) scale(${z})`; m.classList.toggle('is-zoomed', z !== 1); };
+    const resetZoom = () => { z = 1; tx = ty = 0; applyZoom(); };
+    const clamp = () => {
+      const w = img.offsetWidth, h = img.offsetHeight;
+      tx = Math.min(0, Math.max(w * (1 - z), tx)); ty = Math.min(0, Math.max(h * (1 - z), ty));
+    };
+    function show(i) {
+      idx = (i + list.length) % list.length;
+      resetZoom();
+      img.classList.add('is-loading');
+      img.onload = () => img.classList.remove('is-loading');
+      img.src = list[idx].src;
+      img.alt = (list[idx].caption || 'Документ') + ' — ' + title.textContent;
+      count.textContent = `${idx + 1} / ${list.length}`;
+      prev.disabled = idx === 0; next.disabled = idx === list.length - 1;
+      $$('.cert-modal__thumb', thumbs).forEach((t, k) => {
+        t.setAttribute('aria-selected', k === idx ? 'true' : 'false');
+        if (k === idx) t.scrollIntoView({ block: 'nearest', inline: 'center' });
+      });
+      [idx - 1, idx + 1].forEach(k => { if (list[k]) new Image().src = list[k].src; }); // соседние заранее
+    }
     function open(btn) {
+      if (!data) return;
+      list = data[btn.dataset.certOpen] || [];
+      if (!list.length) return;
       opener = btn;
+      const card = btn.closest('.doc-card2');
+      const name = card && $('.doc-card2__name', card);
+      title.textContent = 'Дипломы и сертификаты' + (name ? ' · ' + name.textContent.trim() : '');
+      thumbs.innerHTML = list.map((it, k) => `<button type="button" class="cert-modal__thumb" role="tab" aria-label="Документ ${k + 1}"><img src="${it.thumb || it.src}" alt="" loading="lazy"></button>`).join('');
+      $$('.cert-modal__thumb', thumbs).forEach((t, k) => t.addEventListener('click', () => show(k)));
+      m.classList.toggle('is-single', list.length === 1);
+      m.classList.remove('hint-off');
       m.classList.add('is-open');
       m.setAttribute('aria-hidden', 'false');
       document.body.classList.add('nav-locked');
       document.addEventListener('keydown', onKey);
-      const c = m.querySelector('[data-cert-close]');
-      setTimeout(() => c && c.focus(), 60);
+      show(0);
+      setTimeout(() => $('[data-cert-close]', m).focus(), 60);
     }
     function close() {
       m.classList.remove('is-open');
       m.setAttribute('aria-hidden', 'true');
       document.body.classList.remove('nav-locked');
       document.removeEventListener('keydown', onKey);
+      resetZoom();
       if (opener) { try { opener.focus(); } catch (e) {} opener = null; }
     }
-    document.querySelectorAll('[data-cert-open]').forEach(b =>
-      b.addEventListener('click', () => open(b)));
-    m.querySelectorAll('[data-cert-close]').forEach(b => b.addEventListener('click', close));
-    // клик мимо листа закрывает
-    m.addEventListener('click', e => {
-      if (e.target === m || e.target.classList.contains('modal__scrim')) close();
+    const onKey = e => {
+      if (e.key === 'Escape') { if (z !== 1) resetZoom(); else close(); }
+      if (e.key === 'ArrowLeft' && idx > 0) show(idx - 1);
+      if (e.key === 'ArrowRight' && idx < list.length - 1) show(idx + 1);
+    };
+    btns.forEach(b => b.addEventListener('click', () => open(b)));
+    $$('[data-cert-close]', m).forEach(b => b.addEventListener('click', close));
+    prev.addEventListener('click', () => show(idx - 1));
+    next.addEventListener('click', () => show(idx + 1));
+    m.addEventListener('click', e => { if (e.target === m || e.target.classList.contains('modal__scrim') || e.target === stage) close(); });
+
+    // жесты: короткий тап/клик — зум в точку; тянем при зуме — панорама; свайп без зума — листание
+    let down = null;
+    img.addEventListener('pointerdown', e => {
+      down = { x: e.clientX, y: e.clientY, tx, ty, moved: false };
+      img.setPointerCapture(e.pointerId);
     });
+    img.addEventListener('pointermove', e => {
+      if (!down) return;
+      const dx = e.clientX - down.x, dy = e.clientY - down.y;
+      if (Math.hypot(dx, dy) > 6) down.moved = true;
+      if (z !== 1 && down.moved) { tx = down.tx + dx; ty = down.ty + dy; clamp(); applyZoom(); }
+    });
+    img.addEventListener('pointerup', e => {
+      if (!down) return;
+      const dx = e.clientX - down.x, d = down; down = null;
+      m.classList.add('hint-off');
+      if (!d.moved) {
+        if (z === 1) {
+          const r = img.getBoundingClientRect();
+          const px = e.clientX - r.left, py = e.clientY - r.top;
+          z = Z; tx = px * (1 - Z); ty = py * (1 - Z); clamp();
+        } else { z = 1; tx = ty = 0; }
+        applyZoom();
+      } else if (z === 1 && Math.abs(dx) > 50) {
+        if (dx < 0 && idx < list.length - 1) show(idx + 1);
+        if (dx > 0 && idx > 0) show(idx - 1);
+      }
+    });
+    img.addEventListener('pointercancel', () => { down = null; });
+    window.addEventListener('resize', () => { if (m.classList.contains('is-open')) resetZoom(); });
   }
 
   /* ---------- Варианты блока услуг ----------

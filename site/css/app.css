@@ -247,17 +247,14 @@ html.js .reveal.is-visible { opacity: 1; transform: none; }
 
 /* ---------- STATS (более 20 000 имплантов) ---------- */
 .stats-sec { display: flex; align-items: stretch; gap: var(--space-lg); }
-.stats-sec__content { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; align-items: center; gap: var(--space-xl); padding: var(--space-md); }
+.stats-sec__content { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--space-2xl); padding: var(--space-md); }
 .stats-sec__heading { text-align: center; display: flex; flex-direction: column; gap: var(--space-md); }
 .stats-sec__heading .section-title { margin-bottom: 0; }
 .stats-sec__heading p { color: var(--color-text-secondary); }
-.stats-sec__avatars { display: flex; }
-.stats-sec__avatars .ava { width: 96px; height: 96px; border: none; background: transparent; }
-.stats-sec__avatars .ava + .ava { margin-left: -16px; }
 .stats-sec__row { display: flex; gap: var(--space-xs); width: 100%; }
 .stats-sec__item { flex: 1 1 0; padding: var(--space-md) var(--space-lg); border-radius: var(--radius-xl); background: var(--color-brand-100); color: var(--color-text-accent-strong); }
-.stats-award { flex: 0 0 384px; display: flex; flex-direction: column; align-items: center; gap: var(--space-xl); padding: var(--space-xl); border-radius: var(--radius-2xl); background: linear-gradient(180deg, var(--color-brand-100), var(--color-brand-200)); }
-.stats-award__media { width: 128px; height: 128px; border-radius: 50%; overflow: hidden; background: var(--color-brand-600); flex: 0 0 auto; }
+.stats-award { flex: 0 0 384px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: var(--space-xl); padding: var(--space-xl); border-radius: var(--radius-2xl); background: linear-gradient(180deg, var(--color-brand-100), var(--color-brand-200)); }
+.stats-award__media { width: 160px; height: 160px; border-radius: 50%; overflow: hidden; background: var(--color-brand-600); flex: 0 0 auto; }
 .stats-award__media img { width: 100%; height: 100%; object-fit: cover; }
 .stats-award__content { display: flex; flex-direction: column; gap: var(--space-2xs); width: 100%; }
 .stats-award__content p:last-child { color: var(--color-text-secondary); }
@@ -266,7 +263,7 @@ html.js .reveal.is-visible { opacity: 1; transform: none; }
   .stats-award { flex-basis: auto; }
 }
 @media (max-width: 599.98px) {
-  .stats-sec__row, .stats-sec__avatars { flex-wrap: wrap; justify-content: center; }
+  .stats-sec__row { flex-wrap: wrap; justify-content: center; }
 }
 
 /* ---------- АККОРДЕОН (Услуги, FAQ) — с наложением карточек ---------- */
@@ -322,7 +319,7 @@ html.js .reveal.is-visible { opacity: 1; transform: none; }
 .chief-doctor { display: flex; align-items: stretch; gap: var(--space-lg); }
 .chief-doctor__card { flex: 0 0 384px; display: flex; flex-direction: column; gap: var(--space-md); padding: var(--space-xl); border-radius: var(--radius-2xl); background: var(--color-bg-muted); }
 .chief-doctor__photo { aspect-ratio: 1 / 1; border-radius: var(--radius-lg); overflow: hidden; }
-.chief-doctor__photo .media-img { object-position: center 20%; }
+.chief-doctor__photo .media-img { object-position: center top; }
 .chief-doctor__info { display: flex; flex-direction: column; gap: var(--space-md); padding: 0 var(--space-xs); }
 .chief-doctor__heading { display: flex; flex-direction: column; gap: var(--space-3xs); }
 .chief-doctor__heading p:first-child { color: var(--color-text-primary); }
@@ -524,16 +521,8 @@ html.js .reveal.is-visible { opacity: 1; transform: none; }
 
 /* ---------- СОЦ-ДОКАЗАТЕЛЬСТВО ---------- */
 /* соц-доказательство примыкает к «Преимуществам» (как в макете ~48px сверху), а не висит по центру */
-.social-proof { display: flex; align-items: center; justify-content: center; gap: var(--space-xl); flex-wrap: wrap; margin-top: clamp(40px, 4vw, 48px); }
-.social-proof__avatars { display: flex; }
 .ava { display: inline-flex; align-items: center; justify-content: center; width: 56px; height: 56px; border-radius: 50%; overflow: hidden; background: var(--color-bg-accent-subtle); color: var(--color-text-brand); font-weight: 600; font-size: 15px; border: 3px solid var(--color-bg-canvas); }
 .ava img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block; }
-/* соц-аватары: фото 64px + белая обводка 4px запечены в png (72×72), нахлёст 16px по фото */
-.social-proof__avatars .ava { width: 72px; height: 72px; border: none; background: transparent; }
-.social-proof__avatars .ava + .ava { margin-left: -24px; }
-.social-proof__content { display: flex; flex-direction: column; gap: 2px; }
-.social-proof__title { color: var(--color-text-primary); font-size: 24px; line-height: 32px; font-weight: 600; }
-.social-proof__sub { color: var(--color-text-secondary); font-size: 18px; line-height: 28px; }
 
 /* ---------- ВРАЧИ (сетка карточек) ---------- */
 .doctors { background: var(--color-surface-sunken); border-radius: var(--radius-2xl); padding: clamp(28px, 4vw, 56px) var(--card-pad-x); }
@@ -857,7 +846,6 @@ html.js .reveal.is-visible { opacity: 1; transform: none; }
   .gallery { grid-auto-rows: 160px; }
   .acc__num { display: none; }
   .icon-toggle { width: 36px; height: 36px; }
-  .social-proof { flex-direction: column; text-align: center; }
   .specialization__media { height: 420px; }
 }
 
@@ -961,14 +949,43 @@ html.js .reveal.is-visible { opacity: 1; transform: none; }
 }
 
 
-/* ---------- Просмотр сертификата (заглушка: пустой лист А4) ---------- */
-.cert-modal__body { position: relative; display: flex; align-items: center; justify-content: center; }
-/* ширину ведём от меньшего из двух ограничений, чтобы лист влезал и по высоте, и по ширине */
-.cert-modal__sheet { width: min(calc(100vw - 2 * var(--space-2xl)), calc(84vh * 210 / 297)); aspect-ratio: 210 / 297; background: var(--color-surface-default); border-radius: var(--radius-sm); box-shadow: var(--shadow-xl); animation: card-in .3s var(--motion-easing-spring); }
-.cert-modal__close { position: absolute; top: calc(var(--space-lg) * -1); right: calc(var(--space-lg) * -1); width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center; background: rgba(255,255,255,.14); border: none; border-radius: var(--radius-md); color: var(--color-text-inverse); cursor: pointer; transition: background .15s; }
+/* ---------- Просмотр дипломов и сертификатов: галерея на весь экран ----------
+   листание — стрелки, свайп, ← →; клик/тап — увеличение ×2.5 с перетаскиванием; внизу лента превью */
+.cert-modal { padding: 0; z-index: 1000; }
+.cert-modal .modal__scrim { background: #081214; opacity: .94; }
+.cert-modal__body { position: relative; z-index: 1; width: 100%; height: 100%; display: flex; flex-direction: column; color: var(--color-text-inverse); }
+.cert-modal__bar { display: flex; align-items: center; justify-content: space-between; gap: var(--space-md); padding: var(--space-md) var(--space-lg); }
+.cert-modal__title { display: flex; align-items: baseline; gap: var(--space-sm); min-width: 0; }
+.cert-modal__title > :first-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.cert-modal__count { opacity: .7; white-space: nowrap; }
+.cert-modal__close { flex: 0 0 auto; width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; background: rgba(255,255,255,.14); border: none; border-radius: var(--radius-md); color: inherit; cursor: pointer; transition: background .15s; }
 .cert-modal__close:hover { background: rgba(255,255,255,.26); }
-@media (max-width: 599.98px) {
-  .cert-modal__close { top: calc(var(--space-xl) * -1); right: 0; }
+.cert-modal__stage { position: relative; flex: 1 1 auto; min-height: 0; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 0 72px; touch-action: none; }
+.cert-modal__img { max-width: 100%; max-height: 100%; object-fit: contain; border-radius: var(--radius-sm); box-shadow: var(--shadow-xl); background: #fff; cursor: zoom-in; user-select: none; transform-origin: 0 0; transition: transform .25s var(--motion-easing-standard), opacity .2s; }
+.cert-modal__img.is-loading { opacity: .3; }
+.cert-modal.is-zoomed .cert-modal__img { cursor: grab; transition: none; }
+.cert-modal.is-zoomed .cert-modal__img:active { cursor: grabbing; }
+.cert-modal__nav { position: absolute; top: 50%; transform: translateY(-50%); width: 48px; height: 48px; display: inline-flex; align-items: center; justify-content: center; border: none; border-radius: 50%; background: rgba(255,255,255,.14); color: inherit; cursor: pointer; transition: background .15s, opacity .15s; }
+.cert-modal__nav:hover { background: rgba(255,255,255,.28); }
+.cert-modal__nav:disabled { opacity: .25; cursor: default; }
+.cert-modal__nav--prev { left: var(--space-md); }
+.cert-modal__nav--next { right: var(--space-md); }
+.cert-modal__hint { position: absolute; bottom: var(--space-sm); left: 50%; transform: translateX(-50%); padding: 4px 12px; border-radius: 99px; background: rgba(0,0,0,.45); opacity: .85; pointer-events: none; transition: opacity .3s; white-space: nowrap; }
+.cert-modal.is-zoomed .cert-modal__hint, .cert-modal.hint-off .cert-modal__hint { opacity: 0; }
+.cert-modal__thumbs { flex: 0 0 auto; display: flex; gap: var(--space-xs); overflow-x: auto; padding: var(--space-md) var(--space-lg); scrollbar-width: thin; scroll-behavior: smooth; }
+.cert-modal__thumb { flex: 0 0 auto; height: 72px; padding: 0; border: 2px solid transparent; border-radius: var(--radius-xs, 6px); background: none; cursor: pointer; opacity: .55; transition: opacity .15s, border-color .15s; }
+.cert-modal__thumb img { height: 100%; width: auto; display: block; border-radius: 4px; }
+.cert-modal__thumb:hover { opacity: .85; }
+.cert-modal__thumb[aria-selected="true"] { opacity: 1; border-color: var(--color-text-accent-on-dark, #A9E2DD); }
+.cert-modal.is-single .cert-modal__nav, .cert-modal.is-single .cert-modal__thumbs, .cert-modal.is-single .cert-modal__count { display: none; }
+@media (max-width: 767.98px) {
+  .cert-modal__bar { padding: var(--space-sm) var(--space-md); }
+  .cert-modal__stage { padding: 0 var(--space-xs); }
+  .cert-modal__nav { top: auto; bottom: var(--space-sm); transform: none; width: 44px; height: 44px; background: rgba(0,0,0,.4); }
+  .cert-modal__hint { display: none; }
+  .cert-modal__thumbs { padding: var(--space-sm) var(--space-md); }
+  .cert-modal__thumb { height: 56px; }
+}
 }
 
 /* ---------- Подвал, вариант 1 (компактный) ---------- */
@@ -1058,8 +1075,6 @@ html.js .reveal.is-visible { opacity: 1; transform: none; }
   .hero-alt__actions { gap: var(--space-sm); }
   .stats-award { padding: var(--space-lg); gap: var(--space-lg); }
   .stats-sec__content { padding: 0; gap: var(--space-lg); }
-  .stats-sec__avatars .ava { width: 72px; height: 72px; }
-  .stats-sec__avatars .ava + .ava { margin-left: -12px; }
   .chief-doctor__card, .chief-doctor__content { padding: var(--space-lg); }
   .chief-doctor__stats { flex-wrap: wrap; gap: var(--space-md); }
   .surgery-item { padding: var(--space-lg); }
@@ -1108,6 +1123,5 @@ html.js .reveal.is-visible { opacity: 1; transform: none; }
 /* ============================================================ Узкие смартфоны · ≤359 ============================================================ */
 @media (max-width: 359.98px) {
   .hero-mini-stat__value { font-size: 18px; line-height: 24px; }
-  .stats-sec__avatars .ava { width: 60px; height: 60px; }
   .save-teeth__avatar { width: 96px; height: 96px; }
 }

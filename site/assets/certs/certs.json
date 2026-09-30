@@ -1,0 +1,791 @@
+{
+ "kuznetsov": [
+  {
+   "src": "assets/certs/kuznetsov/01.jpg",
+   "w": 1100,
+   "h": 771,
+   "caption": "",
+   "thumb": "assets/certs/kuznetsov/t/01.jpg"
+  },
+  {
+   "src": "assets/certs/kuznetsov/02.jpg",
+   "w": 1100,
+   "h": 771,
+   "caption": "",
+   "thumb": "assets/certs/kuznetsov/t/02.jpg"
+  },
+  {
+   "src": "assets/certs/kuznetsov/03.jpg",
+   "w": 1100,
+   "h": 771,
+   "caption": "",
+   "thumb": "assets/certs/kuznetsov/t/03.jpg"
+  },
+  {
+   "src": "assets/certs/kuznetsov/04.jpg",
+   "w": 1122,
+   "h": 1600,
+   "caption": "",
+   "thumb": "assets/certs/kuznetsov/t/04.jpg"
+  },
+  {
+   "src": "assets/certs/kuznetsov/05.jpg",
+   "w": 1600,
+   "h": 1122,
+   "caption": "",
+   "thumb": "assets/certs/kuznetsov/t/05.jpg"
+  },
+  {
+   "src": "assets/certs/kuznetsov/06.jpg",
+   "w": 1600,
+   "h": 1122,
+   "caption": "",
+   "thumb": "assets/certs/kuznetsov/t/06.jpg"
+  },
+  {
+   "src": "assets/certs/kuznetsov/07.jpg",
+   "w": 1280,
+   "h": 905,
+   "caption": "",
+   "thumb": "assets/certs/kuznetsov/t/07.jpg"
+  },
+  {
+   "src": "assets/certs/kuznetsov/08.jpg",
+   "w": 1269,
+   "h": 915,
+   "caption": "",
+   "thumb": "assets/certs/kuznetsov/t/08.jpg"
+  },
+  {
+   "src": "assets/certs/kuznetsov/09.jpg",
+   "w": 785,
+   "h": 1080,
+   "caption": "",
+   "thumb": "assets/certs/kuznetsov/t/09.jpg"
+  },
+  {
+   "src": "assets/certs/kuznetsov/10.jpg",
+   "w": 620,
+   "h": 877,
+   "caption": "",
+   "thumb": "assets/certs/kuznetsov/t/10.jpg"
+  },
+  {
+   "src": "assets/certs/kuznetsov/11.jpg",
+   "w": 1163,
+   "h": 1600,
+   "caption": "",
+   "thumb": "assets/certs/kuznetsov/t/11.jpg"
+  },
+  {
+   "src": "assets/certs/kuznetsov/12.jpg",
+   "w": 1600,
+   "h": 1132,
+   "caption": "",
+   "thumb": "assets/certs/kuznetsov/t/12.jpg"
+  },
+  {
+   "src": "assets/certs/kuznetsov/13.jpg",
+   "w": 1528,
+   "h": 1080,
+   "caption": "",
+   "thumb": "assets/certs/kuznetsov/t/13.jpg"
+  },
+  {
+   "src": "assets/certs/kuznetsov/14.jpg",
+   "w": 1546,
+   "h": 1080,
+   "caption": "",
+   "thumb": "assets/certs/kuznetsov/t/14.jpg"
+  },
+  {
+   "src": "assets/certs/kuznetsov/15.jpg",
+   "w": 1600,
+   "h": 1134,
+   "caption": "",
+   "thumb": "assets/certs/kuznetsov/t/15.jpg"
+  },
+  {
+   "src": "assets/certs/kuznetsov/16.jpg",
+   "w": 798,
+   "h": 1200,
+   "caption": "",
+   "thumb": "assets/certs/kuznetsov/t/16.jpg"
+  },
+  {
+   "src": "assets/certs/kuznetsov/17.jpg",
+   "w": 720,
+   "h": 1049,
+   "caption": "",
+   "thumb": "assets/certs/kuznetsov/t/17.jpg"
+  },
+  {
+   "src": "assets/certs/kuznetsov/18.jpg",
+   "w": 1280,
+   "h": 902,
+   "caption": "",
+   "thumb": "assets/certs/kuznetsov/t/18.jpg"
+  },
+  {
+   "src": "assets/certs/kuznetsov/19.jpg",
+   "w": 1000,
+   "h": 1415,
+   "caption": "",
+   "thumb": "assets/certs/kuznetsov/t/19.jpg"
+  },
+  {
+   "src": "assets/certs/kuznetsov/20.jpg",
+   "w": 1000,
+   "h": 1415,
+   "caption": "",
+   "thumb": "assets/certs/kuznetsov/t/20.jpg"
+  },
+  {
+   "src": "assets/certs/kuznetsov/21.jpg",
+   "w": 1131,
+   "h": 1600,
+   "caption": "",
+   "thumb": "assets/certs/kuznetsov/t/21.jpg"
+  },
+  {
+   "src": "assets/certs/kuznetsov/22.jpg",
+   "w": 1131,
+   "h": 1600,
+   "caption": "",
+   "thumb": "assets/certs/kuznetsov/t/22.jpg"
+  },
+  {
+   "src": "assets/certs/kuznetsov/23.jpg",
+   "w": 1280,
+   "h": 904,
+   "caption": "",
+   "thumb": "assets/certs/kuznetsov/t/23.jpg"
+  },
+  {
+   "src": "assets/certs/kuznetsov/24.jpg",
+   "w": 1000,
+   "h": 707,
+   "caption": "",
+   "thumb": "assets/certs/kuznetsov/t/24.jpg"
+  },
+  {
+   "src": "assets/certs/kuznetsov/25.jpg",
+   "w": 414,
+   "h": 600,
+   "caption": "",
+   "thumb": "assets/certs/kuznetsov/t/25.jpg"
+  },
+  {
+   "src": "assets/certs/kuznetsov/26.jpg",
+   "w": 800,
+   "h": 567,
+   "caption": "",
+   "thumb": "assets/certs/kuznetsov/t/26.jpg"
+  },
+  {
+   "src": "assets/certs/kuznetsov/27.jpg",
+   "w": 800,
+   "h": 552,
+   "caption": "",
+   "thumb": "assets/certs/kuznetsov/t/27.jpg"
+  },
+  {
+   "src": "assets/certs/kuznetsov/28.jpg",
+   "w": 418,
+   "h": 600,
+   "caption": "",
+   "thumb": "assets/certs/kuznetsov/t/28.jpg"
+  },
+  {
+   "src": "assets/certs/kuznetsov/29.jpg",
+   "w": 800,
+   "h": 568,
+   "caption": "",
+   "thumb": "assets/certs/kuznetsov/t/29.jpg"
+  },
+  {
+   "src": "assets/certs/kuznetsov/30.jpg",
+   "w": 800,
+   "h": 547,
+   "caption": "",
+   "thumb": "assets/certs/kuznetsov/t/30.jpg"
+  },
+  {
+   "src": "assets/certs/kuznetsov/31.jpg",
+   "w": 424,
+   "h": 600,
+   "caption": "",
+   "thumb": "assets/certs/kuznetsov/t/31.jpg"
+  },
+  {
+   "src": "assets/certs/kuznetsov/32.jpg",
+   "w": 800,
+   "h": 571,
+   "caption": "",
+   "thumb": "assets/certs/kuznetsov/t/32.jpg"
+  },
+  {
+   "src": "assets/certs/kuznetsov/33.jpg",
+   "w": 422,
+   "h": 600,
+   "caption": "",
+   "thumb": "assets/certs/kuznetsov/t/33.jpg"
+  },
+  {
+   "src": "assets/certs/kuznetsov/34.jpg",
+   "w": 800,
+   "h": 558,
+   "caption": "",
+   "thumb": "assets/certs/kuznetsov/t/34.jpg"
+  },
+  {
+   "src": "assets/certs/kuznetsov/35.jpg",
+   "w": 800,
+   "h": 553,
+   "caption": "",
+   "thumb": "assets/certs/kuznetsov/t/35.jpg"
+  },
+  {
+   "src": "assets/certs/kuznetsov/36.jpg",
+   "w": 421,
+   "h": 600,
+   "caption": "",
+   "thumb": "assets/certs/kuznetsov/t/36.jpg"
+  },
+  {
+   "src": "assets/certs/kuznetsov/37.jpg",
+   "w": 426,
+   "h": 600,
+   "caption": "",
+   "thumb": "assets/certs/kuznetsov/t/37.jpg"
+  },
+  {
+   "src": "assets/certs/kuznetsov/38.jpg",
+   "w": 427,
+   "h": 600,
+   "caption": "",
+   "thumb": "assets/certs/kuznetsov/t/38.jpg"
+  },
+  {
+   "src": "assets/certs/kuznetsov/39.jpg",
+   "w": 408,
+   "h": 600,
+   "caption": "",
+   "thumb": "assets/certs/kuznetsov/t/39.jpg"
+  },
+  {
+   "src": "assets/certs/kuznetsov/40.jpg",
+   "w": 420,
+   "h": 600,
+   "caption": "",
+   "thumb": "assets/certs/kuznetsov/t/40.jpg"
+  },
+  {
+   "src": "assets/certs/kuznetsov/41.jpg",
+   "w": 428,
+   "h": 600,
+   "caption": "",
+   "thumb": "assets/certs/kuznetsov/t/41.jpg"
+  },
+  {
+   "src": "assets/certs/kuznetsov/42.jpg",
+   "w": 405,
+   "h": 600,
+   "caption": "",
+   "thumb": "assets/certs/kuznetsov/t/42.jpg"
+  },
+  {
+   "src": "assets/certs/kuznetsov/43.jpg",
+   "w": 414,
+   "h": 600,
+   "caption": "",
+   "thumb": "assets/certs/kuznetsov/t/43.jpg"
+  },
+  {
+   "src": "assets/certs/kuznetsov/44.jpg",
+   "w": 427,
+   "h": 600,
+   "caption": "",
+   "thumb": "assets/certs/kuznetsov/t/44.jpg"
+  },
+  {
+   "src": "assets/certs/kuznetsov/45.jpg",
+   "w": 500,
+   "h": 713,
+   "caption": "",
+   "thumb": "assets/certs/kuznetsov/t/45.jpg"
+  },
+  {
+   "src": "assets/certs/kuznetsov/46.jpg",
+   "w": 500,
+   "h": 713,
+   "caption": "",
+   "thumb": "assets/certs/kuznetsov/t/46.jpg"
+  }
+ ],
+ "nurieva": [
+  {
+   "src": "assets/certs/nurieva/01.jpg",
+   "w": 864,
+   "h": 620,
+   "caption": "",
+   "thumb": "assets/certs/nurieva/t/01.jpg"
+  },
+  {
+   "src": "assets/certs/nurieva/02.jpg",
+   "w": 1600,
+   "h": 1133,
+   "caption": "",
+   "thumb": "assets/certs/nurieva/t/02.jpg"
+  },
+  {
+   "src": "assets/certs/nurieva/03.jpg",
+   "w": 1503,
+   "h": 1080,
+   "caption": "",
+   "thumb": "assets/certs/nurieva/t/03.jpg"
+  },
+  {
+   "src": "assets/certs/nurieva/04.jpg",
+   "w": 1280,
+   "h": 891,
+   "caption": "",
+   "thumb": "assets/certs/nurieva/t/04.jpg"
+  },
+  {
+   "src": "assets/certs/nurieva/05.jpg",
+   "w": 1141,
+   "h": 1600,
+   "caption": "",
+   "thumb": "assets/certs/nurieva/t/05.jpg"
+  },
+  {
+   "src": "assets/certs/nurieva/06.jpg",
+   "w": 1280,
+   "h": 905,
+   "caption": "",
+   "thumb": "assets/certs/nurieva/t/06.jpg"
+  },
+  {
+   "src": "assets/certs/nurieva/07.jpg",
+   "w": 1280,
+   "h": 891,
+   "caption": "",
+   "thumb": "assets/certs/nurieva/t/07.jpg"
+  },
+  {
+   "src": "assets/certs/nurieva/08.jpg",
+   "w": 1000,
+   "h": 1415,
+   "caption": "",
+   "thumb": "assets/certs/nurieva/t/08.jpg"
+  },
+  {
+   "src": "assets/certs/nurieva/09.jpg",
+   "w": 1200,
+   "h": 838,
+   "caption": "",
+   "thumb": "assets/certs/nurieva/t/09.jpg"
+  },
+  {
+   "src": "assets/certs/nurieva/10.jpg",
+   "w": 800,
+   "h": 549,
+   "caption": "",
+   "thumb": "assets/certs/nurieva/t/10.jpg"
+  },
+  {
+   "src": "assets/certs/nurieva/11.jpg",
+   "w": 800,
+   "h": 562,
+   "caption": "",
+   "thumb": "assets/certs/nurieva/t/11.jpg"
+  },
+  {
+   "src": "assets/certs/nurieva/12.jpg",
+   "w": 800,
+   "h": 555,
+   "caption": "",
+   "thumb": "assets/certs/nurieva/t/12.jpg"
+  },
+  {
+   "src": "assets/certs/nurieva/13.jpg",
+   "w": 424,
+   "h": 600,
+   "caption": "",
+   "thumb": "assets/certs/nurieva/t/13.jpg"
+  },
+  {
+   "src": "assets/certs/nurieva/14.jpg",
+   "w": 408,
+   "h": 600,
+   "caption": "",
+   "thumb": "assets/certs/nurieva/t/14.jpg"
+  },
+  {
+   "src": "assets/certs/nurieva/15.jpg",
+   "w": 800,
+   "h": 555,
+   "caption": "",
+   "thumb": "assets/certs/nurieva/t/15.jpg"
+  },
+  {
+   "src": "assets/certs/nurieva/16.jpg",
+   "w": 428,
+   "h": 600,
+   "caption": "",
+   "thumb": "assets/certs/nurieva/t/16.jpg"
+  },
+  {
+   "src": "assets/certs/nurieva/17.jpg",
+   "w": 408,
+   "h": 600,
+   "caption": "",
+   "thumb": "assets/certs/nurieva/t/17.jpg"
+  },
+  {
+   "src": "assets/certs/nurieva/18.jpg",
+   "w": 800,
+   "h": 566,
+   "caption": "",
+   "thumb": "assets/certs/nurieva/t/18.jpg"
+  },
+  {
+   "src": "assets/certs/nurieva/19.jpg",
+   "w": 410,
+   "h": 600,
+   "caption": "",
+   "thumb": "assets/certs/nurieva/t/19.jpg"
+  },
+  {
+   "src": "assets/certs/nurieva/20.jpg",
+   "w": 800,
+   "h": 547,
+   "caption": "",
+   "thumb": "assets/certs/nurieva/t/20.jpg"
+  },
+  {
+   "src": "assets/certs/nurieva/21.jpg",
+   "w": 412,
+   "h": 600,
+   "caption": "",
+   "thumb": "assets/certs/nurieva/t/21.jpg"
+  },
+  {
+   "src": "assets/certs/nurieva/22.jpg",
+   "w": 416,
+   "h": 600,
+   "caption": "",
+   "thumb": "assets/certs/nurieva/t/22.jpg"
+  },
+  {
+   "src": "assets/certs/nurieva/23.jpg",
+   "w": 500,
+   "h": 713,
+   "caption": "",
+   "thumb": "assets/certs/nurieva/t/23.jpg"
+  }
+ ],
+ "lapteva": [
+  {
+   "src": "assets/certs/lapteva/01.jpg",
+   "w": 1280,
+   "h": 897,
+   "caption": "",
+   "thumb": "assets/certs/lapteva/t/01.jpg"
+  }
+ ],
+ "gubanov": [
+  {
+   "src": "assets/certs/gubanov/01.jpg",
+   "w": 800,
+   "h": 561,
+   "caption": "",
+   "thumb": "assets/certs/gubanov/t/01.jpg"
+  },
+  {
+   "src": "assets/certs/gubanov/02.jpg",
+   "w": 787,
+   "h": 544,
+   "caption": "",
+   "thumb": "assets/certs/gubanov/t/02.jpg"
+  },
+  {
+   "src": "assets/certs/gubanov/03.jpg",
+   "w": 785,
+   "h": 1080,
+   "caption": "",
+   "thumb": "assets/certs/gubanov/t/03.jpg"
+  },
+  {
+   "src": "assets/certs/gubanov/04.jpg",
+   "w": 960,
+   "h": 1430,
+   "caption": "",
+   "thumb": "assets/certs/gubanov/t/04.jpg"
+  },
+  {
+   "src": "assets/certs/gubanov/05.jpg",
+   "w": 1131,
+   "h": 1600,
+   "caption": "",
+   "thumb": "assets/certs/gubanov/t/05.jpg"
+  },
+  {
+   "src": "assets/certs/gubanov/06.jpg",
+   "w": 1169,
+   "h": 826,
+   "caption": "",
+   "thumb": "assets/certs/gubanov/t/06.jpg"
+  },
+  {
+   "src": "assets/certs/gubanov/07.jpg",
+   "w": 1524,
+   "h": 1080,
+   "caption": "",
+   "thumb": "assets/certs/gubanov/t/07.jpg"
+  },
+  {
+   "src": "assets/certs/gubanov/08.jpg",
+   "w": 1555,
+   "h": 1080,
+   "caption": "",
+   "thumb": "assets/certs/gubanov/t/08.jpg"
+  },
+  {
+   "src": "assets/certs/gubanov/09.jpg",
+   "w": 1600,
+   "h": 1085,
+   "caption": "",
+   "thumb": "assets/certs/gubanov/t/09.jpg"
+  },
+  {
+   "src": "assets/certs/gubanov/10.jpg",
+   "w": 1600,
+   "h": 1132,
+   "caption": "",
+   "thumb": "assets/certs/gubanov/t/10.jpg"
+  },
+  {
+   "src": "assets/certs/gubanov/11.jpg",
+   "w": 1280,
+   "h": 894,
+   "caption": "",
+   "thumb": "assets/certs/gubanov/t/11.jpg"
+  },
+  {
+   "src": "assets/certs/gubanov/12.jpg",
+   "w": 800,
+   "h": 546,
+   "caption": "",
+   "thumb": "assets/certs/gubanov/t/12.jpg"
+  },
+  {
+   "src": "assets/certs/gubanov/13.jpg",
+   "w": 413,
+   "h": 600,
+   "caption": "",
+   "thumb": "assets/certs/gubanov/t/13.jpg"
+  },
+  {
+   "src": "assets/certs/gubanov/14.jpg",
+   "w": 800,
+   "h": 562,
+   "caption": "",
+   "thumb": "assets/certs/gubanov/t/14.jpg"
+  },
+  {
+   "src": "assets/certs/gubanov/15.jpg",
+   "w": 800,
+   "h": 545,
+   "caption": "",
+   "thumb": "assets/certs/gubanov/t/15.jpg"
+  },
+  {
+   "src": "assets/certs/gubanov/16.jpg",
+   "w": 429,
+   "h": 600,
+   "caption": "",
+   "thumb": "assets/certs/gubanov/t/16.jpg"
+  },
+  {
+   "src": "assets/certs/gubanov/17.jpg",
+   "w": 424,
+   "h": 600,
+   "caption": "",
+   "thumb": "assets/certs/gubanov/t/17.jpg"
+  },
+  {
+   "src": "assets/certs/gubanov/18.jpg",
+   "w": 414,
+   "h": 600,
+   "caption": "",
+   "thumb": "assets/certs/gubanov/t/18.jpg"
+  },
+  {
+   "src": "assets/certs/gubanov/19.jpg",
+   "w": 414,
+   "h": 600,
+   "caption": "",
+   "thumb": "assets/certs/gubanov/t/19.jpg"
+  },
+  {
+   "src": "assets/certs/gubanov/20.jpg",
+   "w": 800,
+   "h": 545,
+   "caption": "",
+   "thumb": "assets/certs/gubanov/t/20.jpg"
+  },
+  {
+   "src": "assets/certs/gubanov/21.jpg",
+   "w": 800,
+   "h": 554,
+   "caption": "",
+   "thumb": "assets/certs/gubanov/t/21.jpg"
+  }
+ ],
+ "popov": [
+  {
+   "src": "assets/certs/popov/01.jpg",
+   "w": 710,
+   "h": 504,
+   "caption": "",
+   "thumb": "assets/certs/popov/t/01.jpg"
+  },
+  {
+   "src": "assets/certs/popov/02.jpg",
+   "w": 1600,
+   "h": 1151,
+   "caption": "",
+   "thumb": "assets/certs/popov/t/02.jpg"
+  },
+  {
+   "src": "assets/certs/popov/03.jpg",
+   "w": 1600,
+   "h": 1148,
+   "caption": "",
+   "thumb": "assets/certs/popov/t/03.jpg"
+  },
+  {
+   "src": "assets/certs/popov/04.jpg",
+   "w": 1191,
+   "h": 1600,
+   "caption": "",
+   "thumb": "assets/certs/popov/t/04.jpg"
+  },
+  {
+   "src": "assets/certs/popov/05.jpg",
+   "w": 1600,
+   "h": 1151,
+   "caption": "",
+   "thumb": "assets/certs/popov/t/05.jpg"
+  },
+  {
+   "src": "assets/certs/popov/06.jpg",
+   "w": 1600,
+   "h": 1148,
+   "caption": "",
+   "thumb": "assets/certs/popov/t/06.jpg"
+  },
+  {
+   "src": "assets/certs/popov/07.jpg",
+   "w": 1600,
+   "h": 1160,
+   "caption": "",
+   "thumb": "assets/certs/popov/t/07.jpg"
+  },
+  {
+   "src": "assets/certs/popov/08.jpg",
+   "w": 1600,
+   "h": 1157,
+   "caption": "",
+   "thumb": "assets/certs/popov/t/08.jpg"
+  },
+  {
+   "src": "assets/certs/popov/09.jpg",
+   "w": 1600,
+   "h": 1147,
+   "caption": "",
+   "thumb": "assets/certs/popov/t/09.jpg"
+  }
+ ],
+ "rizaeva": [
+  {
+   "src": "assets/certs/rizaeva/01.jpg",
+   "w": 1000,
+   "h": 701,
+   "caption": "",
+   "thumb": "assets/certs/rizaeva/t/01.jpg"
+  },
+  {
+   "src": "assets/certs/rizaeva/02.jpg",
+   "w": 1132,
+   "h": 800,
+   "caption": "",
+   "thumb": "assets/certs/rizaeva/t/02.jpg"
+  },
+  {
+   "src": "assets/certs/rizaeva/03.jpg",
+   "w": 1140,
+   "h": 800,
+   "caption": "",
+   "thumb": "assets/certs/rizaeva/t/03.jpg"
+  },
+  {
+   "src": "assets/certs/rizaeva/04.jpg",
+   "w": 1140,
+   "h": 800,
+   "caption": "",
+   "thumb": "assets/certs/rizaeva/t/04.jpg"
+  },
+  {
+   "src": "assets/certs/rizaeva/05.jpg",
+   "w": 800,
+   "h": 561,
+   "caption": "",
+   "thumb": "assets/certs/rizaeva/t/05.jpg"
+  },
+  {
+   "src": "assets/certs/rizaeva/06.jpg",
+   "w": 1140,
+   "h": 800,
+   "caption": "",
+   "thumb": "assets/certs/rizaeva/t/06.jpg"
+  },
+  {
+   "src": "assets/certs/rizaeva/07.jpg",
+   "w": 800,
+   "h": 561,
+   "caption": "",
+   "thumb": "assets/certs/rizaeva/t/07.jpg"
+  },
+  {
+   "src": "assets/certs/rizaeva/08.jpg",
+   "w": 800,
+   "h": 561,
+   "caption": "",
+   "thumb": "assets/certs/rizaeva/t/08.jpg"
+  },
+  {
+   "src": "assets/certs/rizaeva/09.jpg",
+   "w": 800,
+   "h": 561,
+   "caption": "",
+   "thumb": "assets/certs/rizaeva/t/09.jpg"
+  },
+  {
+   "src": "assets/certs/rizaeva/10.jpg",
+   "w": 800,
+   "h": 561,
+   "caption": "",
+   "thumb": "assets/certs/rizaeva/t/10.jpg"
+  },
+  {
+   "src": "assets/certs/rizaeva/11.jpg",
+   "w": 800,
+   "h": 1140,
+   "caption": "",
+   "thumb": "assets/certs/rizaeva/t/11.jpg"
+  }
+ ]
+}

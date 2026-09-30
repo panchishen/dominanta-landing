@@ -1,0 +1,12 @@
+/* Страницы политики и согласия (152-ФЗ) — простая текстовая вёрстка на токенах темы */
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--color-bg-default, #fff); color: var(--color-text-primary, #1b1f22); font-family: 'Onest', system-ui, sans-serif; font-size: 17px; line-height: 1.6; }
+.legal { max-width: 760px; margin: 0 auto; padding: 40px 16px 80px; }
+.legal__back { display: inline-block; margin-bottom: 32px; color: var(--color-text-accent, #00848A); text-decoration: none; font-weight: 500; }
+.legal__back:hover { text-decoration: underline; }
+.legal h1 { font-size: clamp(28px, 4vw, 40px); line-height: 1.2; margin: 0 0 8px; }
+.legal__date { color: var(--color-text-secondary, #5b6168); margin: 0 0 32px; }
+.legal h2 { font-size: 21px; line-height: 1.3; margin: 32px 0 12px; }
+.legal p, .legal li { margin: 0 0 12px; }
+.legal ul { padding-left: 22px; margin: 0 0 12px; }
+.legal a { color: var(--color-text-accent, #00848A); }
