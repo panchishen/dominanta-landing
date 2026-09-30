@@ -215,6 +215,7 @@
     else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
   }
   function resetModal(m) {
+    m.querySelector('.modal__card').style.minHeight = '';
     m.querySelector('.modal__form').hidden = false;
     m.querySelector('.modal__success').hidden = true;
     const form = m.querySelector('form');
@@ -235,7 +236,9 @@
       // Обязателен только телефон (по макету)
       if (!phoneValid(phone)) { validateField(phone, false, 'Введите номер полностью'); phone.focus(); return; }
       validateField(phone, true);
-      // успех
+      // успех: окно сохраняет высоту формы (иначе сжимается и панель с маскотом)
+      const card = m.querySelector('.modal__card');
+      card.style.minHeight = card.offsetHeight + 'px';
       m.querySelector('.modal__form').hidden = true;
       const ok2 = m.querySelector('.modal__success');
       ok2.hidden = false;
@@ -443,11 +446,12 @@
     update();
   }
 
-  /* ---------- Маскот в окне записи (content-map 20b) ----------
-     sad — по умолчанию, следит за курсором: SVG-зрачки (track=svg) или перемотка видео look по X курсора (track=video);
-     nod — пока курсор на «Записаться» / фокус в телефоне или на кнопке (ролик — только отрезок с закрытыми глазами, петля);
-     heal → happy — после отправки формы (ролик обрезан до превращения, ×1.25 ≈ 1.5 с); у happy те же SVG-зрачки.
-     Телефон (нет hover): зрачки сами медленно оглядываются. reduced-motion: только статичные кадры. */
+  /* ---------- Маскот в окне записи (content-map 20b, маскот v3) ----------
+     Сценарий (#bookingModal[data-mascot-scenario] = heal | implant) подставляет файлы assets/mascot-<сценарий>-*.
+     sad — по умолчанию, следит за курсором перемоткой ролика look по X курсора (зрачки нарисованы в кадрах);
+     nod — пока курсор на «Записаться» / фокус в телефоне или на кнопке (петля sad → кивок → sad);
+     heal → happy — после отправки формы (×1.25 ≈ 3 с), happy — радостная петля.
+     Телефон (нет hover): look сам медленно гуляет туда-обратно. reduced-motion: только статичные кадры. */
   function initMascot() {
     const box = $('#bookingModal');
     const m = box && $('.mascot', box);
@@ -455,19 +459,35 @@
     const btn = $('.modal__submit', box);
     const phone = $('.js-phone', box);
     const success = $('.modal__success', box);
-    const nod = $('.mascot__nod', m), heal = $('.mascot__heal', m), look = $('.mascot__look', m);
-    const pupils = $$('.mascot__pupil', m).map(g => ({ g, cx: +g.dataset.cx, cy: +g.dataset.cy, max: +g.dataset.r - 19, x: 0, y: 0 }));
+    const nod = $('.mascot__nod', m), heal = $('.mascot__heal', m), look = $('.mascot__look', m), happy = $('.mascot__happy', m);
     const hover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
     const active = () => box.dataset.formVariant === '2' && box.classList.contains('is-open');
-    const setState = s => { m.dataset.state = s; };
+    const setState = s => {
+      m.dataset.state = s;
+      // play — после того как слой стал видимым: невидимое muted-видео Chrome сам ставит на паузу
+      if (s === 'happy' && !prefersReduced) setTimeout(() => { if (m.dataset.state === 'happy') happy.play().catch(() => {}); }, 120);
+      else happy.pause();
+    };
     const load = v => { if (v.preload !== 'auto') { v.preload = 'auto'; v.load(); } };
+    let lookT = 0; // текущее время перемотки look
+
+    /* сценарий: меняем файлы у всех слоёв, возвращаемся в sad */
+    const setScenario = sc => {
+      $$('[data-src]', m).forEach(el => {
+        el.src = 'assets/mascot-' + sc + '-' + el.dataset.src;
+        if (el.dataset.poster) el.poster = 'assets/mascot-' + sc + '-' + el.dataset.poster;
+        if (el.tagName === 'VIDEO') { el.pause(); if (el.preload === 'auto') el.load(); }
+      });
+      lookT = 0; setState('sad');
+    };
+    box.addEventListener('mascot-scenario', () => setScenario(box.dataset.mascotScenario));
 
     /* открытие окна: подгружаем видео, сбрасываем в sad */
     new MutationObserver(() => {
-      if (!box.classList.contains('is-open')) { [nod, heal].forEach(v => v.pause()); return; }
+      if (!box.classList.contains('is-open')) { [nod, heal, happy].forEach(v => v.pause()); return; }
       if (box.dataset.formVariant !== '2') return;
       setState('sad');
-      if (!prefersReduced) [nod, heal, look].forEach(load);
+      if (!prefersReduced) [nod, heal, look, happy].forEach(load);
     }).observe(box, { attributes: true, attributeFilter: ['class'] });
 
     /* --- nod --- */
@@ -494,42 +514,21 @@
       load(heal); heal.currentTime = 0; heal.playbackRate = 1.25; setState('heal');
       heal.play().catch(() => setState('happy'));
       heal.addEventListener('ended', () => setState('happy'), { once: true });
-      setTimeout(() => { if (m.dataset.state === 'heal') setState('happy'); }, 3000); // страховка: видео не доиграло
+      setTimeout(() => { if (m.dataset.state === 'heal') setState('happy'); }, 4000); // страховка: видео не доиграло
     }).observe(success, { attributes: true, attributeFilter: ['hidden'] });
 
-    /* --- слежение за курсором --- */
+    /* --- слежение за курсором: перемотка look --- */
     if (prefersReduced) return;
-    let mx = null, my = null, t0 = performance.now();
-    if (hover) window.addEventListener('pointermove', e => { mx = e.clientX; my = e.clientY; }, { passive: true });
-    let lookT = 0;
+    let mx = null, t0 = performance.now();
+    if (hover) window.addEventListener('pointermove', e => { mx = e.clientX; }, { passive: true });
     const tick = now => {
       requestAnimationFrame(tick);
-      const st = m.dataset.state;
-      if (!active() || (st !== 'sad' && st !== 'happy')) return;
-      const r = m.getBoundingClientRect();
-      const k = r.width / 720;
-      if (st === 'sad' && box.dataset.mascotTrack === 'video') {
-        // перемотка look: X курсора по ширине окна → время ролика (слева направо)
-        if (!look.duration) { load(look); return; }
-        const fx = mx === null ? 0.5 + 0.45 * Math.sin((now - t0) / 2600) : mx / innerWidth;
-        lookT += (Math.min(1, Math.max(0, fx)) * (look.duration - 0.05) - lookT) * 0.18;
-        if (Math.abs(look.currentTime - lookT) > 0.02 && !look.seeking) look.currentTime = lookT;
-        return;
-      }
-      pupils.forEach((p, i) => {
-        let dx, dy;
-        if (mx === null) { // телефон или курсор ещё не двигался — сами «оглядываются»
-          const a = (now - t0) / 1800;
-          dx = Math.sin(a) * p.max * 0.8; dy = Math.sin(a * 0.7 + i * 0.2) * p.max * 0.35;
-        } else {
-          const ex = r.left + p.cx * k, ey = r.top + p.cy * k;
-          const vx = mx - ex, vy = my - ey, d = Math.hypot(vx, vy) || 1;
-          const s = Math.min(1, d / 260) * p.max; // ближе к зубу — меньше отклонение
-          dx = vx / d * s; dy = vy / d * s;
-        }
-        p.x += (dx - p.x) * 0.2; p.y += (dy - p.y) * 0.2;
-        p.g.setAttribute('transform', `translate(${p.x.toFixed(2)} ${p.y.toFixed(2)})`);
-      });
+      if (!active() || m.dataset.state !== 'sad') return;
+      // X курсора по ширине окна → время ролика (слева направо); без курсора — медленно гуляет сам
+      if (!look.duration) { load(look); return; }
+      const fx = mx === null ? 0.5 + 0.45 * Math.sin((now - t0) / 2600) : mx / innerWidth;
+      lookT += (Math.min(1, Math.max(0, fx)) * (look.duration - 0.05) - lookT) * 0.18;
+      if (Math.abs(look.currentTime - lookT) > 0.02 && !look.seeking) look.currentTime = lookT;
     };
     requestAnimationFrame(tick);
   }
@@ -631,7 +630,10 @@
           bm.dataset.formVariant = btn.dataset.formVariant;
           $$('[data-mascot-opts]', cfg).forEach(g => { g.style.display = btn.dataset.formVariant === '2' ? '' : 'none'; });
         }
-        if (bm && btn.dataset.mascotTrack) bm.dataset.mascotTrack = btn.dataset.mascotTrack;
+        if (bm && btn.dataset.mascotScenario) {
+          bm.dataset.mascotScenario = btn.dataset.mascotScenario;
+          bm.dispatchEvent(new Event('mascot-scenario'));
+        }
       }));
     });
 

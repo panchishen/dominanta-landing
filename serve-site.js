@@ -50,10 +50,20 @@ const server = http.createServer((req, res) => {
           res.end('<h1>404</h1><p>Not found: ' + rel + '</p>');
           return;
         }
-        res.writeHead(200, {
-          'Content-Type': MIME[path.extname(target).toLowerCase()] || 'application/octet-stream',
-          'Cache-Control': 'no-store',
-        });
+        const type = MIME[path.extname(target).toLowerCase()] || 'application/octet-stream';
+        // Range — без него браузер не даёт перематывать видео (currentTime), а маскот перематывает look курсором
+        const m = /^bytes=(\d*)-(\d*)$/.exec(req.headers.range || '');
+        if (m) {
+          const size = data.length;
+          let start = m[1] === '' ? size - +m[2] : +m[1];
+          let end = m[1] !== '' && m[2] !== '' ? Math.min(+m[2], size - 1) : size - 1;
+          if (start > end || start < 0) { res.writeHead(416, { 'Content-Range': 'bytes */' + size }).end(); return; }
+          res.writeHead(206, { 'Content-Type': type, 'Content-Range': `bytes ${start}-${end}/${size}`,
+            'Accept-Ranges': 'bytes', 'Content-Length': end - start + 1, 'Cache-Control': 'no-store' });
+          res.end(data.subarray(start, end + 1));
+          return;
+        }
+        res.writeHead(200, { 'Content-Type': type, 'Accept-Ranges': 'bytes', 'Cache-Control': 'no-store' });
         res.end(data);
       });
     });

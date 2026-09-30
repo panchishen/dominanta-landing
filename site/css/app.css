@@ -656,26 +656,22 @@ html.js .reveal.is-visible { opacity: 1; transform: none; }
 .modal[data-form-variant="2"] .modal__art { display: flex; align-items: center; justify-content: center; background: #003A3C; padding: var(--space-lg); border-radius: var(--radius-xl) 0 0 var(--radius-xl); }
 .modal[data-form-variant="2"] .modal__main { padding: var(--space-xl); align-self: center; }
 .mascot { position: relative; aspect-ratio: 1; width: 100%; max-width: 400px; }
-.mascot__layer { position: absolute; inset: 0; width: 100%; height: 100%; display: block; opacity: 0; pointer-events: none; }
-/* видео браузер рисует на тон темнее панели (на экране заметнее, чем в canvas) — lighten: тёмный фон видео
-   уступает цвету панели #003A3C, светлый зуб проходит как есть; квадрата/круга вокруг зуба не видно */
-video.mascot__layer { mix-blend-mode: lighten; }
-.mascot__eyes circle { fill: #1b1f22; }
-.mascot__eyes .mascot__glint { fill: #fff; opacity: .85; }
-/* какие слои видны в каком состоянии */
-.mascot[data-state="sad"] .mascot__sad,
-.mascot[data-state="sad"] .mascot__eyes { opacity: 1; }
-.modal[data-mascot-track="video"] .mascot[data-state="sad"] .mascot__sad,
-.modal[data-mascot-track="video"] .mascot[data-state="sad"] .mascot__eyes { opacity: 0; }
-.modal[data-mascot-track="video"] .mascot[data-state="sad"] .mascot__look { opacity: 1; }
+.mascot__layer { position: absolute; inset: 0; width: 100%; height: 100%; display: block; opacity: 0; pointer-events: none; object-fit: cover; }
+/* ролик заполняет всю панель (object-fit: cover): фон кадра и есть фон панели — ни шва, ни наложений/масок */
+.modal[data-form-variant="2"] .modal__art { padding: 0; overflow: hidden; align-items: stretch; }
+.modal[data-form-variant="2"] .mascot { max-width: none; aspect-ratio: auto; }
+/* какие слои видны в каком состоянии (sad = перематываемый look; без анимаций — статичный кадр sad) */
+.mascot[data-state="sad"] .mascot__look,
 .mascot[data-state="nod"] .mascot__nod,
 .mascot[data-state="heal"] .mascot__heal,
-.mascot[data-state="happy"] .mascot__happy,
-.mascot[data-state="happy"] .mascot__eyes { opacity: 1; } /* глаза у happy на тех же местах, что у sad (±1 px) */
+.mascot[data-state="happy"] .mascot__happy { opacity: 1; }
+@media (prefers-reduced-motion: reduce) {
+  .mascot[data-state="sad"] .mascot__look { opacity: 0; }
+  .mascot[data-state="sad"] .mascot__sad { opacity: 1; }
+}
 @media (max-width: 767.98px) {
   .modal[data-form-variant="2"] .modal__card { grid-template-columns: 1fr; max-width: 440px; }
-  .modal[data-form-variant="2"] .modal__art { padding: var(--space-xs); border-radius: var(--radius-xl) var(--radius-xl) 0 0; }
-  .modal[data-form-variant="2"] .mascot { max-width: 180px; }
+  .modal[data-form-variant="2"] .modal__art { aspect-ratio: 4 / 3; border-radius: var(--radius-xl) var(--radius-xl) 0 0; } /* кадр 1:1 обрезается сверху/снизу, зуб целиком */
   .modal[data-form-variant="2"] .modal__main { padding: var(--space-lg); }
 }
 
@@ -752,6 +748,10 @@ video.mascot__layer { mix-blend-mode: lighten; }
 .modal__close { position: absolute; top: var(--space-md); right: var(--space-md); width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center; background: var(--color-action-secondary); border: none; border-radius: var(--radius-md); color: var(--color-text-primary); cursor: pointer; transition: background .15s; }
 .modal__close:hover { background: var(--color-action-secondary-hover); }
 .modal__form form { display: flex; flex-direction: column; gap: var(--space-md); }
+/* высота формы фиксирована: снизу зарезервирована строка ошибки (gap поля 6px + caption 16px);
+   когда ошибка показана — резерв убирается, окно не «прыгает» */
+.modal__form form { padding-bottom: 22px; }
+.modal__form form:has(.is-error) { padding-bottom: 0; }
 .modal__head { display: flex; flex-direction: column; gap: var(--space-3xs); margin-bottom: var(--space-md); padding-right: 32px; }
 .modal__head h2 { color: var(--color-text-primary); }
 .modal__sub { color: var(--color-text-secondary); }
