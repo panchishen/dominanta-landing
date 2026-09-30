@@ -20,7 +20,7 @@
    <!-- PREVIEW-NOINDEX: удалить эту строку при публикации на боевом домене --><meta name="robots" content="noindex, nofollow">
    ```
 
-   Эту строку нужно удалить целиком во всех HTML-файлах. Сейчас это `index.html` и `special-version/index.html`. Удалить разом (из папки с распакованным сайтом):
+   Эту строку нужно удалить целиком во всех HTML-файлах. Сейчас это `index.html`, `special-version/index.html`, `privacy.html` и `consent.html`. Удалить разом (из папки с распакованным сайтом):
 
    ```bash
    grep -rl 'PREVIEW-NOINDEX' --include='*.html' . | xargs sed -i '/PREVIEW-NOINDEX/d'
@@ -31,6 +31,8 @@
    ```bash
    grep -rl 'PREVIEW-NOINDEX' .
    ```
+
+4. **Обложка превью ссылки.** В `index.html` и `special-version/index.html` мета-тег `og:image` указывает на адрес превью GitHub Pages. Замените `https://panchishen.github.io/dominanta-landing/` на адрес боевого домена (картинка — `assets/og-cover.jpg`).
 
 `robots.txt` и `sitemap.xml` для боевого домена готовит разработчик: в релиз они не входят.
 
