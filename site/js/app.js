@@ -472,10 +472,11 @@
     let lookT = 0; // текущее время перемотки look
 
     /* сценарий: меняем файлы у всех слоёв, возвращаемся в sad */
+    const V = '?v=3'; // версия ассетов маскота: менять при замене файлов, иначе браузер/Pages отдадут старые из кэша
     const setScenario = sc => {
       $$('[data-src]', m).forEach(el => {
-        el.src = 'assets/mascot-' + sc + '-' + el.dataset.src;
-        if (el.dataset.poster) el.poster = 'assets/mascot-' + sc + '-' + el.dataset.poster;
+        el.src = 'assets/mascot-' + sc + '-' + el.dataset.src + V;
+        if (el.dataset.poster) el.poster = 'assets/mascot-' + sc + '-' + el.dataset.poster + V;
         if (el.tagName === 'VIDEO') { el.pause(); if (el.preload === 'auto') el.load(); }
       });
       lookT = 0; setState('sad');
