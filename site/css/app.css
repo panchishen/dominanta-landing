@@ -504,7 +504,7 @@ html.js .reveal.is-visible { opacity: 1; transform: none; }
 
 /* ---------- ГАЛЕРЕЯ (бенто) ---------- */
 .gallery { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: clamp(150px, 18.5vw, 235px); gap: var(--space-xs); }
-.gallery__photo--b .media-img { object-position: center 28%; } /* вертикальный кадр КТ: в узкой ячейке — лицо и руки на экране */
+.gallery__photo--b .media-img { object-position: center 28%; } /* вертикальный кадр сканера inEos X5: в узкой ячейке — камера и модель */
 .gallery__photo { border-radius: var(--radius-xl); overflow: hidden; }
 .gallery__photo--a { grid-column: span 2; grid-row: span 2; }
 .gallery__photo--b { grid-row: span 2; }
