@@ -787,7 +787,7 @@ html.js .reveal.is-visible { opacity: 1; transform: none; }
   /* 4px до шапки: у статичной шапки нижняя граница отстоит от строки на её вертикальный padding — вычитаем его */
   .hdr--standard .hdr__nav.is-open { top: calc(100% - var(--hdr-pad-y) + 4px); }
   .stats { grid-template-columns: repeat(2, 1fr); }
-  .brands { grid-template-columns: repeat(2, 1fr); }
+  .brands { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .brand-item:last-child:nth-child(odd) { grid-column: 1 / -1; }
   .restoration__options { grid-template-columns: 1fr; }
   .restoration__detail { grid-template-columns: 1fr; }
@@ -1126,3 +1126,17 @@ html.js .reveal.is-visible { opacity: 1; transform: none; }
   .hero-mini-stat__value { font-size: 18px; line-height: 24px; }
   .save-teeth__avatar { width: 96px; height: 96px; }
 }
+
+/* Согласие на обработку данных (152-ФЗ) — чекбокс в формах записи */
+.consent { display: grid; grid-template-columns: 20px 1fr; column-gap: 10px; align-items: start; color: var(--color-text-tertiary); text-align: left; cursor: pointer; }
+.consent__box { width: 20px; height: 20px; margin: 0; accent-color: var(--color-brand-500); cursor: pointer; }
+.consent a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+.consent a:hover { color: var(--color-text-primary); }
+.consent__error { grid-column: 2; display: none; margin-top: 4px; color: var(--color-text-error); }
+.consent.is-error .consent__box { outline: 2px solid var(--color-feedback-error); outline-offset: 2px; }
+.consent.is-error .consent__error { display: block; }
+.consent--dark { color: rgba(255,255,255,.7); }
+.consent--dark a:hover { color: var(--color-text-inverse); }
+.consent--dark .consent__box { accent-color: var(--color-brand-200); }
+.consent--dark .consent__error { color: #FFB4A8; }
+.consent--dark.is-error .consent__box { outline-color: #FFB4A8; }

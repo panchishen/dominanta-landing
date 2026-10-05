@@ -236,6 +236,7 @@
       // Обязателен только телефон (по макету)
       if (!phoneValid(phone)) { validateField(phone, false, 'Введите номер полностью'); phone.focus(); return; }
       validateField(phone, true);
+      if (!consentValid(form)) return;
       // успех: окно сохраняет высоту формы (иначе сжимается и панель с маскотом)
       const card = m.querySelector('.modal__card');
       card.style.minHeight = card.offsetHeight + 'px';
@@ -246,6 +247,18 @@
     });
   }
 
+  /* ---------- Согласие на обработку данных (152-ФЗ): без галочки заявка не уходит ---------- */
+  function consentValid(form) {
+    const box = form.querySelector('.js-consent');
+    if (!box || box.checked) return true;
+    box.closest('.consent').classList.add('is-error');
+    box.focus();
+    return false;
+  }
+  document.addEventListener('change', e => {
+    if (e.target.classList?.contains('js-consent') && e.target.checked) e.target.closest('.consent').classList.remove('is-error');
+  });
+
   /* ---------- Телефон в inline-формах (CTA-секция) ---------- */
   function initInlineForms() {
     $$('form[data-inline-form]').forEach(form => {
@@ -255,6 +268,7 @@
         e.preventDefault();
         if (!phoneValid(phone)) { validateField(phone, false, 'Введите номер полностью'); phone.focus(); return; }
         validateField(phone, true);
+        if (!consentValid(form)) return;
         form.classList.add('is-sent'); // покажем встроенное сообщение об успехе
       });
     });

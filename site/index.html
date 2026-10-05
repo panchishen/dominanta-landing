@@ -24,7 +24,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/themes.css">
-  <link rel="stylesheet" href="css/app.css?v=3">
+  <link rel="stylesheet" href="css/app.css?v=4">
   <!-- PREVIEW-NOINDEX: удалить эту строку при публикации на боевом домене --><meta name="robots" content="noindex, nofollow">
 </head>
 <body>
@@ -702,7 +702,7 @@
             </div>
             <div class="cta__submit">
               <button class="btn btn--primary btn--lg text-button-lg" type="submit">Записаться</button>
-              <p class="cta__note text-caption">Нажимая кнопку, вы соглашаетесь на&nbsp;обработку персональных данных.</p>
+              <label class="consent consent--dark text-caption"><input class="consent__box js-consent" type="checkbox"><span>Даю <a href="consent.html" target="_blank">согласие на&nbsp;обработку персональных данных</a> и&nbsp;принимаю <a href="privacy.html" target="_blank">политику конфиденциальности</a></span><span class="consent__error">Отметьте согласие, чтобы отправить заявку</span></label>
             </div>
           </div>
         </form>
@@ -822,7 +822,7 @@
           <label class="field"><span class="field__label text-label-md">Имя</span><input class="field__control js-name" type="text" placeholder="Ваше имя" autocomplete="name"></label>
           <label class="field"><span class="field__label text-label-md">Телефон <span class="field__req">*</span></span><input class="field__control js-phone" type="tel" placeholder="+7 (___) ___-__-__"><span class="field__error text-caption">Введите номер полностью</span></label>
           <button class="btn btn--primary btn--lg text-button-lg modal__submit" type="submit">Записаться</button>
-          <p class="modal__consent text-caption">Нажимая кнопку, вы соглашаетесь с&nbsp;политикой конфиденциальности.</p>
+          <label class="consent text-caption"><input class="consent__box js-consent" type="checkbox"><span>Даю <a href="consent.html" target="_blank">согласие на&nbsp;обработку персональных данных</a> и&nbsp;принимаю <a href="privacy.html" target="_blank">политику конфиденциальности</a></span><span class="consent__error">Отметьте согласие, чтобы отправить заявку</span></label>
         </form>
       </div>
       <div class="modal__success" hidden>
@@ -835,6 +835,6 @@
     </div>
   </div>
 
-  <script src="js/app.js?v=3"></script>
+  <script src="js/app.js?v=4"></script>
 </body>
 </html>
