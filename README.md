@@ -32,7 +32,7 @@
    grep -rl 'PREVIEW-NOINDEX' .
    ```
 
-4. **Обложка превью ссылки.** В `index.html` и `special-version/index.html` мета-тег `og:image` указывает на адрес превью GitHub Pages. Замените `https://panchishen.github.io/dominanta-landing/` на адрес боевого домена (картинка — `assets/og-cover.jpg`).
+4. **Обложка превью ссылки.** В `index.html` и `special-version/index.html` мета-тег `og:image` уже указывает на боевой домен: `https://xn--90ahaidkb3bh0b3f.xn--p1ai/assets/og-cover.jpg` (крепкиезубы.рф в punycode). Если сайт будет на другом домене или не в корне, поправьте адрес.
 
 `robots.txt` и `sitemap.xml` для боевого домена готовит разработчик: в релиз они не входят.
 
