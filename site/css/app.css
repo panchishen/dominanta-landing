@@ -10,7 +10,7 @@ body.nav-locked { overflow: hidden; }
 /* длинные слова (термины, номера) переносятся, а не распирают колонку на узких экранах */
 body { overflow-wrap: break-word; }
 /* флекс- и грид-дети с текстом должны уметь сжиматься ниже своей min-content ширины */
-.acc__title, .restoration-detail p, .guarantee__item-text, .services-note__text, .contact-item__value, .review-card__body { min-width: 0; }
+.acc__title, .restoration-detail p, .guarantee__item-text, .services-note__text, .review-card__body { min-width: 0; }
 img, svg, iframe { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; }
 button { font-family: inherit; }
@@ -670,11 +670,6 @@ html.js .reveal.is-visible { opacity: 1; transform: none; }
 .contacts { position: relative; border-radius: var(--radius-2xl); overflow: hidden; background: var(--color-surface-sunken); min-height: 480px; }
 .contacts__map { position: absolute; inset: 0; }
 .contacts__map iframe { width: 100%; height: 100%; border: 0; }
-.contacts__card { position: absolute; right: var(--space-lg); top: var(--space-lg); /* справа: виджет 2ГИС держит метку и карточку организации по центру, кнопки зума слева */ width: 256px; max-width: calc(100% - 2 * var(--space-xl)); display: flex; flex-direction: column; gap: 20px; background: var(--color-surface-default); border-radius: var(--radius-xl); padding: var(--space-lg); }
-.contact-item { display: flex; align-items: center; gap: var(--space-sm); }
-.contact-item__icon { flex: 0 0 auto; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; background: var(--color-bg-brand-subtle); color: var(--color-text-brand); }
-.contact-item__label { color: var(--color-text-tertiary); }
-.contact-item__value { color: var(--color-text-primary); display: block; }
 
 /* ---------- FOOTER (тёмная широкая карточка) ---------- */
 /* под футером всегда 40px «воздуха» до низа страницы */
@@ -793,7 +788,6 @@ html.js .reveal.is-visible { opacity: 1; transform: none; }
   .restoration__detail { grid-template-columns: 1fr; }
   .contacts { min-height: 0; display: flex; flex-direction: column-reverse; }
   .contacts__map { position: relative; height: 320px; }
-  .contacts__card { position: static; transform: none; width: 100%; max-width: none; }
 }
 /* XS · ≤767 — смартфон: всё в одну колонку, внутренние отступы карточек уменьшены */
 @media (max-width: 767.98px) {
