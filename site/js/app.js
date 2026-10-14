@@ -180,11 +180,15 @@
 
   /* ---------- Модалка записи (вызов по любой CTA) ---------- */
   let lastFocus = null;
-  function openModal() {
+  const MODAL_TITLE_DEFAULT = 'Запись на&nbsp;консультацию';
+  function openModal(trigger) {
     const m = $('#bookingModal');
     if (!m) return;
     lastFocus = document.activeElement;
     resetModal(m);
+    // заголовок окна — под кнопку, которая его открыла (data-modal-title), иначе по умолчанию
+    const title = $('#modalTitle', m);
+    if (title) title.innerHTML = (trigger && trigger.dataset.modalTitle) || MODAL_TITLE_DEFAULT;
     m.classList.add('is-open');
     m.setAttribute('aria-hidden', 'false');
     document.body.classList.add('nav-locked');
@@ -224,7 +228,7 @@
   function initModal() {
     const m = $('#bookingModal');
     if (!m) return;
-    $$('[data-open-modal]').forEach(b => b.addEventListener('click', e => { e.preventDefault(); openModal(); }));
+    $$('[data-open-modal]').forEach(b => b.addEventListener('click', e => { e.preventDefault(); openModal(b); }));
     $$('[data-close-modal]', m).forEach(b => b.addEventListener('click', closeModal));
     m.addEventListener('click', e => { if (e.target === m || e.target.classList.contains('modal__scrim')) closeModal(); });
 
