@@ -247,13 +247,12 @@
     });
   }
 
-  /* ---------- Согласие на обработку данных (152-ФЗ): без галочки заявка не уходит ---------- */
+  /* ---------- Согласия (152-ФЗ и рассылки): обе галочки обязательны, без них заявка не уходит ---------- */
   function consentValid(form) {
-    const box = form.querySelector('.js-consent');
-    if (!box || box.checked) return true;
-    box.closest('.consent').classList.add('is-error');
-    box.focus();
-    return false;
+    const missing = $$('.js-consent', form).filter(box => !box.checked);
+    missing.forEach(box => box.closest('.consent').classList.add('is-error'));
+    if (missing.length) missing[0].focus();
+    return !missing.length;
   }
   document.addEventListener('change', e => {
     if (e.target.classList?.contains('js-consent') && e.target.checked) e.target.closest('.consent').classList.remove('is-error');
