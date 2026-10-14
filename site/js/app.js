@@ -189,6 +189,7 @@
     // заголовок окна — под кнопку, которая его открыла (data-modal-title), иначе по умолчанию
     const title = $('#modalTitle', m);
     if (title) title.innerHTML = (trigger && trigger.dataset.modalTitle) || MODAL_TITLE_DEFAULT;
+    m.leadTrigger = trigger || null; // для служебных полей заявки
     m.classList.add('is-open');
     m.setAttribute('aria-hidden', 'false');
     document.body.classList.add('nav-locked');
@@ -241,6 +242,8 @@
       if (!phoneValid(phone)) { validateField(phone, false, 'Введите номер полностью'); phone.focus(); return; }
       validateField(phone, true);
       if (!consentValid(form)) return;
+      fillLeadMeta(form, $('#modalTitle', m).textContent, m.leadTrigger);
+      submitLead(form);
       // успех: окно сохраняет высоту формы (иначе сжимается и панель с маскотом)
       const card = m.querySelector('.modal__card');
       card.style.minHeight = card.offsetHeight + 'px';
@@ -250,6 +253,43 @@
       ok2.querySelector('[data-autofocus]')?.focus();
     });
   }
+
+  /* ---------- Служебные поля заявки: откуда пришла, с каким заголовком, UTM ----------
+     form_source — в разметке; form_title — заголовок окна/блока; form_trigger — текст кнопки, открывшей окно;
+     form_section — заголовок блока страницы, где была кнопка; page_url и utm_* — адрес и метки рекламы.
+     UTM запоминаем при первом заходе (sessionStorage), чтобы не терялись при переходах по якорям. */
+  const UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
+  const UTM_STORE = 'dm-utm';
+  function readUtm() {
+    const q = new URLSearchParams(location.search);
+    const fromUrl = {};
+    UTM_KEYS.forEach(k => { if (q.get(k)) fromUrl[k] = q.get(k); });
+    try {
+      if (Object.keys(fromUrl).length) { sessionStorage.setItem(UTM_STORE, JSON.stringify(fromUrl)); return fromUrl; }
+      return JSON.parse(sessionStorage.getItem(UTM_STORE) || '{}');
+    } catch (e) { return fromUrl; }
+  }
+  readUtm(); // сохранить метки сразу при заходе
+  const cleanText = s => (s || '').replace(/ /g, ' ').replace(/\s+/g, ' ').trim();
+  function fillLeadMeta(form, title, trigger) {
+    const set = (name, value) => { const f = form.querySelector(`input[name="${name}"]`); if (f) f.value = cleanText(value); };
+    const section = !trigger ? '' :
+      trigger.closest('header') ? 'Шапка сайта' :
+      trigger.closest('#hero') ? 'Первый экран' :
+      trigger.closest('[data-lead-section]')?.dataset.leadSection || // явное название блока, если заголовок не h1–h3
+      trigger.closest('section')?.querySelector('h1, h2, h3')?.textContent;
+    set('form_title', title);
+    set('form_trigger', trigger ? trigger.textContent : '');
+    // кнопка внутри карточки услуги — добавляем её название («Варианты восстановления… · All-on-4 — протез на 4 имплантах»)
+    const item = trigger && trigger.closest('.service-item')?.querySelector('.service-item__title')?.textContent;
+    set('form_section', [section, item].filter(Boolean).map(cleanText).join(' · '));
+    set('page_url', location.href);
+    const utm = readUtm();
+    UTM_KEYS.forEach(k => set(k, utm[k] || ''));
+  }
+  /* Отправка заявки — подключает разработчик клиента: все поля формы (имя, телефон, согласия, служебные)
+     доступны как new FormData(form). Сейчас заявка никуда не уходит, показывается только сообщение об успехе. */
+  function submitLead(form) {}
 
   /* ---------- Согласия (152-ФЗ и рассылки): обе галочки обязательны, без них заявка не уходит ---------- */
   function consentValid(form) {
@@ -272,6 +312,9 @@
         if (!phoneValid(phone)) { validateField(phone, false, 'Введите номер полностью'); phone.focus(); return; }
         validateField(phone, true);
         if (!consentValid(form)) return;
+        const heading = form.closest('section')?.querySelector('h1, h2');
+        fillLeadMeta(form, heading ? heading.textContent : '', null);
+        submitLead(form);
         form.classList.add('is-sent'); // покажем встроенное сообщение об успехе
       });
     });

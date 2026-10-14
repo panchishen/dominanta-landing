@@ -299,7 +299,7 @@
     </section>
 
     <!-- CTA (компактный, тёмный) -->
-    <section class="cta-mid band band--wide reveal">
+    <section class="cta-mid band band--wide reveal" data-lead-section="Начните с консультации и 3D-снимка">
       <div class="cta-mid__inner"><div class="inner cta-mid__row">
         <div class="cta-mid__media">
           <img class="media-img" src="assets/cta-mid-image.png" alt="Хирург-имплантолог Оксана Нуриева" loading="lazy">
@@ -668,6 +668,17 @@
           <p class="cta__phone-line text-body-lg">Или&nbsp;позвоните: <a class="cta__phone-link" href="tel:+73512251505">+7&nbsp;(351) 225-15-05</a> Пн–Вс 9:00–20:00</p>
         </div>
         <form class="cta__form" data-inline-form novalidate>
+          <!-- служебные поля для заявки: заполняет fillLeadMeta() в js/app.js -->
+          <input type="hidden" name="form_source" value="Блок формы внизу страницы">
+          <input type="hidden" name="form_title">
+          <input type="hidden" name="form_trigger">
+          <input type="hidden" name="form_section">
+          <input type="hidden" name="page_url">
+          <input type="hidden" name="utm_source">
+          <input type="hidden" name="utm_medium">
+          <input type="hidden" name="utm_campaign">
+          <input type="hidden" name="utm_content">
+          <input type="hidden" name="utm_term">
           <div class="cta__success">
             <span class="success-badge" aria-hidden="true"><svg viewBox="0 0 24 24" width="40" height="40"><path d="M17 1.2l1.3 2.5L20.8 5l-2.5 1.3L17 8.8l-1.3-2.5L13.2 5l2.5-1.3zM8 4.3l2.7 5 5 2.7-5 2.7L8 19.7l-2.7-5-5-2.7 5-2.7zM19.7 16.3L18 13.2l-1.7 3.1-3.1 1.7 3.1 1.7L18 22.8l1.7-3.1 3.1-1.7z" fill="currentColor"/></svg></span>
             <div class="cta__success-title text-h4">Заявка отправлена!</div>
@@ -675,8 +686,8 @@
           </div>
           <div class="cta__form-fields">
             <div class="cta__row">
-              <label class="field"><span class="field__label text-label-md">Имя</span><input class="field__control js-name" type="text" placeholder="Ваше имя" autocomplete="name"></label>
-              <label class="field"><span class="field__label text-label-md">Телефон</span><input class="field__control js-phone" type="tel" placeholder="+7 (___) ___-__-__"><span class="field__error text-caption">Введите номер полностью</span></label>
+              <label class="field"><span class="field__label text-label-md">Имя</span><input class="field__control js-name" type="text" name="name" placeholder="Ваше имя" autocomplete="name"></label>
+              <label class="field"><span class="field__label text-label-md">Телефон</span><input class="field__control js-phone" type="tel" name="phone" placeholder="+7 (___) ___-__-__"><span class="field__error text-caption">Введите номер полностью</span></label>
             </div>
             <div class="cta__submit">
               <button class="btn btn--primary btn--lg text-button-lg" type="submit">Отправить</button>
@@ -792,8 +803,19 @@
           <p class="modal__sub text-body-sm">Оставьте контакты&nbsp;— перезвоним в&nbsp;ближайшее рабочее время</p>
         </div>
         <form novalidate>
-          <label class="field"><span class="field__label text-label-md">Имя</span><input class="field__control js-name" type="text" placeholder="Ваше имя" autocomplete="name"></label>
-          <label class="field"><span class="field__label text-label-md">Телефон <span class="field__req">*</span></span><input class="field__control js-phone" type="tel" placeholder="+7 (___) ___-__-__"><span class="field__error text-caption">Введите номер полностью</span></label>
+          <!-- служебные поля для заявки: заполняет fillLeadMeta() в js/app.js -->
+          <input type="hidden" name="form_source" value="Окно записи">
+          <input type="hidden" name="form_title">
+          <input type="hidden" name="form_trigger">
+          <input type="hidden" name="form_section">
+          <input type="hidden" name="page_url">
+          <input type="hidden" name="utm_source">
+          <input type="hidden" name="utm_medium">
+          <input type="hidden" name="utm_campaign">
+          <input type="hidden" name="utm_content">
+          <input type="hidden" name="utm_term">
+          <label class="field"><span class="field__label text-label-md">Имя</span><input class="field__control js-name" type="text" name="name" placeholder="Ваше имя" autocomplete="name"></label>
+          <label class="field"><span class="field__label text-label-md">Телефон <span class="field__req">*</span></span><input class="field__control js-phone" type="tel" name="phone" placeholder="+7 (___) ___-__-__"><span class="field__error text-caption">Введите номер полностью</span></label>
           <button class="btn btn--primary btn--lg text-button-lg modal__submit" type="submit">Отправить</button>
           <label class="consent text-caption"><input class="consent__box js-consent" type="checkbox" name="consent_personal_data"><span>Я&nbsp;даю <a href="consent.html" target="_blank">согласие на&nbsp;обработку моих персональных данных</a> и&nbsp;ознакомлен с&nbsp;<a href="privacy.html" target="_blank">политикой конфиденциальности</a></span><span class="consent__error">Отметьте согласие, чтобы отправить заявку</span></label>
           <label class="consent text-caption"><input class="consent__box js-consent" type="checkbox" name="consent_marketing"><span>Я&nbsp;даю <a href="consent-marketing.html" target="_blank">согласие на&nbsp;получение информационных и&nbsp;рекламных рассылок</a></span><span class="consent__error">Отметьте согласие, чтобы отправить заявку</span></label>
